@@ -24,6 +24,15 @@ const WorkDaysIndex = ({ data, location }) => {
   return (
     <Layout location={location} title={siteTitle}>
       <Seo title="Upcoming workdays" />
+
+      <h1>Volunteer days</h1>
+
+      <p>All are welcome and any time you can give on the day will be most appreciated.</p>
+      <p>Tools and equipment are provided, but please wear appropriate clothes and footwear and bring your own refreshments.</p>
+      <p>We usually meet at 10am on the last Wednesday and 11am on the second Sunday of the month.</p>
+      <p>Work Day notices are posted at all the main entrances to the wood and the recreation ground.</p>
+
+      <h2>Dates:</h2>
       <ol style={{ listStyle: `none` }}>
         {posts.map(post => {
           const title = post.frontmatter.title || post.fields.slug
@@ -41,11 +50,11 @@ const WorkDaysIndex = ({ data, location }) => {
                 itemType="http://schema.org/Article"
               >
                 <header>
-                  <h2>
+                  <h3>
                     <Link to={post.fields.slug} itemProp="url">
                       <span itemProp="headline">{title}</span>
                     </Link>
-                  </h2>
+                  </h3>
                   <small>{post.frontmatter.date}</small>
                 </header>
                 <section>
