@@ -26,7 +26,6 @@ const NewsIndex = ({ data, location }) => {
   return (
     <Layout location={location} title={siteTitle}>
       <Seo title="Latest News" />
-      <Bio />
       <ol style={{ listStyle: `none` }}>
         {posts.map(post => {
           const title = post.frontmatter.title || post.fields.slug
@@ -59,6 +58,7 @@ const NewsIndex = ({ data, location }) => {
           )
         })}
       </ol>
+      <Bio />
     </Layout>
   )
 }

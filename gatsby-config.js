@@ -2,8 +2,8 @@ module.exports = {
   siteMetadata: {
     title: `POC For Friends Of Foxley Website`,
     author: {
-      name: `Eloise Taylor`,
-      summary: `.`,
+      name: `Friend`,
+      summary: `Friends of Foxley are a group of volunteers who manage Foxley Wood in Kenley, Surrey. `,
     },
     description: `POC to show a possible option for the new website.`,
     siteUrl: `https://gatsbystarterblogsource.gatsbyjs.io/`,
