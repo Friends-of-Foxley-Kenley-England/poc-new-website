@@ -1,11 +1,11 @@
 {
-  "name": "gatsby-starter-blog",
+  "name": "friends-of-foxley-website",
   "private": true,
-  "description": "A starter for a blog powered by Gatsby and Markdown",
+  "description": "A POC for the Friends Of Foxley website refresh",
   "version": "0.1.0",
-  "author": "Kyle Mathews <mathews.kyle@gmail.com>",
+  "author": "Eloise Taylor",
   "bugs": {
-    "url": "https://github.com/gatsbyjs/gatsby/issues"
+    "url": "https://github.com/Friends-of-Foxley-Kenley-England/poc-new-website/issues"
   },
   "dependencies": {
     "gatsby": "^3.6.2",
@@ -35,15 +35,16 @@
   "devDependencies": {
     "prettier": "2.2.1"
   },
-  "homepage": "https://github.com/gatsbyjs/gatsby-starter-blog#readme",
+  "homepage": "http://www.friendsoffoxley.co.uk/",
   "keywords": [
-    "gatsby"
+    "volunteer",
+    "woods"
   ],
   "license": "0BSD",
   "main": "n/a",
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/gatsbyjs/gatsby-starter-blog.git"
+    "url": "https://github.com/Friends-of-Foxley-Kenley-England/poc-new-website"
   },
   "scripts": {
     "build": "gatsby build",
