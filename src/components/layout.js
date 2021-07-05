@@ -1,22 +1,41 @@
 import * as React from "react"
-import { Link } from "gatsby"
+import { useStaticQuery, graphql, Link } from "gatsby"
+
+import {Header} from "../components/header"
 
 const Layout = ({ location, title, children }) => {
+
+  const data = useStaticQuery(graphql`
+          query SiteTitleQuery {
+            site {
+              siteMetadata {
+                title
+                    menuLinks {
+                      name
+                      link
+                    }
+              }
+            }
+          }
+        `)
+
   const rootPath = `${__PATH_PREFIX__}/`
   const isRootPath = location.pathname === rootPath
   let header
 
   if (isRootPath) {
     header = (
-      <h1 className="main-heading">
-        <Link to="/">{title}</Link>
-      </h1>
+      // <h1 className="main-heading">
+      //   <Link to="/">{title}</Link>
+      // </h1>
+      <Header className="header-link-home" menuLinks={data.site.siteMetadata.menuLinks} siteTitle={title} />
     )
   } else {
     header = (
-      <Link className="header-link-home" to="/">
-        {title}
-      </Link>
+      // <Link className="header-link-home" to="/">
+      //   {title}
+      // </Link>
+      <Header className="header-link-home" menuLinks={data.site.siteMetadata.menuLinks} siteTitle={title} />
     )
   }
 

@@ -10,6 +10,20 @@ module.exports = {
     social: {
       twitter: `....`,
     },
+    menuLinks:[
+      {
+         name:'home',
+         link:'/'
+      },
+      {
+         name:'news',
+         link:'/news'
+      },
+      {
+         name:'Work Days',
+         link:'/work-days'
+      }
+    ]
   },
   plugins: [
     `gatsby-plugin-image`,
