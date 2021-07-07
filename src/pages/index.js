@@ -13,7 +13,7 @@ const HomeIndex = ({ data, location }) => {
         <p>
           Volunteer group helping to manage the Foxley woods in Kenley, Surrey. 
         </p>
-        <What3wordsAddress words="tune.then.global" icon-color="#3CABAA" tooltip-location="entrance at Burwood Avenue"/>
+        <What3wordsAddress words="tune.then.global" icon-color="#0e4630" text-color="#0e4630" tooltip-location="entrance at Burwood Avenue"/>
       </Layout>
   )
 }
