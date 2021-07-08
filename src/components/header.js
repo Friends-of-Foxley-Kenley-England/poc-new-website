@@ -2,23 +2,18 @@ import React from "react"
 import { Link } from "gatsby"
 import PropTypes from "prop-types"
 
+const navHeaderStyle = {
+  background: "#11573c",
+  marginBottom: "1.45rem"
+}
+
 const Header = ({ siteTitle, menuLinks }) => (
-  <header
-    style={{
-      background: "rebeccapurple",
-      marginBottom: "1.45rem",
-    }}
-  >
-    <div
-      style={{
-        background: "rebeccapurple",
-        marginBottom: "1.45rem",
-      }}
-    >
+  <header style={navHeaderStyle} >
+    <div style={navHeaderStyle}  >
       <div
         style={{
           margin: "0 auto",
-          maxWidth: 960,
+          width: "100%",
           padding: "1.45rem 1.0875rem",
           display: "flex",
           justifyItems: "space-between",
