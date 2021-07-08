@@ -1,7 +1,7 @@
 import * as React from "react"
 import { useStaticQuery, graphql, Link } from "gatsby"
 
-import {Header} from "../components/header"
+import Header from "../components/header"
 
 const Layout = ({ location, title, children }) => {
 
