@@ -12,11 +12,11 @@ module.exports = {
     },
     menuLinks:[
       {
-         name:'home',
+         name:'Home',
          link:'/'
       },
       {
-         name:'news',
+         name:'Latest News',
          link:'/news'
       },
       {
