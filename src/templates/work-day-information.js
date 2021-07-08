@@ -75,7 +75,7 @@ const WorkDayTemplate = ({ data, location }) => {
 export default WorkDayTemplate
 
 export const pageQuery = graphql`
-  query BlogPostBySlug(
+  query WorkDayBySlug(
     $id: String!
     $previousPostId: String
     $nextPostId: String
