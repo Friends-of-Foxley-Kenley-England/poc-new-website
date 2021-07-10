@@ -245,12 +245,16 @@ a:focus {
 
 /* Custom classes */
 
-.global-wrapper {
+.layout {
+  height: 100vh;
   display: flex;
-  align-items: stretch;
-  justify-content: center;
+  flex-direction: column;
+}
+
+
+.global-wrapper {
   flex: 1;
-  margin: var(--spacing-0) auto;
+  /* margin: var(--spacing-0) auto; */
   max-width: var(--maxWidth-wrapper); 
   padding: var(--spacing-10) var(--spacing-5);
 }
@@ -341,3 +345,6 @@ a:focus {
     list-style-position: inside;
   }
 }
+
+
+
