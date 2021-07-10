@@ -40,15 +40,18 @@ const Layout = ({ location, title, children }) => {
   }
 
   return (
-    <div className="global-wrapper" data-is-root-path={isRootPath}>
+    <div id="layout" style={{height: "100%"}}>
       <header className="global-header">{header}</header>
-      <main>{children}</main>
-      <footer>
+      <div className="global-wrapper" data-is-root-path={isRootPath}>
+        <main>{children}</main>
+      </div>
+      <footer style={{bottom: "auto"}}>
         © {new Date().getFullYear()}, Built with
         {` `}
         <a href="https://www.gatsbyjs.com">Gatsby</a>
       </footer>
     </div>
+
   )
 }
 
