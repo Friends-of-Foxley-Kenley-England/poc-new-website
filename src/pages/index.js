@@ -8,7 +8,8 @@ const HomeIndex = ({ data, location }) => {
 
   return (
     <Layout location={location} title={siteTitle}>
-        <Seo title="Friends Of Foxley" />
+        <Seo title={siteTitle}/>
+        <h1>{siteTitle}</h1>
         <p>
           Volunteer group helping to manage the Foxley woods in Kenley, Surrey. 
         </p>
