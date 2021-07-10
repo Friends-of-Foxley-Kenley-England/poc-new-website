@@ -254,7 +254,7 @@ a:focus {
 
 .global-wrapper {
   flex: 1;
-  /* margin: var(--spacing-0) auto; */
+  margin: var(--spacing-0) auto;
   max-width: var(--maxWidth-wrapper); 
   padding: var(--spacing-10) var(--spacing-5);
 }
