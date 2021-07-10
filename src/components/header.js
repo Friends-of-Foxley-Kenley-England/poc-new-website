@@ -1,26 +1,13 @@
 import React from "react"
 import { Link } from "gatsby"
 import PropTypes from "prop-types"
-
-const navHeaderStyle = {
-  background: "#11573c",
-  marginBottom: "1.45rem"
-}
+import * as style from "./header.module.css"
 
 const Header = ({ siteTitle, menuLinks }) => (
-  <header style={navHeaderStyle} >
-    <div style={navHeaderStyle}  >
-      <div
-        style={{
-          margin: "0 auto",
-          width: "100%",
-          padding: "1.45rem 1.0875rem",
-          display: "flex",
-          justifyItems: "space-between",
-          alignItems: "center",
-        }}
-      >
-        <h1 style={{ margin: 0, flex: 1 }}>
+  <header>
+    <div>
+      <div className={style.navigationBar}>
+        {/* <h1 style={{ margin: 0, flex: 1 }}>
           <Link
             to="/"
             style={{
@@ -30,19 +17,13 @@ const Header = ({ siteTitle, menuLinks }) => (
           >
             {siteTitle}
           </Link>
-        </h1>
+        </h1> */}
         <div>
           <nav>
-            <ul style={{ display: "flex", flex: 1 }}>
+            <ul className={style.navigationLinks}>
               {menuLinks.map(link => (
-                <li
-                  key={link.name}
-                  style={{
-                    listStyleType: `none`,
-                    padding: `1rem`,
-                  }}
-                >
-                  <Link style={{ color: `white` }} to={link.link}>
+                <li key={link.name} className={style.navigationLinkArea}>
+                  <Link className={style.navigationLink} to={link.link}>
                     {link.name}
                   </Link>
                 </li>
