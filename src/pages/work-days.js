@@ -11,7 +11,7 @@ const WorkDaysIndex = ({ data, location }) => {
   if (posts.length === 0) {
     return (
       <Layout location={location} title={siteTitle}>
-        <Seo title="All workdays" />
+        <Seo title="Volunteer workdays" />
         <p>
           No workdays found. Add markdown posts to "content/work-days" (or the
           directory you specified for the "gatsby-source-filesystem" plugin in
@@ -23,7 +23,7 @@ const WorkDaysIndex = ({ data, location }) => {
 
   return (
     <Layout location={location} title={siteTitle}>
-      <Seo title="Upcoming workdays" />
+      <Seo title="Volunteer workdays" />
 
       <h1>Volunteer days</h1>
 
