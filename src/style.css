@@ -75,12 +75,14 @@ html {
   font-size: var(--fontSize-root);
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  height: 100%;
 }
 
 body {
   font-family: var(--font-body);
   font-size: var(--fontSize-1);
   color: var(--color-text);
+  height: 100%;
 }
 
 footer {
@@ -241,13 +243,18 @@ a:focus {
 /* Custom classes */
 
 .global-wrapper {
+  display: flex;
+  align-items: stretch;
+  justify-content: center;
+  flex: 1;
   margin: var(--spacing-0) auto;
-  max-width: var(--maxWidth-wrapper);
+  max-width: var(--maxWidth-wrapper); 
   padding: var(--spacing-10) var(--spacing-5);
 }
 
 .global-wrapper[data-is-root-path="true"] .bio {
   margin-bottom: var(--spacing-20);
+  background-color: darkseagreen;
 }
 
 .global-header {
