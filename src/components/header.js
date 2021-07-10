@@ -4,7 +4,7 @@ import PropTypes from "prop-types"
 import * as style from "./header.module.css"
 
 const Header = ({ siteTitle, menuLinks }) => (
-  <header>
+  <header className={style.navHeader}>
     <div>
       <div className={style.navigationBar}>
         {/* <h1 style={{ margin: 0, flex: 1 }}>
