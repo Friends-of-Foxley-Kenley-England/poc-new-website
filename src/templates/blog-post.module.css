@@ -1,0 +1,21 @@
+.blog-post-header {
+    margin: var(--spacing-0) var(--spacing-0) var(--spacing-4) var(--spacing-0);
+}
+
+.blog-post-posted-date  {
+    font-size: var(--fontSize-2);
+    font-family: var(--font-heading);
+}
+
+.blog-post-nav {
+    margin: var(--spacing-0);
+}
+
+.blog-post-nav-links {
+    margin: var(--spacing-0);
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    list-style: none;
+    padding: 0;
+}
