@@ -2,6 +2,7 @@ import * as React from "react"
 import { useStaticQuery, graphql } from "gatsby"
 import * as style from "./layout.module.css"
 import Header from "../components/header"
+import SiteFooter from "../components/site-footer"
 
 const Layout = ({ location, title, children }) => {
 
@@ -45,11 +46,7 @@ const Layout = ({ location, title, children }) => {
       <div className={style.globalWrapper} data-is-root-path={isRootPath}>
         <main>{children}</main>
       </div>
-      <footer style={{bottom: "auto"}}>
-        © {new Date().getFullYear()}, Built with
-        {` `}
-        <a href="https://www.gatsbyjs.com" className={style.gatsbyLink}>Gatsby</a>
-      </footer>
+      <SiteFooter/>
     </div>
 
   )
