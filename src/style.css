@@ -179,23 +179,7 @@ a:focus {
 
 /* Custom classes */
 
-.layout {
-  height: 100vh;
-  display: flex;
-  flex-direction: column;
-}
 
-.global-wrapper {
-  flex: 1;
-  margin: var(--spacing-0) auto;
-  max-width: var(--maxWidth-wrapper); 
-  padding: var(--spacing-5);
-}
-
-.global-wrapper[data-is-root-path="true"] .bio {
-  margin-bottom: var(--spacing-20);
-  background-color: darkseagreen;
-}
 
 .main-heading {
   font-size: var(--fontSize-7);
@@ -222,11 +206,9 @@ a:focus {
   margin-bottom: var(--spacing-4);
 }
 
-.header-link-home {
-  font-weight: var(--fontWeight-bold);
-  font-family: var(--font-heading);
-  text-decoration: none;
-  font-size: var(--fontSize-2);
+.global-wrapper[data-is-root-path="true"] .bio {
+  margin-bottom: var(--spacing-20);
+  background-color: darkseagreen;
 }
 
 .bio {
