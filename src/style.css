@@ -62,6 +62,7 @@
   --color-heading: var(--color-dark-green);
   --color-main-heading: var(--color-darker-green);
   --color-accent: #d1dce5;
+  --color-nav-link: white;
 }
 
 /* HTML elements */
