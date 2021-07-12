@@ -1,6 +1,6 @@
 import * as React from "react"
 import { useStaticQuery, graphql } from "gatsby"
-
+import * as style from "./layout.module.css"
 import Header from "../components/header"
 
 const Layout = ({ location, title, children }) => {
@@ -25,18 +25,24 @@ const Layout = ({ location, title, children }) => {
 
   if (isRootPath) {
     header = (
-      <Header className="header-link-home" menuLinks={data.site.siteMetadata.menuLinks} siteTitle={title} />
+      <Header 
+          className={style.headerLinkHome} 
+          menuLinks={data.site.siteMetadata.menuLinks} 
+          siteTitle={title} />
     )
   } else {
     header = (
-      <Header className="header-link-home" menuLinks={data.site.siteMetadata.menuLinks} siteTitle={title} />
+      <Header 
+          className={style.headerLinkHome} 
+          menuLinks={data.site.siteMetadata.menuLinks} 
+          siteTitle={title} />
     )
   }
 
   return (
-    <div className="layout">
-      <header className="global-header">{header}</header>
-      <div className="global-wrapper" data-is-root-path={isRootPath}>
+    <div className={style.layout}>
+      <header className={style.globalHeader}>{header}</header>
+      <div className={style.globalWrapper} data-is-root-path={isRootPath}>
         <main>{children}</main>
       </div>
       <footer style={{bottom: "auto"}}>
