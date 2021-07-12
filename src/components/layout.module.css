@@ -17,4 +17,8 @@
     text-decoration: none;
     font-size: var(--fontSize-2);
 }
+
+.gatsby-link {
+    color: var(--color-nav-link)
+}
   
