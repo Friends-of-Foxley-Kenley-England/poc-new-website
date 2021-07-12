@@ -1,3 +1,10 @@
+/* 
+ Site-wide stylings
+ 
+ Specific stylings for components/pages should be added
+ to it's own CSS module and imported
+*/
+
 *,
 :after,
 :before {
