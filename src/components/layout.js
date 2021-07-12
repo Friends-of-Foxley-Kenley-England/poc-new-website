@@ -25,11 +25,17 @@ const Layout = ({ location, title, children }) => {
 
   if (isRootPath) {
     header = (
-      <Header className={style.headerLinkHome} menuLinks={data.site.siteMetadata.menuLinks} siteTitle={title} />
+      <Header 
+          className={style.headerLinkHome} 
+          menuLinks={data.site.siteMetadata.menuLinks} 
+          siteTitle={title} />
     )
   } else {
     header = (
-      <Header className={style.headerLinkHome} menuLinks={data.site.siteMetadata.menuLinks} siteTitle={title} />
+      <Header 
+          className={style.headerLinkHome} 
+          menuLinks={data.site.siteMetadata.menuLinks} 
+          siteTitle={title} />
     )
   }
 
