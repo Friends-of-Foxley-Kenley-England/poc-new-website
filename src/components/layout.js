@@ -1,5 +1,5 @@
 import * as React from "react"
-import { useStaticQuery, graphql, Link } from "gatsby"
+import { useStaticQuery, graphql } from "gatsby"
 
 import Header from "../components/header"
 
@@ -25,16 +25,10 @@ const Layout = ({ location, title, children }) => {
 
   if (isRootPath) {
     header = (
-      // <h1 className="main-heading">
-      //   <Link to="/">{title}</Link>
-      // </h1>
       <Header className="header-link-home" menuLinks={data.site.siteMetadata.menuLinks} siteTitle={title} />
     )
   } else {
     header = (
-      // <Link className="header-link-home" to="/">
-      //   {title}
-      // </Link>
       <Header className="header-link-home" menuLinks={data.site.siteMetadata.menuLinks} siteTitle={title} />
     )
   }
