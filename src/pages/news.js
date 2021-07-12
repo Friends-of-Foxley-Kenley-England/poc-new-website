@@ -4,6 +4,7 @@ import { Link, graphql } from "gatsby"
 import Bio from "../components/bio"
 import Layout from "../components/layout"
 import Seo from "../components/seo"
+import * as style from "./posts.module.css"
 
 const NewsIndex = ({ data, location }) => {
   const siteTitle = data.site.siteMetadata?.title || `Title`
@@ -34,7 +35,7 @@ const NewsIndex = ({ data, location }) => {
           return (
             <li key={post.fields.slug}>
               <article
-                className="post-list-item"
+                className={style.postListItem}
                 itemScope
                 itemType="http://schema.org/Article"
               >
