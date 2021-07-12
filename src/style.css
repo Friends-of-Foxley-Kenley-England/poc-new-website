@@ -54,11 +54,13 @@
   --fontSize-5: 2.074rem;
   --fontSize-6: 2.488rem;
   --fontSize-7: 2.986rem;
+  --color-dark-green: #11573c;
+  --color-darker-green: #0e4630;
   --color-primary: #005b99;
   --color-text: #2e353f;
   --color-text-light: #4f5969;
-  --color-heading: #11573c;
-  --color-main-heading: #0e4630;
+  --color-heading: var(--color-dark-green);
+  --color-main-heading: var(--color-darker-green);
   --color-accent: #d1dce5;
 }
 
