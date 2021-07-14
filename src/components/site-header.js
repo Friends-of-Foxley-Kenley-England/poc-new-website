@@ -19,15 +19,12 @@ const SiteHeader = ({ siteTitle, menuLinks }) => (
           </Link>
         </h1> */}
       <nav>
-        <ul>
-          {menuLinks.map(link => (
-            <li key={link.name}>
-              <Link to={link.link}>
-                {link.name}
-              </Link>
-            </li>
-          ))}
-        </ul>
+        {menuLinks.map(link => (
+          <Link to={link.link}>
+            {link.name}
+          </Link>
+        ))}
+        <a className={style.hamburgerMenu}><HamburgerMenu /></a>
       </nav>
     </div>
   </header>
