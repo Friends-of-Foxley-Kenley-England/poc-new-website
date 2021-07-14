@@ -24,6 +24,7 @@ body {
   font-size: var(--fontSize-1);
   color: var(--color-text);
   height: 100%;
+  background-color: var(--color-white);
 }
 
 footer {
