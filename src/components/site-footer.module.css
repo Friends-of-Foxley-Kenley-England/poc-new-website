@@ -1,4 +1,4 @@
-site-footer {
+.site-footer {
     background-color: var(--color-heading);
     font-size: var(--fontSize-0);
     padding: var(--spacing-2) var(--spacing-2);
