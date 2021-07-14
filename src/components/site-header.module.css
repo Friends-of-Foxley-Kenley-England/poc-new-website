@@ -1,65 +1,95 @@
-.navigation-bar {
-    overflow: hidden;
-    background-color: var(--color-dark-green);
+/* https://code-boxx.com/simple-responsive-pure-css-hamburger-menu/ */
+
+.hamnav {
+    width: 100%;
+    background: var(--color-dark-green);
+    position: sticky;
+    top: 0;
 }
   
-.navigation-bar a {
-    float: left;
-    display: block;
-    color: var(--color-nav-link);
-    text-align: center;
-    padding: 10px 12px;
-    text-decoration: none;
-    font-size: 17px;
-}
-
-.navigation-bar a:hover {
-    background-color: #ddd;
-    color: black;
-}
-
-.navigation-bar a.active {
-    background-color: #04AA6D;
+.hamitems { display: flex; }
+.hamitems a {
+    flex-grow: 1;
+    flex-basis: 0;
+    padding: 10px;
     color: white;
+    text-decoration: none;
+    text-align: center;
 }
+.hamitems a:hover { background: #401408; }
+  
+  /* (C) HIDE HAMBURGER */
+.hamnav label, #hamburger { display: none; }
 
-.navigation-bar .hamburger-menu {
-    display: none;
-}
-
-@media screen and (max-width: 600px) {
-    .navigation-bar a:not(:first-child) {display: none;}
-    .navigation-bar a.hamburger-menu {
-        float: right;
-        display: block;
+.hamnav input[type="checkbox"] { display: none; }
+  
+  /* [ON SMALL SCREENS] */
+@media screen and (max-width: 768px){
+    /* (A) BREAK INTO VERTICAL MENU */
+    .hamitems a {
+      box-sizing: border-box;
+      display: block;
+      width: 100%;
+      border-top: 1px solid #333;
     }
-}
-
-@media screen and (min-width: 400px) {
-    .navigation-bar {position: relative;}
-    .navigation-bar .hamburger-menu {
-        position: absolute;
-        right: 0;
-        top: 0;
+  
+    /* (B) SHOW HAMBURGER ICON */
+    .hamnav label {
+      display: inline-block;
+      color: white;
+      background: #a02620;
+      font-style: normal;
+      font-size: 1.2em;
+      padding: 10px;
     }
-    .navigation-bar a {
-        float: none;
-        display: block;
-        text-align: left;
+  
+    /* (C) TOGGLE SHOW/HIDE MENU */
+    .hamitems { display: none; }
+    .hamnav input:checked ~ .hamitems { display: block; }
+}
+  
+  /* [DOES NOT MATTER] */
+html, body {
+    padding: 0;
+    margin: 0;
+    font-family: arial, sans-serif;
+}
+  
+
+  /* [ON SMALL SCREENS] */
+@media screen and (max-width: 768px){
+    /* (A) BREAK INTO VERTICAL MENU */
+    .hamitems a {
+      box-sizing: border-box;
+      display: block;
+      width: 100%;
+      border-top: 1px solid #333;
     }
-}
+/* (B) SHOW HAMBURGER ICON */
+    .hamnav label { 
+      display: inline-block; 
+      color: white;
+      background: var(--color-darker-green);;
+      font-style: normal;
+      font-size: 1.2em;
+      padding: 10px;
+    }
+  
+    /* (C) TOGGLE SHOW/HIDE MENU */
+    .hamitems { display: none; }
+    .hamnav input:checked ~ .hamitems { display: block; }
+  }
 
 
 
-/*
-WIP:
 
 
-.hamburger-menu {
-    width: 100%; 
-     height: 100%;
-     max-height: var(--spacing-2); 
-}
 
-svg.banner { width: 100%; height: auto; }
-*/
+
+
+
+
+
+
+
+

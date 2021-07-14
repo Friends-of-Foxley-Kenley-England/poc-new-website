@@ -5,28 +5,23 @@ import * as style from "./site-header.module.css"
 import HamburgerMenu from '../../static/hamburger-menu.inline.svg'
 
 const SiteHeader = ({ siteTitle, menuLinks }) => (
-  <header className={style.navHeader}>
-    <div className={style.navigationBar}>
-      {/* <h1 style={{ margin: 0, flex: 1 }}>
-          <Link
-            to="/"
-            style={{
-              color: "white",
-              textDecoration: "none",
-            }}
-          >
-            {siteTitle}
-          </Link>
-        </h1> */}
-      <nav>
+  <header >
+
+    <nav id="hamnav" className={style.hamnav}>
+
+      <label for="hamburger">&#9776;</label>
+      <input type="checkbox" id="hamburger" />
+      
+
+      <div id="hamitems" className={style.hamitems}>
         {menuLinks.map(link => (
           <Link to={link.link}>
             {link.name}
           </Link>
         ))}
-        <a className={style.hamburgerMenu}><HamburgerMenu /></a>
-      </nav>
-    </div>
+      </div>
+    </nav>
+
   </header>
 )
 
