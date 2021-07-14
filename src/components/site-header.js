@@ -1,9 +1,9 @@
 import React from "react"
 import { Link } from "gatsby"
 import PropTypes from "prop-types"
-import * as style from "./header.module.css"
+import * as style from "./site-header.module.css"
 
-const Header = ({ siteTitle, menuLinks }) => (
+const SiteHeader = ({ siteTitle, menuLinks }) => (
   <header className={style.navHeader}>
     <div>
       <div className={style.navigationBar}>
@@ -36,12 +36,12 @@ const Header = ({ siteTitle, menuLinks }) => (
   </header>
 )
 
-Header.propTypes = {
+SiteHeader.propTypes = {
   siteTitle: PropTypes.string,
 }
 
-Header.defaultProps = {
+SiteHeader.defaultProps = {
   siteTitle: ``,
 }
 
-export default Header;
+export default SiteHeader;
