@@ -8,7 +8,7 @@
     display: block;
     color: var(--color-nav-link);
     text-align: center;
-    padding: 14px 16px;
+    padding: 10px 12px;
     text-decoration: none;
     font-size: 17px;
 }
@@ -31,11 +31,11 @@
     .navigation-bar a:not(:first-child) {display: none;}
     .navigation-bar a.hamburger-menu {
         float: right;
-        display:inline;
+        display: block;
     }
 }
 
-@media screen and (min-width: 500px) {
+@media screen and (min-width: 400px) {
     .navigation-bar {position: relative;}
     .navigation-bar .hamburger-menu {
         position: absolute;
