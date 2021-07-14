@@ -2,7 +2,6 @@ import React from "react"
 import { Link } from "gatsby"
 import PropTypes from "prop-types"
 import * as style from "./site-header.module.css"
-import HamburgerMenu from '../../static/hamburger-menu.inline.svg'
 
 const SiteHeader = ({ siteTitle, menuLinks }) => (
   <header >
@@ -10,8 +9,7 @@ const SiteHeader = ({ siteTitle, menuLinks }) => (
     <nav id="hamnav" className={style.hamnav}>
 
       <label for="hamburger">&#9776;</label>
-      <input type="checkbox" id="hamburger" />
-      
+      <input type="checkbox" id="hamburger" />   
 
       <div id="hamitems" className={style.hamitems}>
         {menuLinks.map(link => (
