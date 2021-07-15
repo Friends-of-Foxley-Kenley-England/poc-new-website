@@ -60,6 +60,7 @@
   --color-heading: var(--color-dark-green);
   --color-main-heading: var(--color-darker-green);
   --color-accent: #d1dce5;
+  --color-nav-accent: #333;
   --color-nav-link: white;
   --color-white: rgb(241, 240, 240);
 }
