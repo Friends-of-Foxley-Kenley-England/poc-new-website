@@ -22,6 +22,10 @@ module.exports = {
       {
          name:'Work Days',
          link:'/work-days'
+      },
+      {
+         name:'Contact',
+         link:'/contact'
       }
     ]
   },
