@@ -6,12 +6,12 @@ import * as style from "./site-header.module.css"
 const SiteHeader = ({ siteTitle, menuLinks }) => (
   <header >
 
-    <nav id="hamnav" className={style.hamnav}>
+    <nav id="navbar" className={style.navigationBar}>
 
       <label for="hamburger">&#9776;</label>
       <input type="checkbox" id="hamburger" />   
 
-      <div id="hamitems" className={style.hamitems}>
+      <div id="navlinks" className={style.navigationLinks}>
         {menuLinks.map(link => (
           <Link to={link.link}>
             {link.name}
