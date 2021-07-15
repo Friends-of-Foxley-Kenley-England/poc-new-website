@@ -53,7 +53,7 @@
       color: var(--color-white);
       background: var(--color-dark-green);
       font-style: normal;
-      font-size: 1.2em;
+      font-size: var(--fontSize-2);
       padding: var(--spacing-2);
     }
   
@@ -70,10 +70,10 @@
 
     .title {
         color: var(--color-white);
-        margin-top: 0%;
-        margin-bottom: 0%;
+        margin-top: var(--spacing-0);
+        margin-bottom: var(--spacing-0);
         display: inline;
-        padding-left: 2rem;
-        font-size: 1.2em;
+        padding-left: var(--spacing-8);
+        font-size: var(--fontSize-2);
     }
 }
