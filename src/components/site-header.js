@@ -9,7 +9,7 @@ const SiteHeader = ({ siteTitle, menuLinks }) => (
     <nav id="navbar" className={style.navigationBar}>
 
       <label for="hamburger">&#9776;</label>
-      <input type="checkbox" id="hamburger" />   
+      <input type="checkbox" id="hamburger" />
 
       <div id="navlinks" className={style.navigationLinks}>
         {menuLinks.map(link => (
@@ -18,6 +18,8 @@ const SiteHeader = ({ siteTitle, menuLinks }) => (
           </Link>
         ))}
       </div>
+
+      <h3 className={style.title}>{siteTitle}</h3>
     </nav>
 
   </header>
