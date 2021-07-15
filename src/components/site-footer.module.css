@@ -1,11 +1,11 @@
 .site-footer {
     background-color: var(--color-heading);
-    font-size: var(--fontSize-0);
+    font-size: 0.75rem;
     padding: var(--spacing-2) var(--spacing-2);
     color: white;
     bottom: auto;
 }
 
 .gatsby-link {
-    color: var(--color-nav-link)
+    color: var(--color-white)
 }
