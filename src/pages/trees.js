@@ -18,9 +18,9 @@ const TreesIndex = ({ data, location }) => {
 
       <ul>
           <li><Link to="/trees/english-oak">English Oak</Link></li>
-          <li>Beech</li>
+          <li><a href="https://en.wikipedia.org/wiki/Beech">Beech</a></li>
           <li>Ash</li>
-          <li>Sycamore</li>
+          <li><a href="https://en.wikipedia.org/wiki/Sycamore">Sycamore</a></li>
           <li>Juniper</li>
           <li>Hazel</li>
           <li>Wych Elm</li>
