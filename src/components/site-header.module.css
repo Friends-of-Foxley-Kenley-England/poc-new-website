@@ -14,12 +14,14 @@
 .navigation-links a {
     flex-grow: 1;
     flex-basis: 0;
-    padding: 10px;
-    color: white;
+    padding: var(--spacing-2);
+    color: var(--color-white);
     text-decoration: none;
     text-align: center;
 }
-.navigation-links a:hover { background: #401408; }
+.navigation-links a:hover { 
+    background: var(--color-nav-accent); 
+}
   
 /* Hide hamburger by default*/
 .navigation-bar label, #hamburger { 
@@ -38,17 +40,17 @@
       box-sizing: border-box;
       display: block;
       width: 100%;
-      border-top: 1px solid #333;
+      border-top: 1px solid var(--color-nav-accent);
     }
   
     /* Show hamburger icon */
     .navigation-bar label {
       display: inline-block;
-      color: white;
-      background: var(--color-darker-green);
+      color: var(--color-white);
+      background: var(--color-dark-green);
       font-style: normal;
       font-size: 1.2em;
-      padding: 10px;
+      padding: var(--spacing-2);
     }
   
     /* Toggle show/hide of menu */
