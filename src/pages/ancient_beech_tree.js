@@ -3,7 +3,7 @@ import { graphql } from "gatsby"
 import Layout from "../components/layout"
 import Seo from "../components/seo"
 
-const ContactIndex = ({ data, location }) => {
+const AncientBeechTreeIndex = ({ data, location }) => {
   const siteTitle = data.site.siteMetadata?.title || `Title`
 
   return (
@@ -83,7 +83,7 @@ const ContactIndex = ({ data, location }) => {
   )
 }
 
-export default ContactIndex
+export default AncientBeechTreeIndex
 
 
 export const pageQuery = graphql`
