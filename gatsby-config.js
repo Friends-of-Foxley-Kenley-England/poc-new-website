@@ -28,6 +28,10 @@ module.exports = {
          link:'/history'
       },
       {
+        name:'Trees',
+        link:'/trees'
+     },
+      {
          name:'Contact',
          link:'/contact'
       }
