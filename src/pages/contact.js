@@ -8,7 +8,7 @@ const ContactIndex = ({ data, location }) => {
   const siteTitle = data.site.siteMetadata?.title || `Title`
 
   return (
-    <Layout location={location} title={"Contact " + siteTitle}>
+    <Layout location={location} title={siteTitle}>
       <Seo title="contact" />
       <h1>Contact us</h1>
       <p>
