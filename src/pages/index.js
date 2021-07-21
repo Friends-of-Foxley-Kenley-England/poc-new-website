@@ -39,8 +39,8 @@ const HomeIndex = ({ data, location }) => {
           please download our membership form.
         </p>
         <p>
-          FIREWOOD:  For excellent value firewood look 
-          <a href="http://www.friendsoffoxley.co.uk/pages/firewood.html" target="_blank" rel="noopener noreferrer">here</a>
+          <a href="http://www.friendsoffoxley.co.uk/pages/firewood.html" target="_blank" rel="noopener noreferrer">Firewood</a>: 
+          excellent value firewood 
         </p>
       </Layout>
   )
