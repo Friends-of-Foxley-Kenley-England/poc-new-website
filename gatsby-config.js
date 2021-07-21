@@ -1,6 +1,6 @@
 module.exports = {
   siteMetadata: {
-    title: `POC For Friends Of Foxley Website`,
+    title: `Friends Of Foxley`,
     author: {
       name: `Friend`,
       summary: `Friends of Foxley are a group of volunteers who manage Foxley Wood in Kenley, Surrey. `,
@@ -10,6 +10,32 @@ module.exports = {
     social: {
       twitter: `....`,
     },
+    menuLinks:[
+      {
+         name:'Home',
+         link:'/'
+      },
+      {
+         name:'Latest News',
+         link:'/news'
+      },
+      {
+         name:'Work Days',
+         link:'/work-days'
+      },
+      {
+         name:'History',
+         link:'/history'
+      },
+      {
+        name:'Trees',
+        link:'/trees'
+     },
+      {
+         name:'Contact',
+         link:'/contact'
+      }
+    ]
   },
   plugins: [
     `gatsby-plugin-image`,

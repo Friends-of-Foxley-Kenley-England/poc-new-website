@@ -4,6 +4,7 @@ import { Link, graphql } from "gatsby"
 import Bio from "../components/bio"
 import Layout from "../components/layout"
 import Seo from "../components/seo"
+import * as style from "./blog-post.module.css"
 
 const BlogPostTemplate = ({ data, location }) => {
   const post = data.markdownRemark
@@ -23,8 +24,8 @@ const BlogPostTemplate = ({ data, location }) => {
         itemType="http://schema.org/Article"
       >
         <header>
-          <h1 itemProp="headline">{post.frontmatter.title}</h1>
-          <p>{post.frontmatter.date}</p>
+          <h1 className={style.blogPostHeader} itemProp="headline">{post.frontmatter.title}</h1>
+          <p className={style.blogPostPostedDate}>{post.frontmatter.date}</p>
         </header>
         <section
           dangerouslySetInnerHTML={{ __html: post.html }}
@@ -35,16 +36,8 @@ const BlogPostTemplate = ({ data, location }) => {
           <Bio />
         </footer>
       </article>
-      <nav className="blog-post-nav">
-        <ul
-          style={{
-            display: `flex`,
-            flexWrap: `wrap`,
-            justifyContent: `space-between`,
-            listStyle: `none`,
-            padding: 0,
-          }}
-        >
+      <nav className={style.blogPostNav}>
+        <ul className={style.blogPostNavLinks}>
           <li>
             {previous && (
               <Link to={previous.fields.slug} rel="prev">

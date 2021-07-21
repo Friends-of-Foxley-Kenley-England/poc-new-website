@@ -4,6 +4,7 @@ import { Link, graphql } from "gatsby"
 import Bio from "../components/bio"
 import Layout from "../components/layout"
 import Seo from "../components/seo"
+import * as style from "./posts.module.css"
 
 const NewsIndex = ({ data, location }) => {
   const siteTitle = data.site.siteMetadata?.title || `Title`
@@ -12,7 +13,7 @@ const NewsIndex = ({ data, location }) => {
   if (posts.length === 0) {
     return (
       <Layout location={location} title={siteTitle}>
-        <Seo title="All posts" />
+        <Seo title="News" />
         <Bio />
         <p>
           No blog posts found. Add markdown posts to "content/blog" (or the
@@ -25,7 +26,7 @@ const NewsIndex = ({ data, location }) => {
 
   return (
     <Layout location={location} title={siteTitle}>
-      <Seo title="Latest News" />
+      <Seo title="News" />
       <h1>Latest news</h1>
       <ol style={{ listStyle: `none` }}>
         {posts.map(post => {
@@ -34,7 +35,7 @@ const NewsIndex = ({ data, location }) => {
           return (
             <li key={post.fields.slug}>
               <article
-                className="post-list-item"
+                className={style.postListItem}
                 itemScope
                 itemType="http://schema.org/Article"
               >

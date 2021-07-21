@@ -1,35 +1,54 @@
 import * as React from "react"
-import { Link } from "gatsby"
+import { useStaticQuery, graphql } from "gatsby"
+import * as style from "./layout.module.css"
+import SiteHeader from "./site-header"
+import SiteFooter from "./site-footer"
 
 const Layout = ({ location, title, children }) => {
+
+  const data = useStaticQuery(graphql`
+          query SiteTitleQuery {
+            site {
+              siteMetadata {
+                title
+                    menuLinks {
+                      name
+                      link
+                    }
+              }
+            }
+          }
+        `)
+
   const rootPath = `${__PATH_PREFIX__}/`
   const isRootPath = location.pathname === rootPath
-  let header
+  let siteHeader
 
   if (isRootPath) {
-    header = (
-      <h1 className="main-heading">
-        <Link to="/">{title}</Link>
-      </h1>
+    siteHeader = (
+      <SiteHeader 
+          className={style.headerLinkHome} 
+          menuLinks={data.site.siteMetadata.menuLinks} 
+          siteTitle={title} />
     )
   } else {
-    header = (
-      <Link className="header-link-home" to="/">
-        {title}
-      </Link>
+    siteHeader = (
+      <SiteHeader 
+          className={style.headerLinkHome} 
+          menuLinks={data.site.siteMetadata.menuLinks} 
+          siteTitle={title} />
     )
   }
 
   return (
-    <div className="global-wrapper" data-is-root-path={isRootPath}>
-      <header className="global-header">{header}</header>
-      <main>{children}</main>
-      <footer>
-        © {new Date().getFullYear()}, Built with
-        {` `}
-        <a href="https://www.gatsbyjs.com">Gatsby</a>
-      </footer>
+    <div className={style.layout}>
+      <header className={style.globalHeader}>{siteHeader}</header>
+      <div className={style.globalWrapper} data-is-root-path={isRootPath}>
+        <main>{children}</main>
+      </div>
+      <SiteFooter/>
     </div>
+
   )
 }
 

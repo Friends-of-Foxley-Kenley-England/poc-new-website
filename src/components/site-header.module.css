@@ -1,0 +1,79 @@
+/*
+    Styling from: 
+    https://code-boxx.com/simple-responsive-pure-css-hamburger-menu/ 
+*/
+
+.navigation-bar {
+    width: 100%;
+    background: var(--color-dark-green);
+    position: sticky;
+    top: 0;
+}
+  
+.navigation-links { display: flex; }
+.navigation-links a {
+    flex-grow: 1;
+    flex-basis: 0;
+    padding: var(--spacing-2);
+    color: var(--color-white);
+    text-decoration: none;
+    text-align: center;
+}
+.navigation-links a:hover { 
+    background: var(--color-nav-accent); 
+}
+  
+/* Hide hamburger by default*/
+.navigation-bar label, #hamburger { 
+    display: none; 
+}
+
+/* Hide checkbox - never want to the the checkbox! */
+.navigation-bar input[type="checkbox"] { 
+    display: none; 
+}
+
+.title {
+    display: none;
+}
+  
+  /* [ON SMALL SCREENS] */
+@media screen and (max-width: 768px){
+    /* Show menu vertically */
+    .navigation-links a {
+      box-sizing: border-box;
+      display: block;
+      width: 100%;
+      border-top: 1px solid var(--color-nav-accent);
+    }
+  
+    /* Show hamburger icon */
+    .navigation-bar label {
+      display: inline-block;
+      color: var(--color-white);
+      background: var(--color-dark-green);
+      font-style: normal;
+      font-size: var(--fontSize-2);
+      padding: var(--spacing-2);
+    }
+  
+    /* Toggle show/hide of menu */
+    .navigation-links { display: none; }
+    .navigation-bar input:checked ~ .navigation-links { 
+        display: block; 
+    }
+    
+    /* Hiding title when hamburger menu expanded */
+    .navigation-bar input:checked ~ .title { 
+        display: none; 
+    }
+
+    .title {
+        color: var(--color-white);
+        margin-top: var(--spacing-0);
+        margin-bottom: var(--spacing-0);
+        display: inline;
+        padding-left: var(--spacing-8);
+        font-size: var(--fontSize-2);
+    }
+}

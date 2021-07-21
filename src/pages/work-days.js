@@ -3,6 +3,7 @@ import { Link, graphql } from "gatsby"
 
 import Layout from "../components/layout"
 import Seo from "../components/seo"
+import * as style from "./posts.module.css"
 
 const WorkDaysIndex = ({ data, location }) => {
   const siteTitle = data.site.siteMetadata?.title || `Title`
@@ -11,7 +12,7 @@ const WorkDaysIndex = ({ data, location }) => {
   if (posts.length === 0) {
     return (
       <Layout location={location} title={siteTitle}>
-        <Seo title="All workdays" />
+        <Seo title="Volunteer workdays" />
         <p>
           No workdays found. Add markdown posts to "content/work-days" (or the
           directory you specified for the "gatsby-source-filesystem" plugin in
@@ -23,14 +24,13 @@ const WorkDaysIndex = ({ data, location }) => {
 
   return (
     <Layout location={location} title={siteTitle}>
-      <Seo title="Upcoming workdays" />
+      <Seo title="Volunteer workdays" />
 
       <h1>Volunteer days</h1>
 
       <p>All are welcome and any time you can give on the day will be most appreciated.</p>
       <p>Tools and equipment are provided, but please wear appropriate clothes and footwear and bring your own refreshments.</p>
-      <p>We usually meet at 10am on the last Wednesday and 11am on the second Sunday of the month.</p>
-      <p>Work Day notices are posted at all the main entrances to the wood and the recreation ground.</p>
+      <p>We usually meet at 11am on the <strong>second Sunday of the month</strong> and 10am on the <strong>last Wednesday of the month</strong>.</p>
 
       <h2>Dates:</h2>
       <ol style={{ listStyle: `none` }}>
@@ -45,7 +45,7 @@ const WorkDaysIndex = ({ data, location }) => {
           return (
             <li key={post.fields.slug}>
               <article
-                className="post-list-item"
+                className={style.postListItem}
                 itemScope
                 itemType="http://schema.org/Article"
               >

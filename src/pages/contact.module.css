@@ -1,0 +1,12 @@
+.contact {
+    margin-bottom: var(--spacing-6);
+}
+
+.contact h2 {
+    margin-bottom: var(--spacing-2);
+    font-size: var(--font-size-4);
+}
+
+.contact p {
+    margin-bottom: var(--spacing-0);
+}
