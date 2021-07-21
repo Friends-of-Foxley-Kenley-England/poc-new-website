@@ -121,6 +121,8 @@ exports.createSchemaCustomization = ({ actions }) => {
       title: String
       description: String
       date: Date @dateformat
+      meeting_time: String
+      type: String
     }
 
     type Fields {
@@ -128,6 +130,7 @@ exports.createSchemaCustomization = ({ actions }) => {
     }
   `)
 }
+
 
 
 /* 
@@ -173,3 +176,21 @@ Can access data:
 
 
 */
+
+
+/*
+
+{
+  markdownRemark(id: {}, frontmatter: {type: {eq: "work-day"}}) {
+    id
+    frontmatter {
+      meeting_point_description
+      meeting_point_what3words
+      meeting_time
+      title
+      type
+      date
+      description
+    }
+  }
+}*/
