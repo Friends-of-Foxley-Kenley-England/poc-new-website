@@ -20,27 +20,27 @@ const ContactIndex = ({ data, location }) => {
       <section className={style.contact}>
         <h2> Chairman</h2>
         <p>Andrew Wood</p>
-        <a href="mailto:fofchair@gmail.com">fofchair@gmail.com</a>
+        <a href="mailto:fofchair@gmail.com" rel="noopener noreferrer">fofchair@gmail.com</a>
       </section>
 
       <section className={style.contact}>
         <h2>Secretary and Membership</h2>
         <p>Chris Parker</p>
-        <a href="mailto:chrispm_parker@hotmail.co.uk">chrispm_parker@hotmail.co.uk</a>
+        <a href="mailto:chrispm_parker@hotmail.co.uk" rel="noopener noreferrer">chrispm_parker@hotmail.co.uk</a>
         <p>020 8668 3302</p>
       </section>
 
       <section className={style.contact}>
         <h2>Treasurer</h2>
         <p>Carl Roche</p>
-        <a href="mailto:carlroche@freeukisp.co.uk">carlroche@freeukisp.co.uk</a>
+        <a href="mailto:carlroche@freeukisp.co.uk" rel="noopener noreferrer">carlroche@freeukisp.co.uk</a>
         <p>020 8660 7790</p>
       </section>
 
       <section className={style.contact}>
         <h2>Wood Products</h2>
         <p>Alison Falkner</p>
-        <a href="mailto:alison.falkner@btinternet.com">alison.falkner@btinternet.com</a>
+        <a href="mailto:alison.falkner@btinternet.com" rel="noopener noreferrer">alison.falkner@btinternet.com</a>
         <p>020 8668 8979</p>
       </section>
 

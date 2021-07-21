@@ -1,6 +1,6 @@
 <!-- AUTO-GENERATED-CONTENT:START (STARTER) -->
 <p align="center">
-  <a href="https://www.gatsbyjs.com">
+  <a href="https://www.gatsbyjs.com" target="_blank" rel="noopener noreferrer">
     <img alt="Gatsby" src="src\images\logo.png" width="60" />
   </a>
 </p>

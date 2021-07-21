@@ -38,7 +38,10 @@ const HomeIndex = ({ data, location }) => {
           If you would like to become a member of the Friends of Foxley without any obligation 
           please download our membership form.
         </p>
-        <p>FIREWOOD:  For excellent value firewood look <a href="http://www.friendsoffoxley.co.uk/pages/firewood.html">here</a></p>
+        <p>
+          FIREWOOD:  For excellent value firewood look 
+          <a href="http://www.friendsoffoxley.co.uk/pages/firewood.html" target="_blank" rel="noopener noreferrer">here</a>
+        </p>
       </Layout>
   )
 }

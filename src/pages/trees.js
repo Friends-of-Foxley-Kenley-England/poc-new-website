@@ -18,16 +18,16 @@ const TreesIndex = ({ data, location }) => {
 
       <ul>
           <li><Link to="/trees/english-oak">English Oak</Link></li>
-          <li><a href="https://en.wikipedia.org/wiki/Beech">Beech</a></li>
-          <li><a href="https://en.wikipedia.org/wiki/Fraxinus">Ash</a></li>
-          <li><a href="https://en.wikipedia.org/wiki/Sycamore">Sycamore</a></li>
-          <li><a href="https://en.wikipedia.org/wiki/Juniper">Juniper</a></li>
-          <li><a href="https://en.wikipedia.org/wiki/Hazel">Hazel</a></li>
-          <li><a href="https://en.wikipedia.org/wiki/Ulmus_glabra">Wych Elm</a></li>
-          <li><a href="https://en.wikipedia.org/wiki/Yew">Yew</a></li>
-          <li><a href="https://en.wikipedia.org/wiki/Hornbeam">Hornbeam</a></li>
-          <li><a href="https://en.wikipedia.org/wiki/Whitebeam">Whitebeam</a></li>
-          <li><a href="https://en.wikipedia.org/wiki/Holly">Holly</a></li>
+          <li><a href="https://en.wikipedia.org/wiki/Beech" target="_blank" rel="noopener noreferrer">Beech</a></li>
+          <li><a href="https://en.wikipedia.org/wiki/Fraxinus" target="_blank" rel="noopener noreferrer">Ash</a></li>
+          <li><a href="https://en.wikipedia.org/wiki/Sycamore" target="_blank" rel="noopener noreferrer">Sycamore</a></li>
+          <li><a href="https://en.wikipedia.org/wiki/Juniper" target="_blank" rel="noopener noreferrer">Juniper</a></li>
+          <li><a href="https://en.wikipedia.org/wiki/Hazel" target="_blank" rel="noopener noreferrer">Hazel</a></li>
+          <li><a href="https://en.wikipedia.org/wiki/Ulmus_glabra" target="_blank" rel="noopener noreferrer">Wych Elm</a></li>
+          <li><a href="https://en.wikipedia.org/wiki/Yew" target="_blank" rel="noopener noreferrer">Yew</a></li>
+          <li><a href="https://en.wikipedia.org/wiki/Hornbeam" target="_blank" rel="noopener noreferrer">Hornbeam</a></li>
+          <li><a href="https://en.wikipedia.org/wiki/Whitebeam" target="_blank" rel="noopener noreferrer">Whitebeam</a></li>
+          <li><a href="https://en.wikipedia.org/wiki/Holly" target="_blank" rel="noopener noreferrer">Holly</a></li>
       </ul>
     </Layout>
   )
