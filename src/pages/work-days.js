@@ -37,9 +37,11 @@ const WorkDaysIndex = ({ data, location }) => {
         {posts.map(post => {
           const title = post.frontmatter.title || post.fields.slug
 
-          console.log({
+          console.log('work day template',{
             slug: post.fields.slug,
-            title: post.frontmatter.title
+            title: post.frontmatter.title,
+            meeting_time: post.frontmatter.meeting_time,
+            type: post.frontmatter.type
           })
 
           return (
