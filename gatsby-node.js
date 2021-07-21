@@ -36,12 +36,13 @@ exports.createPages = async ({ graphql, actions, reporter }) => {
     return
   }
 
-  console.log(result.data)
-  console.log(result)
+  console.log('result.data', result.data)
+  console.log('result', result)
   const posts = result.data.allMarkdownRemark.nodes.filter(x => x.type === `news`)
   const workdayPosts = result.data.allMarkdownRemark.nodes.filter(x => x.type === `work-days`)
 
-  console.log(posts)
+  console.log('news',posts)
+  console.log('workdayPosts',workdayPosts)
 
   // Create blog posts pages
   // But only if there's at least one markdown file found at "content/blog" (defined in gatsby-config.js)
