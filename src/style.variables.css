@@ -25,7 +25,7 @@
   --spacing-20: 5rem;
   --spacing-24: 6rem;
   --spacing-32: 8rem;
-  --fontFamily-sans: system-ui, -apple-system, BlinkMacSystemFont,
+  --fontFamily-sans: "Segoe UI",system-ui, -apple-system, BlinkMacSystemFont,
     Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif,
     "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
   --fontFamily-serif: "Georgia", Cambria, "Times New Roman",
