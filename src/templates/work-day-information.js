@@ -13,7 +13,6 @@ const WorkDayTemplate = ({ data, location }) => {
   const { previous, next } = data
 
   return (
-    // <script src="https://assets.what3words.com/sdk/v3/what3words.js"></script>
     <Layout location={location} title={siteTitle}>
       <Seo
         title={post.frontmatter.title}
