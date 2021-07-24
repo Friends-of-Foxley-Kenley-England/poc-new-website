@@ -37,7 +37,7 @@ const WorkDayTemplate = ({ data, location }) => {
 
           <h2 itemProp="headline">Location</h2>
           <p className={style.location}>{post.frontmatter.meeting_point_description}</p>
-          <What3wordsAddress words={post.frontmatter.meeting_point_what3words} icon-color="#0e4630" text-color="#0e4630" tooltip-location={post.frontmatter.meeting_point_what3words}/>
+          <What3wordsAddress words={post.frontmatter.meeting_point_what3words} icon-color="#0e4630" text-color="#0e4630" tooltip-location={post.frontmatter.meeting_point_what3words} rel="noopener noreferrer"/>
           
         </section>
 
