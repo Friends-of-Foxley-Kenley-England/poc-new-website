@@ -1,7 +1,7 @@
-meetingInfo, h2 {
+meetingInfo h2 {
     margin-bottom: var(--spacing-4);
 }
 
-location, p {
+location p {
     margin-bottom: 0%;
 }
