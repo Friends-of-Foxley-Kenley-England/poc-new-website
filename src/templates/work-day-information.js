@@ -4,15 +4,15 @@ import { Link, graphql } from "gatsby"
 import Bio from "../components/bio"
 import Layout from "../components/layout"
 import Seo from "../components/seo"
-import * as style from "./blog-post.module.css"
+import {What3wordsAddress} from "@what3words/react-components"
+import * as style from "./work-day-information.module.css"
 
-const BlogPostTemplate = ({ data, location }) => {
+const WorkDayTemplate = ({ data, location }) => {
   const post = data.markdownRemark
   const siteTitle = data.site.siteMetadata?.title || `Title`
   const { previous, next } = data
 
   return (
-    // <script src="https://assets.what3words.com/sdk/v3/what3words.js"></script>
     <Layout location={location} title={siteTitle}>
       <Seo
         title={post.frontmatter.title}
@@ -24,30 +24,48 @@ const BlogPostTemplate = ({ data, location }) => {
         itemType="http://schema.org/Article"
       >
         <header>
-          <h1 className={style.blogPostHeader} itemProp="headline">{post.frontmatter.title}</h1>
-          <p className={style.blogPostPostedDate}>{post.frontmatter.date}</p>
+          <h1 itemProp="headline">{"Work day: " + post.frontmatter.title}</h1>
+          <p>{post.frontmatter.date}</p>
         </header>
         <section
           dangerouslySetInnerHTML={{ __html: post.html }}
           itemProp="articleBody"
         />
+        <section className={style.meetingInfo}>
+          <h2 itemProp="headline">Time</h2>
+          <p>{post.frontmatter.meeting_time}</p>
+
+          <h2 itemProp="headline">Location</h2>
+          <p className={style.location}>{post.frontmatter.meeting_point_description}</p>
+          <What3wordsAddress words={post.frontmatter.meeting_point_what3words} icon-color="#0e4630" text-color="#0e4630" tooltip-location={post.frontmatter.meeting_point_what3words} rel="noopener noreferrer"/>
+          
+        </section>
+
         <hr />
         <footer>
           <Bio />
         </footer>
       </article>
-      <nav className={style.blogPostNav}>
-        <ul className={style.blogPostNavLinks}>
+      <nav className="blog-post-nav">
+        <ul
+          style={{
+            display: `flex`,
+            flexWrap: `wrap`,
+            justifyContent: `space-between`,
+            listStyle: `none`,
+            padding: 0,
+          }}
+        >
           <li>
             {previous && (
-              <Link to={'/news' + previous.fields.slug} rel="prev">
+              <Link to={'/work-days' + previous.fields.slug} rel="prev">
                 ← {previous.frontmatter.title}
               </Link>
             )}
           </li>
           <li>
             {next && (
-              <Link to={'/news' + next.fields.slug} rel="next">
+              <Link to={'/work-days' + next.fields.slug} rel="next">
                 {next.frontmatter.title} →
               </Link>
             )}
@@ -58,10 +76,10 @@ const BlogPostTemplate = ({ data, location }) => {
   )
 }
 
-export default BlogPostTemplate
+export default WorkDayTemplate
 
 export const pageQuery = graphql`
-  query BlogPostBySlug(
+  query WorkDayBySlug(
     $id: String!
     $previousPostId: String
     $nextPostId: String
@@ -79,6 +97,9 @@ export const pageQuery = graphql`
         title
         date(formatString: "MMMM DD, YYYY")
         description
+        meeting_time
+        meeting_point_description
+        meeting_point_what3words
       }
     }
     previous: markdownRemark(id: { eq: $previousPostId }) {

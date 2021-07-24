@@ -14,7 +14,6 @@ const HomeIndex = ({ data, location }) => {
           Volunteer group helping to manage the Foxley woods in Kenley, Surrey. 
         </p>
 
-
         <h2> How can I help?</h2>
         <p>
           If you enjoy fresh air and light exercise come and help us look after the Foxley 
