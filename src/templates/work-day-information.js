@@ -5,6 +5,7 @@ import Bio from "../components/bio"
 import Layout from "../components/layout"
 import Seo from "../components/seo"
 import {What3wordsAddress} from "@what3words/react-components"
+import * as style from "./work-day-information.module.css"
 
 const WorkDayTemplate = ({ data, location }) => {
   const post = data.markdownRemark
@@ -31,9 +32,12 @@ const WorkDayTemplate = ({ data, location }) => {
           dangerouslySetInnerHTML={{ __html: post.html }}
           itemProp="articleBody"
         />
-        <section>
-          <h1 itemProp="headline">Meeting time</h1>
+        <section className={style.meetingInfo}>
+          <h2 itemProp="headline">Time</h2>
           <p>{post.frontmatter.meeting_time}</p>
+
+          <h2 itemProp="headline">Location</h2>
+          <p className={style.location}>{post.frontmatter.meeting_point_description}</p>
           <What3wordsAddress words={post.frontmatter.meeting_point_what3words} icon-color="#0e4630" text-color="#0e4630" tooltip-location={post.frontmatter.meeting_point_what3words}/>
           
         </section>
