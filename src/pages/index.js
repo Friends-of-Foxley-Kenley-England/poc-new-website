@@ -2,7 +2,6 @@ import * as React from "react"
 import { graphql, Link } from "gatsby"
 import Layout from "../components/layout"
 import Seo from "../components/seo"
-import {What3wordsAddress} from "@what3words/react-components"
 
 const HomeIndex = ({ data, location }) => {
   const siteTitle = data.site.siteMetadata?.title || `Title`
@@ -14,8 +13,6 @@ const HomeIndex = ({ data, location }) => {
         <p>
           Volunteer group helping to manage the Foxley woods in Kenley, Surrey. 
         </p>
-        <What3wordsAddress words="tune.then.global" icon-color="#0e4630" text-color="#0e4630" tooltip-location="entrance at Burwood Avenue"/>
-
 
         <h2> How can I help?</h2>
         <p>
