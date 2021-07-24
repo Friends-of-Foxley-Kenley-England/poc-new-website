@@ -53,7 +53,7 @@ const WorkDaysIndex = ({ data, location }) => {
               >
                 <header>
                   <h3>
-                    <Link to={post.fields.slug} itemProp="url">
+                    <Link to={'/work-days' + post.fields.slug} itemProp="url">
                       <span itemProp="headline">{title}</span>
                     </Link>
                   </h3>
