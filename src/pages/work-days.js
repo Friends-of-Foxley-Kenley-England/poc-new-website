@@ -57,7 +57,6 @@ const WorkDaysIndex = ({ data, location }) => {
                       <span itemProp="headline">{title}</span>
                     </Link>
                   </h3>
-                  <small>{post.frontmatter.date}</small>
                 </header>
                 <section>
                   <p
