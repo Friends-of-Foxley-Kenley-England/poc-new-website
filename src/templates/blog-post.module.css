@@ -19,3 +19,11 @@
     list-style: none;
     padding: 0;
 }
+
+.articleBody{
+    margin-bottom: var(--spacing-10);
+}
+
+.spacer {
+    margin-top: var(--spacing-10);
+}
