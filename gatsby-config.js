@@ -9,6 +9,7 @@ module.exports = {
     siteUrl: `https://gatsbystarterblogsource.gatsbyjs.io/`,
     social: {
       twitter: `....`,
+      facebook: `https://www.facebook.com/pages/Friends-of-Foxley-Wood/151238351586387`
     },
     menuLinks:[
       {
