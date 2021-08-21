@@ -16,7 +16,7 @@ module.exports = {
          link:'/'
       },
       {
-         name:'Latest News',
+         name:'News',
          link:'/news'
       },
       {
