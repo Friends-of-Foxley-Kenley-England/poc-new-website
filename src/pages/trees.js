@@ -2,7 +2,7 @@ import * as React from "react"
 import { graphql, Link } from "gatsby"
 import Layout from "../components/layout"
 import Seo from "../components/seo"
-import ExternalLink from "./external-link"
+import ExternalLink from "../components/external-link"
 
 const TreesIndex = ({ data, location }) => {
   const siteTitle = data.site.siteMetadata?.title || `Title`
