@@ -1,13 +1,13 @@
-import * as React from "react"
-import { Link, graphql } from "gatsby"
+import * as React from "react";
+import { Link, graphql } from "gatsby";
 
-import Layout from "../components/layout"
-import Seo from "../components/seo"
-import * as style from "./posts.module.css"
+import Layout from "../components/layout";
+import Seo from "../components/seo";
+import * as style from "./posts.module.css";
 
 const WorkDaysIndex = ({ data, location }) => {
-  const siteTitle = data.site.siteMetadata?.title || `Title`
-  const posts = data.allMarkdownRemark.nodes
+  const siteTitle = data.site.siteMetadata?.title || `Title`;
+  const posts = data.allMarkdownRemark.nodes;
 
   if (posts.length === 0) {
     return (
@@ -19,7 +19,7 @@ const WorkDaysIndex = ({ data, location }) => {
           gatsby-config.js).
         </p>
       </Layout>
-    )
+    );
   }
 
   return (
@@ -28,32 +28,41 @@ const WorkDaysIndex = ({ data, location }) => {
 
       <h1>Volunteer days</h1>
 
-      <p>All are welcome and any time you can give on the day will be most appreciated.</p>
-      <p>Tools and equipment are provided, but please wear appropriate clothes and footwear and bring your own refreshments.</p>
-      <p>We usually meet at 11am on the <strong>second Sunday of the month</strong> and 10am on the <strong>last Wednesday of the month</strong>.</p>
+      <p>
+        All are welcome and any time you can give on the day will be most
+        appreciated.
+      </p>
+      <p>
+        Tools and equipment are provided, but please wear appropriate clothes
+        and footwear and bring your own refreshments.
+      </p>
+      <p>
+        We usually meet at 11am on the{" "}
+        <strong>second Sunday of the month</strong> and 10am on the{" "}
+        <strong>last Wednesday of the month</strong>.
+      </p>
 
       <h2>Dates:</h2>
       <ol style={{ listStyle: `none` }}>
         {posts.map(post => {
-          const title = post.frontmatter.title || post.fields.slug
+          const title = post.frontmatter.title || post.fields.slug;
 
-          console.log('work day template',{
+          console.log("work day template", {
             slug: post.fields.slug,
             title: post.frontmatter.title,
             meeting_time: post.frontmatter.meeting_time,
-            type: post.frontmatter.type
-          })
+            type: post.frontmatter.type,
+          });
 
           return (
             <li key={post.fields.slug}>
               <article
                 className={style.postListItem}
                 itemScope
-                itemType="http://schema.org/Article"
-              >
+                itemType="http://schema.org/Article">
                 <header>
                   <h3>
-                    <Link to={'/work-days' + post.fields.slug} itemProp="url">
+                    <Link to={"/work-days" + post.fields.slug} itemProp="url">
                       <span itemProp="headline">{title}</span>
                     </Link>
                   </h3>
@@ -68,16 +77,16 @@ const WorkDaysIndex = ({ data, location }) => {
                 </section>
               </article>
             </li>
-          )
+          );
         })}
       </ol>
     </Layout>
-  )
-}
+  );
+};
 
-export default WorkDaysIndex
+export default WorkDaysIndex;
 
- //, filter: { sourceInstanceName: { eq: "work-days" } }
+//, filter: { sourceInstanceName: { eq: "work-days" } }
 
 export const pageQuery = graphql`
   query {
@@ -87,7 +96,7 @@ export const pageQuery = graphql`
       }
     }
     allMarkdownRemark(
-      filter: { fileAbsolutePath: {regex : "\/work-days/"} },
+      filter: { fileAbsolutePath: { regex: "/work-days/" } }
       sort: { fields: [frontmatter___date], order: DESC }
     ) {
       nodes {
@@ -103,4 +112,4 @@ export const pageQuery = graphql`
       }
     }
   }
-`
+`;

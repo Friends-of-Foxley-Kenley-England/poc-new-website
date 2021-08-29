@@ -10,32 +10,32 @@ module.exports = {
     social: {
       twitter: `....`,
     },
-    menuLinks:[
+    menuLinks: [
       {
-         name:'Home',
-         link:'/'
+        name: "Home",
+        link: "/",
       },
       {
-         name:'News',
-         link:'/news'
+        name: "News",
+        link: "/news",
       },
       {
-         name:'Work Days',
-         link:'/work-days'
+        name: "Work Days",
+        link: "/work-days",
       },
       {
-         name:'History',
-         link:'/history'
+        name: "History",
+        link: "/history",
       },
       {
-        name:'Trees',
-        link:'/trees'
-     },
+        name: "Trees",
+        link: "/trees",
+      },
       {
-         name:'Contact',
-         link:'/contact'
-      }
-    ]
+        name: "Contact",
+        link: "/contact",
+      },
+    ],
   },
   plugins: [
     `gatsby-plugin-image`,
@@ -116,8 +116,8 @@ module.exports = {
                   url: site.siteMetadata.siteUrl + node.fields.slug,
                   guid: site.siteMetadata.siteUrl + node.fields.slug,
                   custom_elements: [{ "content:encoded": node.html }],
-                })
-              })
+                });
+              });
             },
             query: `
               {
@@ -161,4 +161,4 @@ module.exports = {
     // To learn more, visit: https://gatsby.dev/offline
     // `gatsby-plugin-offline`,
   ],
-}
+};
