@@ -1,10 +1,11 @@
-import * as React from "react"
+import * as React from "react";
 
-const ExternalLink = ({ href, className, children }) => {
+const ExternalLink = ({ href, children, ...rest }) => {
+  return (
+    <a href={href} target="_blank" rel="noopener noreferrer" {...rest}>
+      {children}
+    </a>
+  );
+};
 
-    return (
-        <a href={href} className={className} target="_blank" rel="noopener noreferrer">{children}</a>
-    )
-}
-
-export default ExternalLink
+export default ExternalLink;
