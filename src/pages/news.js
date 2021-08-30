@@ -28,37 +28,36 @@ const NewsIndex = ({ data, location }) => {
     <Layout location={location} title={siteTitle}>
       <Seo title="News" />
       <h1>Latest news</h1>
-      <ol style={{ listStyle: `none` }}>
-        {posts.map(post => {
-          const title = post.frontmatter.title || post.fields.slug;
 
-          return (
-            <li key={post.fields.slug}>
-              <article
-                className={style.postListItem}
-                itemScope
-                itemType="http://schema.org/Article">
-                <header>
-                  <h2>
-                    <Link to={"/news" + post.fields.slug} itemProp="url">
-                      <span itemProp="headline">{title}</span>
-                    </Link>
-                  </h2>
-                  <small>{post.frontmatter.date}</small>
-                </header>
-                <section>
-                  <p
-                    dangerouslySetInnerHTML={{
-                      __html: post.frontmatter.description || post.excerpt,
-                    }}
-                    itemProp="description"
-                  />
-                </section>
-              </article>
-            </li>
-          );
-        })}
-      </ol>
+      {posts.map(post => {
+        const title = post.frontmatter.title || post.fields.slug;
+
+        return (
+          <article
+            className={style.postListItem}
+            itemScope
+            itemType="http://schema.org/Article"
+            id={post.fields.slug}>
+            <header>
+              <h2>
+                <Link to={"/news" + post.fields.slug} itemProp="url">
+                  <span itemProp="headline">{title}</span>
+                </Link>
+              </h2>
+              <small>{post.frontmatter.date}</small>
+            </header>
+            <section>
+              <p
+                dangerouslySetInnerHTML={{
+                  __html: post.frontmatter.description || post.excerpt,
+                }}
+                itemProp="description"
+              />
+            </section>
+          </article>
+        );
+      })}
+
       <Bio />
     </Layout>
   );
