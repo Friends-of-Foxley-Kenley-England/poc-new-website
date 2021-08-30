@@ -1,5 +1,6 @@
 import * as React from "react";
 import { graphql, Link } from "gatsby";
+import { StaticImage } from "gatsby-plugin-image";
 import Layout from "../components/layout";
 import Seo from "../components/seo";
 
@@ -24,9 +25,10 @@ const Index = ({ data, location }) => {
         source of funds to help buy and maintain essential tools.
       </p>
       <p>
-        Order via <strong>Carl</strong> or <strong>Alison</strong> on the{" "}
-        <Link to="/contact">contact</Link> page
+        Order via <strong>Carl</strong> or <strong>Alison</strong> (see contact info on the{" "}
+        <Link to="/contact">contact</Link> page).
       </p>
+      <StaticImage src="../images/firewood.jpeg" alt="Bags of firewood" />
     </Layout>
   );
 };
