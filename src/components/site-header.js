@@ -6,7 +6,7 @@ import * as style from "./site-header.module.css";
 const SiteHeader = ({ siteTitle, menuLinks }) => (
   <header>
     <nav id="navbar" className={style.navigationBar}>
-      <label for="hamburger">&#9776;</label>
+      <label htmlFor="hamburger">&#9776;</label>
       <input type="checkbox" id="hamburger" />
 
       <div id="navlinks" className={style.navigationLinks}>
