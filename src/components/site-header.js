@@ -11,7 +11,9 @@ const SiteHeader = ({ siteTitle, menuLinks }) => (
 
       <div id="navlinks" className={style.navigationLinks}>
         {menuLinks.map(link => (
-          <Link to={link.link}>{link.name}</Link>
+          <Link to={link.link} key={link.name}>
+            {link.name}
+          </Link>
         ))}
       </div>
 
