@@ -3,6 +3,10 @@ import { Link } from "gatsby";
 import PropTypes from "prop-types";
 import * as style from "./site-header.module.css";
 
+const isActive = ({ isCurrent }) => {
+  return isCurrent ? { className: style.isOnThisPage } : {};
+};
+
 const SiteHeader = ({ siteTitle, menuLinks }) => (
   <header>
     <nav id="navbar" className={style.navigationBar}>
@@ -11,7 +15,7 @@ const SiteHeader = ({ siteTitle, menuLinks }) => (
 
       <div id="navlinks" className={style.navigationLinks}>
         {menuLinks.map(link => (
-          <Link to={link.link} key={link.name}>
+          <Link getProps={isActive} to={link.link} key={link.name}>
             {link.name}
           </Link>
         ))}
