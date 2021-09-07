@@ -38,4 +38,4 @@ jobs:
         # Run id
         id: $GITHUB_RUN_ID-$GITHUB_RUN_NUMBER
         # Webpack stats filepath
-        webpack-stats-path: public/webpack-stats.json
+        webpack-stats-path: public/webpack.stats.json
