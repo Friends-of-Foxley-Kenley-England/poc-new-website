@@ -91,6 +91,10 @@ module.exports = {
         stats: {
           assets: true,
           modules: true,
+          entrypoints: true,
+          chunks: true,
+          builtAt: true,
+          hash: true,
         },
       },
     },
