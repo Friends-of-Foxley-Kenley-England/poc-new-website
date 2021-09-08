@@ -89,6 +89,7 @@ module.exports = {
       resolve: "gatsby-plugin-bundle-stats",
       options: {
         stats: {
+          context: './src',
           assets: true,
           modules: true,
           entrypoints: true,
