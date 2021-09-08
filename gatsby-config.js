@@ -85,7 +85,15 @@ module.exports = {
     },
     `gatsby-transformer-sharp`,
     `gatsby-plugin-sharp`,
-    `gatsby-plugin-bundle-stats`,
+    {
+      resolve: "gatsby-plugin-bundle-stats",
+      options: {
+        stats: {
+          assets: true,
+          modules: true,
+        },
+      },
+    },
     // {
     //   resolve: `gatsby-plugin-google-analytics`,
     //   options: {
