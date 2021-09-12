@@ -17,7 +17,7 @@ const HomeIndex = ({ data, location }) => {
       <h2> How can I help?</h2>
       <p>
         If you enjoy fresh air and light exercise come and help us look after
-        the Foxley Wood Nature Reserve located on the Purley/Kenley borders in
+        Foxley Wood local Nature Reserve located on the Purley/Kenley borders in
         Surrey.
       </p>
       <p>

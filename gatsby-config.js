@@ -3,7 +3,7 @@ module.exports = {
     title: `Friends Of Foxley`,
     author: {
       name: `Friend`,
-      summary: `Friends of Foxley are a group of volunteers who manage Foxley Wood in Kenley, Surrey. `,
+      summary: `The Friends of Foxley are a group of volunteers who manage Foxley Wood in Kenley, Surrey. `,
     },
     description: `POC to show a possible option for the new website.`,
     siteUrl: `https://gatsbystarterblogsource.gatsbyjs.io/`,
