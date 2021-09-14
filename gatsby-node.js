@@ -1,5 +1,6 @@
 const path = require(`path`);
 const { createFilePath } = require(`gatsby-source-filesystem`);
+const { StatsWriterPlugin } = require('webpack-stats-plugin');
 
 exports.createPages = async ({ graphql, actions, reporter }) => {
   const { createPage } = actions;
@@ -142,4 +143,25 @@ exports.createSchemaCustomization = ({ actions }) => {
       slug: String
     }
   `);
+};
+
+
+
+exports.onCreateWebpackConfig = ({ stage, plugins, actions }) => {
+  if (stage === 'build-javascript') {
+    actions.setWebpackConfig({
+      plugins: [
+        new StatsWriterPlugin(
+          filename: 'webpack.stats.json',
+          stats: {
+            context: './src', // optional, will improve readability of the paths
+            assets: true,
+            entrypoints: true,
+            chunks: true,
+            modules: true
+          }
+        )
+      ]
+    });
+  }
 };
