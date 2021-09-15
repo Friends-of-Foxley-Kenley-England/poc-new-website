@@ -147,7 +147,7 @@ exports.createSchemaCustomization = ({ actions }) => {
 
 exports.onCreateWebpackConfig = ({ stage, plugins, actions }) => {
   console.log('stage', stage);
-  //if (stage === 'build-javascript') {
+  if (stage === "build-javascript") {
     actions.setWebpackConfig({
       plugins: [
         new StatsWriterPlugin({
@@ -160,5 +160,5 @@ exports.onCreateWebpackConfig = ({ stage, plugins, actions }) => {
         }),
       ],
     });
-  //}
+  }
 };
