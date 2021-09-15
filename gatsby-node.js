@@ -146,6 +146,7 @@ exports.createSchemaCustomization = ({ actions }) => {
 };
 
 exports.onCreateWebpackConfig = ({ stage, plugins, actions }) => {
+  console.log('stage', stage);
   //if (stage === 'build-javascript') {
     actions.setWebpackConfig({
       plugins: [
