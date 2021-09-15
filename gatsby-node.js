@@ -145,24 +145,21 @@ exports.createSchemaCustomization = ({ actions }) => {
   `);
 };
 
-
-
 exports.onCreateWebpackConfig = ({ stage, plugins, actions }) => {
-  if (stage === 'build-javascript') {
+  //if (stage === 'build-javascript') {
     actions.setWebpackConfig({
       plugins: [
         new StatsWriterPlugin({
-          filename: 'webpack.stats.json',
+          filename: "webpack.stats.json",
           stats: {
-            context: './src', // optional, will improve readability of the paths
+            context: "./src", // optional, will improve readability of the paths
             assets: true,
             entrypoints: true,
             chunks: true,
-            modules: true
-          }
-        }
-        )
-      ]
+            modules: true,
+          },
+        }),
+      ],
     });
-  }
+  //}
 };
