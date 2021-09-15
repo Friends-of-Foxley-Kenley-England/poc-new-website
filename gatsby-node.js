@@ -151,7 +151,7 @@ exports.onCreateWebpackConfig = ({ stage, plugins, actions }) => {
   if (stage === 'build-javascript') {
     actions.setWebpackConfig({
       plugins: [
-        new StatsWriterPlugin(
+        new StatsWriterPlugin({
           filename: 'webpack.stats.json',
           stats: {
             context: './src', // optional, will improve readability of the paths
@@ -160,6 +160,7 @@ exports.onCreateWebpackConfig = ({ stage, plugins, actions }) => {
             chunks: true,
             modules: true
           }
+        }
         )
       ]
     });
