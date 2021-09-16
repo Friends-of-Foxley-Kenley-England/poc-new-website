@@ -41,6 +41,13 @@ const WorkDaysIndex = ({ data, location }) => {
         <strong>second Sunday of the month</strong> and 10am on the{" "}
         <strong>last Wednesday of the month</strong>.
       </p>
+      <p>
+        Please contact{" "}
+        <Link to="/contact#Secretary-and-Membership">Chris Parker</Link> or{" "}
+        <Link to="/contact#Chairman">Andrew Wood</Link> for details, for each
+        workday, of where and when we will meet or to be added to the list of
+        email addresses to be advised.
+      </p>
 
       <h2>Dates:</h2>
       <ol style={{ listStyle: `none` }}>
