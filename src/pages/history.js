@@ -10,7 +10,6 @@ const HistoryIndex = ({ data, location }) => {
     <Layout location={location} title={siteTitle}>
       <Seo title="history" />
       <h1>History of Foxley Wood</h1>
-
       <p>
         The ancient name FOXLE first appears in the Surrey Assize Rolls of 1279
         but it is not until information from the Messeder map of 1762 and the
@@ -39,7 +38,7 @@ const HistoryIndex = ({ data, location }) => {
         The Foxley estate was finally sold in 1937 to Coulsdon and Purley UDC.
         It is now owned and managed by the London Borough of Croydon, so
         preserving this lovely stretch of old woodland in the green belt scheme
-        now designated as a conservation area.
+        now designated as a Local Nature Reserve.
       </p>
       <p>
         The Friends of Foxley volunteer group were founded in 1992 to work in
