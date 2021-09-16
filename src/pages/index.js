@@ -11,14 +11,14 @@ const HomeIndex = ({ data, location }) => {
       <Seo title={siteTitle} />
       <h1>{siteTitle}</h1>
       <p>
-        Volunteer group helping to manage the Foxley woods in Kenley, Surrey.
+        The Friends Of Foxley are a volunteer group which manages Foxley Wood in
+        Kenley, Surrey, on behalf of and in partnership with Croydon Council.
       </p>
-
       <h2> How can I help?</h2>
       <p>
         If you enjoy fresh air and light exercise come and help us look after
-        Foxley Wood local Nature Reserve located on the Purley/Kenley borders in
-        Surrey.
+        the Foxley Wood Local Nature Reserve located on the Purley/Kenley
+        borders in Surrey.
       </p>
       <p>
         The Friends of Foxley meet on the second Sunday of each month (except
