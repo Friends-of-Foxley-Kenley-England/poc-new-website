@@ -43,8 +43,8 @@ const WorkDaysIndex = ({ data, location }) => {
       </p>
       <p>
         Please contact{" "}
-        <Link to="/contact#Secretary-and-Membership">Chris Parker</Link> or{" "}
-        <Link to="/contact#Chairman">Andrew Wood</Link> for details, for each
+        <Link to="/contact/#secretary-and-membership">Chris Parker</Link> or{" "}
+        <Link to="/contact/#chairman">Andrew Wood</Link> for details, for each
         workday, of where and when we will meet or to be added to the list of
         email addresses to be advised.
       </p>
