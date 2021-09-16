@@ -11,7 +11,6 @@ const EnglishOakTreeIndex = ({ data, location }) => {
       <Seo title="English Oak Tree" />
       <h1>English Oak Tree</h1>
       <h2>Other names - Common Oak, Pedunculate Oak, European Oak</h2>
-
       <p>
         The English Oak is native to most of Western Europe. It is found in
         mixed woodland throughout the UK and is most common in the South and
@@ -50,7 +49,6 @@ const EnglishOakTreeIndex = ({ data, location }) => {
         Walls of Old England’. Oak is still used in construction and to make
         barrels for wine and spirits.
       </p>
-
       <h2>Oaks in Foxley Wood</h2>
       <p>
         Most of of the oaks in the wood are in the higher parts, which is
@@ -82,8 +80,7 @@ const EnglishOakTreeIndex = ({ data, location }) => {
       </ul>
       <p></p>
       <p>
-        Written by <strong>Anthony Mills, Dip.Hort[RHS]</strong>; Tech Arbor.A..
-        Arboricultural Consultant for Friends of Foxley
+        Written by <strong>Andrew Wood</strong>; for Friends of Foxley
       </p>
     </Layout>
   );

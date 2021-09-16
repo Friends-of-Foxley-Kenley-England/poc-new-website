@@ -118,7 +118,7 @@ const AncientBeechTreeIndex = ({ data, location }) => {
       </p>
       <p>
         Written by <strong>Anthony Mills, Dip.Hort[RHS]</strong>; Tech Arbor.A..
-        Arboricultural Consultant for Friends of Foxley 19th Oct.20
+        Arboricultural Advisor for Friends of Foxley 19th Oct 2020
       </p>
     </Layout>
   );
