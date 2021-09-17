@@ -29,12 +29,12 @@ const WorkDayTemplate = ({ data, location }) => {
           dangerouslySetInnerHTML={{ __html: post.html }}
           itemProp="articleBody"
         />
-        <section className={style.meetingInfo}>
+        <section>
           <h2 itemProp="headline">Time</h2>
           <p>{post.frontmatter.meeting_time}</p>
 
           <h2 itemProp="headline">Location</h2>
-          <p className={style.location}>
+          <p>
             {post.frontmatter.meeting_point_description}
           </p>
           <What3wordsAddress
