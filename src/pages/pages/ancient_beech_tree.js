@@ -1,6 +1,17 @@
-import AncientBeechTreeIndex from "../ancient_beech_tree";
+import { graphql } from "gatsby";
+import * as page from "../ancient_beech_tree";
 
-export default AncientBeechTreeIndex;
+export const pageQuery = graphql`
+  query {
+    site {
+      siteMetadata {
+        title
+      }
+    }
+  }
+`;
+
+export default page.default;
 
 /*
 
