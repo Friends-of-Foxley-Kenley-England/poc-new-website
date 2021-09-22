@@ -1,5 +1,5 @@
 import { graphql } from "gatsby";
-import * as page from "../ancient_beech_tree";
+import * as page from "../ancient-beech-tree-diversion";
 
 export const pageQuery = graphql`
   query {

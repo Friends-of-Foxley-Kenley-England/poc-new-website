@@ -9,7 +9,7 @@ const AncientBeechTreeIndex = ({ data, location }) => {
   return (
     <Layout location={location} title={siteTitle}>
       <Seo title="ancient beech tree" />
-      <h1>Ancient Beech Tree</h1>
+      <h1>Ancient Beech Tree Diversion</h1>
       <h2>
         Reasons for the path diversion and fencing around the Ancient Beech
       </h2>
