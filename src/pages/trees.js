@@ -71,6 +71,11 @@ const TreesIndex = ({ data, location }) => {
           </ExternalLink>
         </li>
       </ul>
+
+      <p>
+        We've currently got a diversion around our{" "}
+        <Link to="ancient-beech-tree-diversion">Ancient Beech tree</Link>.
+      </p>
     </Layout>
   );
 };
