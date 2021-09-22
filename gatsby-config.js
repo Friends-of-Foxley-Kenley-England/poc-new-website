@@ -20,7 +20,7 @@ module.exports = {
         link: "/news",
       },
       {
-        name: "Work Days",
+        name: "Volunteer",
         link: "/work-days",
       },
       {
