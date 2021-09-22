@@ -48,9 +48,7 @@ const TreesIndex = ({ data, location }) => {
           </ExternalLink>
         </li>
         <li>
-          <ExternalLink href="https://en.wikipedia.org/wiki/Ulmus_glabra">
-            Wych Elm
-          </ExternalLink>
+          <Link to="wych-elm">Wych Elm</Link>
         </li>
         <li>
           <ExternalLink href="https://en.wikipedia.org/wiki/Yew">
