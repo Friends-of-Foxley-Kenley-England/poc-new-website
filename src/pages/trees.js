@@ -23,6 +23,9 @@ const TreesIndex = ({ data, location }) => {
           <Link to="/trees/english-oak">English Oak</Link>
         </li>
         <li>
+          <Link to="wych-elm">Wych Elm</Link>
+        </li>
+        <li>
           <ExternalLink href="https://en.wikipedia.org/wiki/Beech">
             Beech
           </ExternalLink>
@@ -46,9 +49,6 @@ const TreesIndex = ({ data, location }) => {
           <ExternalLink href="https://en.wikipedia.org/wiki/Hazel">
             Hazel
           </ExternalLink>
-        </li>
-        <li>
-          <Link to="wych-elm">Wych Elm</Link>
         </li>
         <li>
           <ExternalLink href="https://en.wikipedia.org/wiki/Yew">
