@@ -122,6 +122,7 @@ module.exports = {
         `,
         feeds: [
           {
+            title:'FOF',
             serialize: ({ query: { site, allMarkdownRemark } }) => {
               return allMarkdownRemark.nodes.map(node => {
                 return Object.assign({}, node.frontmatter, {
