@@ -1,0 +1,23 @@
+/* Container holding the image and the text */
+.container {
+  position: relative;
+  text-align: center;
+  color: white;
+}
+
+/* Centered text */
+.centered {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+h1 {
+  color: var(--color-white);
+  font-size: var(--fontSize-7);
+}
+
+.image-styling {
+  height: 50%;
+}

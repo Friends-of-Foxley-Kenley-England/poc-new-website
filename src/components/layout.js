@@ -3,6 +3,7 @@ import { useStaticQuery, graphql } from "gatsby";
 import * as style from "./layout.module.css";
 import SiteHeader from "./site-header";
 import SiteFooter from "./site-footer";
+import HeroSection from "../components/hero-section";
 
 const Layout = ({ location, title, children }) => {
   const data = useStaticQuery(graphql`
@@ -44,6 +45,7 @@ const Layout = ({ location, title, children }) => {
   return (
     <div className={style.layout}>
       <header>{siteHeader}</header>
+      <HeroSection title={title} />
       <div className={style.globalWrapper} data-is-root-path={isRootPath}>
         <main>{children}</main>
       </div>

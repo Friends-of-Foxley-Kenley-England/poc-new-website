@@ -9,7 +9,6 @@ const HomeIndex = ({ data, location }) => {
   return (
     <Layout location={location} title={siteTitle}>
       <Seo title={siteTitle} />
-      <h1>{siteTitle}</h1>
       <p>
         The Friends Of Foxley are a volunteer group which manages Foxley Wood in
         Kenley, Surrey, on behalf of and in partnership with Croydon Council.
