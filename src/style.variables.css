@@ -57,7 +57,7 @@
   --fontSize-15: 7rem;
   --color-dark-green: #11573c;
   --color-darker-green: #0e4630;
-  --color-primary: #005b99;
+  --color-primary: var(--color-dark-green);
   --color-text: #2e353f;
   --color-text-light: #4f5969;
   --color-heading: var(--color-dark-green);
