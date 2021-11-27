@@ -45,7 +45,9 @@ const Layout = ({ location, title, children }) => {
   return (
     <div className={style.layout}>
       <header>{siteHeader}</header>
-      <HeroSection title={title} />
+
+      {isRootPath && <HeroSection title={title} />}
+      
       <div className={style.globalWrapper} data-is-root-path={isRootPath}>
         <main>{children}</main>
       </div>
