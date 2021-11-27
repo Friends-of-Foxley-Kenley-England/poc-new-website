@@ -13,8 +13,7 @@
   transform: translate(-50%, -50%);
 }
 
-.centered,
-h1 {
+h1.centered {
   visibility: hidden;
   color: var(--color-white);
   font-size: var(--fontSize-5);
@@ -27,8 +26,7 @@ h1 {
 }
 
 @media screen and (min-width: 700px) {
-  .centered,
-  h1 {
+  h1.centered {
     visibility: visible;
     font-size: var(--fontSize-10);
     white-space: nowrap;
@@ -36,8 +34,7 @@ h1 {
 }
 
 @media screen and (min-width: 1020px) {
-  .centered,
-  h1 {
+  h1.centered {
     font-size: var(--fontSize-15);
   }
 }
