@@ -23,6 +23,15 @@
         ]
       },
       {
+        "source": "src/images/**",
+        "headers": [
+          {
+            "key": "cache-control",
+            "value": "public, max-age=31536000, immutable"
+          }
+        ]
+      },
+      {
         "source": "**/*.@(css|js)",
         "headers": [
           {
