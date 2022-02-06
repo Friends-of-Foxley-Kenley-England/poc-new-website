@@ -1,6 +1,7 @@
 {
   "hosting": {
     "public": "public",
+    "site": "friends-of-foxley-prod",
     "ignore": ["firebase.json", "**/.*", "**/node_modules/**"],
     "headers": [
       {
