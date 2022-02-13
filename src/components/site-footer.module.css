@@ -1,12 +1,20 @@
 .site-footer {
   display: flex;
   align-items: center;
-  justify-content: space-between;
+  justify-content: center;
+  flex-direction: column;
 
   background-color: var(--color-heading);
   font-size: 0.75rem;
   padding: var(--spacing-2) var(--spacing-2);
   color: white;
+}
+
+@media screen and (min-width: 550px) {
+  .site-footer {
+    flex-direction: row;
+    justify-content: space-between;
+  }
 }
 
 .footer-link {
