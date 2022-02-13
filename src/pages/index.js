@@ -2,7 +2,6 @@ import * as React from "react";
 import { graphql, Link } from "gatsby";
 import Layout from "../components/layout";
 import Seo from "../components/seo";
-import FindUsOnFacebook from "../components/find-us-on-facebook";
 
 const HomeIndex = ({ data, location }) => {
   const siteTitle = data.site.siteMetadata?.title || `Title`;
@@ -21,11 +20,6 @@ const HomeIndex = ({ data, location }) => {
         borders in Surrey.
       </p>
       <p>
-        The Friends of Foxley meet on the second Sunday of each month (except
-        November when we meet on the third Sunday) and the last Wednesday of
-        each month (except December).
-      </p>
-      <p>
         Go to <Link to="/work-days">Work Days</Link> to see the work we are
         planning in Foxley Wood this month and where we will meet.
       </p>
@@ -34,7 +28,6 @@ const HomeIndex = ({ data, location }) => {
         appreciated. Tools and equipment are provided, but please wear
         appropriate clothes and footwear and bring your own refreshments.
       </p>
-      <FindUsOnFacebook useWhiteGraphic={false} />
       <p>
         Being a Friends of Foxley volunteer does not necessarily mean doing
         physical work, recorders of wildlife and people with skills in fund
