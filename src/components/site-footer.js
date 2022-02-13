@@ -2,7 +2,7 @@ import React from "react";
 import * as style from "./site-footer.module.css";
 import ExternalLink from "./external-link";
 
-import FindUsOnFacebook from "./follow-us-on-facebook";
+import FindUsOnFacebook from "./find-us-on-facebook";
 
 const SiteFooter = () => (
   <footer className={style.siteFooter}>
