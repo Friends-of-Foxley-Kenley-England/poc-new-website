@@ -10,3 +10,7 @@
 .contact p {
     margin-bottom: var(--spacing-0);
 }
+
+.facebook-spacing {
+   margin-bottom: var(--spacing-4); 
+}

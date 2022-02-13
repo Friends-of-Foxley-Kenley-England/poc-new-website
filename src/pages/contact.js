@@ -3,6 +3,7 @@ import { graphql } from "gatsby";
 import Layout from "../components/layout";
 import Seo from "../components/seo";
 import * as style from "./contact.module.css";
+import FindUsOnFacebook from "../components/find-us-on-facebook";
 
 const ContactIndex = ({ data, location }) => {
   const siteTitle = data.site.siteMetadata?.title || `Title`;
@@ -11,6 +12,9 @@ const ContactIndex = ({ data, location }) => {
     <Layout location={location} title={siteTitle}>
       <Seo title="contact" />
       <h1>Contact us</h1>
+      <div className={style.facebookSpacing}>
+        <FindUsOnFacebook useWhiteGraphic={false} />
+      </div>
       <p>
         If you would like any further information regarding the work of the
         Friends of Foxley in Foxley Wood or if you would like to help preserve
