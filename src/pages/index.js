@@ -2,6 +2,7 @@ import * as React from "react";
 import { graphql, Link } from "gatsby";
 import Layout from "../components/layout";
 import Seo from "../components/seo";
+import FindUsOnFacebook from "../components/find-us-on-facebook";
 
 const HomeIndex = ({ data, location }) => {
   const siteTitle = data.site.siteMetadata?.title || `Title`;
@@ -33,7 +34,7 @@ const HomeIndex = ({ data, location }) => {
         appreciated. Tools and equipment are provided, but please wear
         appropriate clothes and footwear and bring your own refreshments.
       </p>
-      <p>Also follow us on Facebook - click the Facebook logo to find us. </p>
+      <FindUsOnFacebook useWhiteGraphic={false} />
       <p>
         Being a Friends of Foxley volunteer does not necessarily mean doing
         physical work, recorders of wildlife and people with skills in fund
