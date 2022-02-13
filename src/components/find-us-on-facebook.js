@@ -35,7 +35,7 @@ const WhiteFacebookImage = () => {
   );
 };
 
-const FindUsOnFacebook = useWhiteGraphic => {
+const FindUsOnFacebook = ({ useWhiteGraphic }) => {
   const data = useStaticQuery(graphql`
     query FindUsOnFacebookQuery {
       site {
