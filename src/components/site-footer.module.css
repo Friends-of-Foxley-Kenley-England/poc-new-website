@@ -1,11 +1,24 @@
 .site-footer {
-    background-color: var(--color-heading);
-    font-size: 0.75rem;
-    padding: var(--spacing-2) var(--spacing-2);
-    color: white;
-    bottom: auto;
+  display: flex;
+  align-items: stretch;
+  justify-content: space-between;
+
+  background-color: var(--color-heading);
+  font-size: 0.75rem;
+  padding: var(--spacing-2) var(--spacing-2);
+  color: white;
 }
 
 .footer-link {
-    color: var(--color-white)
+  color: var(--color-white);
+}
+
+.facebook-image {
+  height: auto !important;
+  width: 10rem !important;
+}
+
+.built-by {
+  align-self: center;
+  padding: 1rem 0;
 }
