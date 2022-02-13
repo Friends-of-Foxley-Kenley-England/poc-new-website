@@ -14,8 +14,7 @@ const TreesIndex = ({ data, location }) => {
 
       <p>
         Here are the most prominent trees that make Foxley Wood such a special
-        Local Nature Reserve. We will be adding links and information pages for
-        the various species over the coming weeks and months.
+        Local Nature Reserve. 
       </p>
 
       <ul>
