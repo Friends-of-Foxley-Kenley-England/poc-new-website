@@ -1,15 +1,15 @@
-import * as React from "react"
-import { Link, graphql } from "gatsby"
+import * as React from "react";
+import { Link, graphql } from "gatsby";
 
-import Bio from "../components/bio"
-import Layout from "../components/layout"
-import Seo from "../components/seo"
-import * as style from "./blog-post.module.css"
+import Bio from "../components/bio";
+import Layout from "../components/layout";
+import Seo from "../components/seo";
+import * as style from "./blog-post.module.css";
 
 const BlogPostTemplate = ({ data, location }) => {
-  const post = data.markdownRemark
-  const siteTitle = data.site.siteMetadata?.title || `Title`
-  const { previous, next } = data
+  const post = data.markdownRemark;
+  const siteTitle = data.site.siteMetadata?.title || `Title`;
+  const { previous, next } = data;
 
   return (
     // <script src="https://assets.what3words.com/sdk/v3/what3words.js"></script>
@@ -21,17 +21,19 @@ const BlogPostTemplate = ({ data, location }) => {
       <article
         className="blog-post"
         itemScope
-        itemType="http://schema.org/Article"
-      >
+        itemType="http://schema.org/Article">
         <header>
-          <h1 className={style.blogPostHeader} itemProp="headline">{post.frontmatter.title}</h1>
+          <h1 className={style.blogPostHeader} itemProp="headline">
+            {post.frontmatter.title}
+          </h1>
           <p className={style.blogPostPostedDate}>{post.frontmatter.date}</p>
         </header>
         <section
           dangerouslySetInnerHTML={{ __html: post.html }}
           itemProp="articleBody"
+          className={style.articleBody}
         />
-        <hr />
+        <hr className={style.spacer} />
         <footer>
           <Bio />
         </footer>
@@ -40,14 +42,14 @@ const BlogPostTemplate = ({ data, location }) => {
         <ul className={style.blogPostNavLinks}>
           <li>
             {previous && (
-              <Link to={'/news' + previous.fields.slug} rel="prev">
+              <Link to={"/news" + previous.fields.slug} rel="prev">
                 ← {previous.frontmatter.title}
               </Link>
             )}
           </li>
           <li>
             {next && (
-              <Link to={'/news' + next.fields.slug} rel="next">
+              <Link to={"/news" + next.fields.slug} rel="next">
                 {next.frontmatter.title} →
               </Link>
             )}
@@ -55,10 +57,10 @@ const BlogPostTemplate = ({ data, location }) => {
         </ul>
       </nav>
     </Layout>
-  )
-}
+  );
+};
 
-export default BlogPostTemplate
+export default BlogPostTemplate;
 
 export const pageQuery = graphql`
   query BlogPostBySlug(
@@ -77,7 +79,7 @@ export const pageQuery = graphql`
       html
       frontmatter {
         title
-        date(formatString: "MMMM DD, YYYY")
+        date(formatString: "Do MMMM YYYY")
         description
       }
     }
@@ -98,4 +100,4 @@ export const pageQuery = graphql`
       }
     }
   }
-`
+`;

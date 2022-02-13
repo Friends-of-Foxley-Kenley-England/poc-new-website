@@ -1,16 +1,16 @@
-import * as React from "react"
-import { Link, graphql } from "gatsby"
+import * as React from "react";
+import { Link, graphql } from "gatsby";
 
-import Bio from "../components/bio"
-import Layout from "../components/layout"
-import Seo from "../components/seo"
-import {What3wordsAddress} from "@what3words/react-components"
-import * as style from "./work-day-information.module.css"
+import Bio from "../components/bio";
+import Layout from "../components/layout";
+import Seo from "../components/seo";
+import { What3wordsAddress } from "@what3words/react-components";
+import * as style from "./work-day-information.module.css";
 
 const WorkDayTemplate = ({ data, location }) => {
-  const post = data.markdownRemark
-  const siteTitle = data.site.siteMetadata?.title || `Title`
-  const { previous, next } = data
+  const post = data.markdownRemark;
+  const siteTitle = data.site.siteMetadata?.title || `Title`;
+  const { previous, next } = data;
 
   return (
     <Layout location={location} title={siteTitle}>
@@ -21,24 +21,29 @@ const WorkDayTemplate = ({ data, location }) => {
       <article
         className="blog-post"
         itemScope
-        itemType="http://schema.org/Article"
-      >
+        itemType="http://schema.org/Article">
         <header>
           <h1 itemProp="headline">{"Work day: " + post.frontmatter.title}</h1>
-          <p>{post.frontmatter.date}</p>
         </header>
         <section
           dangerouslySetInnerHTML={{ __html: post.html }}
           itemProp="articleBody"
         />
-        <section className={style.meetingInfo}>
+        <section>
           <h2 itemProp="headline">Time</h2>
           <p>{post.frontmatter.meeting_time}</p>
 
           <h2 itemProp="headline">Location</h2>
-          <p className={style.location}>{post.frontmatter.meeting_point_description}</p>
-          <What3wordsAddress words={post.frontmatter.meeting_point_what3words} icon-color="#0e4630" text-color="#0e4630" tooltip-location={post.frontmatter.meeting_point_what3words} rel="noopener noreferrer"/>
-          
+          <p>
+            {post.frontmatter.meeting_point_description}
+          </p>
+          <What3wordsAddress
+            words={post.frontmatter.meeting_point_what3words}
+            icon-color="#0e4630"
+            text-color="#0e4630"
+            tooltip-location={post.frontmatter.meeting_point_what3words}
+            rel="noopener noreferrer"
+          />
         </section>
 
         <hr />
@@ -54,18 +59,17 @@ const WorkDayTemplate = ({ data, location }) => {
             justifyContent: `space-between`,
             listStyle: `none`,
             padding: 0,
-          }}
-        >
+          }}>
           <li>
             {previous && (
-              <Link to={'/work-days' + previous.fields.slug} rel="prev">
+              <Link to={"/work-days" + previous.fields.slug} rel="prev">
                 ← {previous.frontmatter.title}
               </Link>
             )}
           </li>
           <li>
             {next && (
-              <Link to={'/work-days' + next.fields.slug} rel="next">
+              <Link to={"/work-days" + next.fields.slug} rel="next">
                 {next.frontmatter.title} →
               </Link>
             )}
@@ -73,10 +77,10 @@ const WorkDayTemplate = ({ data, location }) => {
         </ul>
       </nav>
     </Layout>
-  )
-}
+  );
+};
 
-export default WorkDayTemplate
+export default WorkDayTemplate;
 
 export const pageQuery = graphql`
   query WorkDayBySlug(
@@ -119,4 +123,4 @@ export const pageQuery = graphql`
       }
     }
   }
-`
+`;

@@ -124,7 +124,8 @@ ol {
 
 ul li,
 ol li {
-  padding-left: var(--spacing-0);
+  margin-left: var(--spacing-4);
+  padding-left: var(--spacing-2);
   margin-bottom: calc(var(--spacing-8) / 2);
 }
 
@@ -180,7 +181,7 @@ a {
 
 a:hover,
 a:focus {
-  text-decoration: none;
+  text-decoration: underline;
 }
 
 /* Custom classes */

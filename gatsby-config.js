@@ -3,7 +3,7 @@ module.exports = {
     title: `Friends Of Foxley`,
     author: {
       name: `Friend`,
-      summary: `Friends of Foxley are a group of volunteers who manage Foxley Wood in Kenley, Surrey. `,
+      summary: `The Friends of Foxley are a group of volunteers who manage Foxley Wood in Kenley, Surrey. `,
     },
     description: `POC to show a possible option for the new website.`,
     siteUrl: `https://gatsbystarterblogsource.gatsbyjs.io/`,
@@ -11,32 +11,32 @@ module.exports = {
       twitter: `....`,
       facebook: `https://www.facebook.com/pages/Friends-of-Foxley-Wood/151238351586387`
     },
-    menuLinks:[
+    menuLinks: [
       {
-         name:'Home',
-         link:'/'
+        name: "Home",
+        link: "/",
       },
       {
-         name:'Latest News',
-         link:'/news'
+        name: "News",
+        link: "/news",
       },
       {
-         name:'Work Days',
-         link:'/work-days'
+        name: "Volunteer",
+        link: "/work-days",
       },
       {
-         name:'History',
-         link:'/history'
+        name: "History",
+        link: "/history",
       },
       {
-        name:'Trees',
-        link:'/trees'
-     },
+        name: "Trees",
+        link: "/trees",
+      },
       {
-         name:'Contact',
-         link:'/contact'
-      }
-    ]
+        name: "Contact",
+        link: "/contact",
+      },
+    ],
   },
   plugins: [
     `gatsby-plugin-image`,
@@ -86,6 +86,20 @@ module.exports = {
     },
     `gatsby-transformer-sharp`,
     `gatsby-plugin-sharp`,
+    {
+      resolve: "gatsby-plugin-bundle-stats",
+      options: {
+        stats: {
+          context: './src',
+          assets: true,
+          modules: true,
+          entrypoints: true,
+          chunks: true,
+          builtAt: true,
+          hash: true,
+        },
+      },
+    },
     // {
     //   resolve: `gatsby-plugin-google-analytics`,
     //   options: {
@@ -109,6 +123,7 @@ module.exports = {
         `,
         feeds: [
           {
+            title:'FOF',
             serialize: ({ query: { site, allMarkdownRemark } }) => {
               return allMarkdownRemark.nodes.map(node => {
                 return Object.assign({}, node.frontmatter, {
@@ -117,8 +132,8 @@ module.exports = {
                   url: site.siteMetadata.siteUrl + node.fields.slug,
                   guid: site.siteMetadata.siteUrl + node.fields.slug,
                   custom_elements: [{ "content:encoded": node.html }],
-                })
-              })
+                });
+              });
             },
             query: `
               {
@@ -162,4 +177,4 @@ module.exports = {
     // To learn more, visit: https://gatsby.dev/offline
     // `gatsby-plugin-offline`,
   ],
-}
+};
