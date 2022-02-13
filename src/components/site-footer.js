@@ -1,20 +1,12 @@
 import React from "react";
 import * as style from "./site-footer.module.css";
 import ExternalLink from "./external-link";
-import { StaticImage } from "gatsby-plugin-image";
+
+import FindUsOnFacebook from "./follow-us-on-facebook";
 
 const SiteFooter = () => (
   <footer className={style.siteFooter}>
-    <ExternalLink href="https://www.facebook.com/pages/Friends-of-Foxley-Wood/151238351586387">
-      <StaticImage
-        src="../images/facebook/FindUs-FB-RGB-Wht.svg"
-        alt="find us on facebook"
-        className={style.facebookImage}
-        loading="lazy"
-        objectFit="contain"
-        placeholder="tracedSVG"
-      />
-    </ExternalLink>
+    <FindUsOnFacebook useWhiteGraphic={true} />
 
     <span className={style.builtBy}>
       © {new Date().getFullYear()}, Built with
