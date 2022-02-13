@@ -21,11 +21,6 @@
   color: var(--color-white);
 }
 
-.facebook-image {
-  height: auto !important;
-  width: 10rem !important;
-}
-
 .built-by {
   align-self: center;
   padding: 1rem 0;
