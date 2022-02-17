@@ -12,7 +12,7 @@ exports.createPages = async ({ graphql, actions, reporter }) => {
   );
 
   //  sorted by date
-  const query = await graphql`
+  const query = await graphql(`
     {
       allContentfulWorkDay {
         nodes {
@@ -29,7 +29,7 @@ exports.createPages = async ({ graphql, actions, reporter }) => {
         }
       }
     }
-  `;
+  `);
 
   if (result.errors) {
     reporter.panicOnBuild(
@@ -40,8 +40,8 @@ exports.createPages = async ({ graphql, actions, reporter }) => {
   }
 
   const posts = {
-    news: query.allContentfulNews.nodes,
-    workdays: query.allContentfulWorkDay.nodes,
+    news: query.data.allContentfulNews.nodes,
+    workdays: query.data.allContentfulWorkDay.nodes,
   };
 
   createPostPage(posts.news, blogPostTemplate, "news", createPage);
@@ -62,7 +62,7 @@ function createPostPage(posts, template, parentPage, createPage) {
         index === posts.length - 1 ? null : posts[index + 1].id;
 
       createPage({
-        path: parentPage + post.fields.slug,
+        path: `${parentPage}/${post.fields.slug}`,
         component: template,
         context: {
           id: post.id,
