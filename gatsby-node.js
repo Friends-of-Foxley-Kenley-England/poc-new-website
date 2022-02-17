@@ -12,7 +12,7 @@ exports.createPages = async ({ graphql, actions, reporter }) => {
   );
 
   //  sorted by date
-  const query = await graphql(`
+  const result = await graphql(`
     {
       allContentfulWorkDay {
         nodes {
@@ -31,6 +31,8 @@ exports.createPages = async ({ graphql, actions, reporter }) => {
     }
   `);
 
+  console.log(result)
+
   if (result.errors) {
     reporter.panicOnBuild(
       `There was an error loading the work days and news`,
@@ -40,9 +42,11 @@ exports.createPages = async ({ graphql, actions, reporter }) => {
   }
 
   const posts = {
-    news: query.data.allContentfulNews.nodes,
-    workdays: query.data.allContentfulWorkDay.nodes,
+    news: result.data.allContentfulNews.nodes,
+    workdays: result.data.allContentfulWorkDay.nodes,
   };
+
+  console.log(posts);
 
   createPostPage(posts.news, blogPostTemplate, "news", createPage);
   createPostPage(posts.workdays, workDayPostTemplate, "work-days", createPage);
@@ -62,7 +66,7 @@ function createPostPage(posts, template, parentPage, createPage) {
         index === posts.length - 1 ? null : posts[index + 1].id;
 
       createPage({
-        path: `${parentPage}/${post.fields.slug}`,
+        path: `${parentPage}/${post.slug}`,
         component: template,
         context: {
           id: post.id,
