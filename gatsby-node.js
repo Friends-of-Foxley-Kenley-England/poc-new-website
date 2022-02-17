@@ -11,53 +11,42 @@ exports.createPages = async ({ graphql, actions, reporter }) => {
     `./src/templates/work-day-information.js`,
   );
 
-  // Get all markdown blog posts sorted by date
-  const result = await graphql(
-    `
-      {
-        allMarkdownRemark(
-          sort: { fields: [frontmatter___date], order: ASC }
-          limit: 1000
-        ) {
-          nodes {
-            id
-            fields {
-              slug
-            }
-            fileAbsolutePath
-          }
+  //  sorted by date
+  const query = await graphql`
+    {
+      allContentfulWorkDay {
+        nodes {
+          slug
+          createdAt
+          id
         }
       }
-    `,
-  );
+      allContentfulNews {
+        nodes {
+          slug
+          createdAt
+          id
+        }
+      }
+    }
+  `;
 
   if (result.errors) {
     reporter.panicOnBuild(
-      `There was an error loading your blog posts`,
+      `There was an error loading the work days and news`,
       result.errors,
     );
     return;
   }
 
-  const posts = getPosts(result);
+  const posts = {
+    news: query.allContentfulNews.nodes,
+    workdays: query.allContentfulWorkDay.nodes,
+  };
 
   createPostPage(posts.news, blogPostTemplate, "news", createPage);
   createPostPage(posts.workdays, workDayPostTemplate, "work-days", createPage);
 };
-
-function getPosts(result) {
-  const news = result.data.allMarkdownRemark.nodes.filter(x =>
-    x.fileAbsolutePath.includes(`/content/news/`),
-  );
-  const workdays = result.data.allMarkdownRemark.nodes.filter(x =>
-    x.fileAbsolutePath.includes(`work-days`),
-  );
-
-  return {
-    news: news,
-    workdays: workdays,
-  };
-}
 
 /***
  * @summary creates the pages with post content (either news or workdays)
@@ -79,7 +68,6 @@ function createPostPage(posts, template, parentPage, createPage) {
           id: post.id,
           previousPostId,
           nextPostId,
-          //pagePath: path
         },
       });
     });
@@ -147,7 +135,7 @@ exports.createSchemaCustomization = ({ actions }) => {
 
 // exports.onCreateWebpackConfig = ({ stage, plugins, actions }) => {
 //   console.log("stage", stage);
-  
+
 //   actions.setWebpackConfig({
 //     plugins: [
 //       new StatsWriterPlugin({
