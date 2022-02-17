@@ -40,7 +40,7 @@ const NewsIndex = ({ data, location }) => {
             id={post.id}>
             <header>
               <h2>
-                <Link to={"/news" + post.slug} itemProp="url">
+                <Link to={"/news/" + post.slug} itemProp="url">
                   <span itemProp="headline">{title}</span>
                 </Link>
               </h2>
@@ -80,6 +80,7 @@ export const pageQuery = graphql`
         }
         title
         createdAt(formatString: "Do MMMM YYYY")
+        slug
       }
     }
   }
