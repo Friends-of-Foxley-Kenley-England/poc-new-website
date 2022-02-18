@@ -37,24 +37,24 @@ const BlogPostTemplate = ({ data, location }) => {
           <Bio />
         </footer>
       </article>
-      {/* <nav className={style.blogPostNav}>
+      <nav className={style.blogPostNav}>
         <ul className={style.blogPostNavLinks}>
           <li>
             {previous && (
-              <Link to={"/news" + previous.slug} rel="prev">
+              <Link to={"/news/" + previous.slug} rel="prev">
                 ← {previous.title}
               </Link>
             )}
           </li>
           <li>
             {next && (
-              <Link to={"/news" + next.slug} rel="next">
+              <Link to={"/news/" + next.slug} rel="next">
                 {next.title} →
               </Link>
             )}
           </li>
         </ul>
-      </nav> */}
+      </nav>
     </Layout>
   );
 };
