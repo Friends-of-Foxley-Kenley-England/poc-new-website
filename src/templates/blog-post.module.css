@@ -24,6 +24,10 @@
     margin-bottom: var(--spacing-10);
 }
 
+.articleBody li {
+    margin-bottom: 0%;
+}
+
 .spacer {
     margin-top: var(--spacing-10);
 }
