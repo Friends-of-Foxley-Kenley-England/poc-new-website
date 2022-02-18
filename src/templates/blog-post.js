@@ -5,6 +5,7 @@ import Bio from "../components/bio";
 import Layout from "../components/layout";
 import Seo from "../components/seo";
 import * as style from "./blog-post.module.css";
+import { renderRichText } from "gatsby-source-contentful/rich-text";
 
 const BlogPostTemplate = ({ data, location }) => {
   const post = data.contentfulNews;
@@ -14,7 +15,10 @@ const BlogPostTemplate = ({ data, location }) => {
   return (
     // <script src="https://assets.what3words.com/sdk/v3/what3words.js"></script>
     <Layout location={location} title={siteTitle}>
-      <Seo title={post.title} description={post.newsContent.raw || post.excerpt} />
+      <Seo
+        title={post.title}
+        // description={post.newsContent.raw || post.excerpt}
+      />
       <article
         className="blog-post"
         itemScope
@@ -25,11 +29,9 @@ const BlogPostTemplate = ({ data, location }) => {
           </h1>
           <p className={style.blogPostPostedDate}>{post.createdAt}</p>
         </header>
-        <section
-          dangerouslySetInnerHTML={{ __html: post.html }}
-          itemProp="articleBody"
-          className={style.articleBody}
-        />
+        <section itemProp="articleBody" className={style.articleBody}>
+          {renderRichText(post.newsContent)}
+        </section>
         <hr className={style.spacer} />
         <footer>
           <Bio />
