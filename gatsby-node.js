@@ -103,19 +103,19 @@ exports.createSchemaCustomization = ({ actions }) => {
   `);
 };
 
-// exports.onCreateWebpackConfig = ({ stage, plugins, actions }) => {
-//   console.log("stage", stage);
+exports.onCreateWebpackConfig = ({ stage, plugins, actions }) => {
+  console.log("stage", stage);
 
-//   actions.setWebpackConfig({
-//     plugins: [
-//       new StatsWriterPlugin({
-//         filename: "webpack.stats.json",
-//         stats: {
-//           context: "./src", // optional, will improve readability of the paths
-//           assets: true,
-//           modules: true,
-//         },
-//       }),
-//     ],
-//   });
-// };
+  actions.setWebpackConfig({
+    plugins: [
+      new StatsWriterPlugin({
+        filename: "webpack.stats.json",
+        stats: {
+          context: "./src", // optional, will improve readability of the paths
+          assets: true,
+          modules: true,
+        },
+      }),
+    ],
+  });
+};
