@@ -13,11 +13,7 @@ const WorkDaysIndex = ({ data, location }) => {
     return (
       <Layout location={location} title={siteTitle}>
         <Seo title="Volunteer workdays" />
-        <p>
-          No workdays found. Add markdown posts to "content/work-days" (or the
-          directory you specified for the "gatsby-source-filesystem" plugin in
-          gatsby-config.js).
-        </p>
+        <p>No news posts found. Add posts to contentful.</p>
       </Layout>
     );
   }
