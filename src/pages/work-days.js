@@ -7,7 +7,7 @@ import * as style from "./posts.module.css";
 
 const WorkDaysIndex = ({ data, location }) => {
   const siteTitle = data.site.siteMetadata?.title || `Title`;
-  const posts = data.allMarkdownRemark.nodes;
+  const posts = data.allContentfulWorkDay.nodes;
 
   if (posts.length === 0) {
     return (
@@ -52,35 +52,23 @@ const WorkDaysIndex = ({ data, location }) => {
       <h2>Dates:</h2>
       <ol style={{ listStyle: `none` }}>
         {posts.map(post => {
-          const title = post.frontmatter.title || post.fields.slug;
-
-          console.log("work day template", {
-            slug: post.fields.slug,
-            title: post.frontmatter.title,
-            meeting_time: post.frontmatter.meeting_time,
-            type: post.frontmatter.type,
-          });
+          const title = post.title;
 
           return (
-            <li key={post.fields.slug}>
+            <li key={post.slug}>
               <article
                 className={style.postListItem}
                 itemScope
                 itemType="http://schema.org/Article">
                 <header>
                   <h3>
-                    <Link to={"/work-days" + post.fields.slug} itemProp="url">
+                    <Link to={"/work-days/" + post.slug} itemProp="url">
                       <span itemProp="headline">{title}</span>
                     </Link>
                   </h3>
                 </header>
                 <section>
-                  <p
-                    dangerouslySetInnerHTML={{
-                      __html: post.frontmatter.description || post.excerpt,
-                    }}
-                    itemProp="description"
-                  />
+                  <p itemProp="description">{post.shortDescriptionOfWorkday}</p>
                 </section>
               </article>
             </li>
@@ -93,8 +81,6 @@ const WorkDaysIndex = ({ data, location }) => {
 
 export default WorkDaysIndex;
 
-//, filter: { sourceInstanceName: { eq: "work-days" } }
-
 export const pageQuery = graphql`
   query {
     site {
@@ -102,20 +88,13 @@ export const pageQuery = graphql`
         title
       }
     }
-    allMarkdownRemark(
-      filter: { fileAbsolutePath: { regex: "/work-days/" } }
-      sort: { fields: [frontmatter___date], order: DESC }
-    ) {
+    allContentfulWorkDay(sort: { fields: dateOfWorkday, order: DESC }) {
       nodes {
-        excerpt
-        fields {
-          slug
-        }
-        frontmatter {
-          date(formatString: "MMMM DD, YYYY")
-          title
-          description
-        }
+        slug
+        createdAt
+        id
+        title
+        shortDescriptionOfWorkday
       }
     }
   }
