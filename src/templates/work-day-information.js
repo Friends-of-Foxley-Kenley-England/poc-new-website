@@ -14,7 +14,7 @@ const WorkDayTemplate = ({ data, location }) => {
 
   return (
     <Layout location={location} title={siteTitle}>
-      <Seo
+      {/* <Seo
         title={post.frontmatter.title}
         description={post.frontmatter.description || post.excerpt}
       />
@@ -26,7 +26,7 @@ const WorkDayTemplate = ({ data, location }) => {
           <h1 itemProp="headline">{"Work day: " + post.frontmatter.title}</h1>
         </header>
         <section
-          dangerouslySetInnerHTML={{ __html: post.html }}
+          // dangerouslySetInnerHTML={{ __html: post.html }}
           itemProp="articleBody"
         />
         <section>
@@ -35,7 +35,7 @@ const WorkDayTemplate = ({ data, location }) => {
 
           <h2 itemProp="headline">Location</h2>
           <p>
-            {post.frontmatter.meeting_point_description}
+            {post.frontmatter.meeting_point_description} 
           </p>
           <What3wordsAddress
             words={post.frontmatter.meeting_point_what3words}
@@ -75,7 +75,7 @@ const WorkDayTemplate = ({ data, location }) => {
             )}
           </li>
         </ul>
-      </nav>
+      </nav> */}
     </Layout>
   );
 };
