@@ -15,7 +15,7 @@ jobs:
 
     strategy:
       matrix:
-        node-version: [15.x,16.x]
+        node-version: [15.x, 16.x]
         # See supported Node.js release schedule at https://nodejs.org/en/about/releases/
       fail-fast: false
 
@@ -26,8 +26,13 @@ jobs:
         with:
           node-version: ${{ matrix.node-version }}
           cache: "npm"
+          
       - run: npm ci
+
       - run: npm run build
+        with:
+          CONTENTFUL_SPACE_ID: ${{secrets.CONTENTFUL_SPACE_ID}}
+          CONTENTFUL_DELIVERY_TOKEN: ${{secrets.CONTENTFUL_DELIVERY_TOKEN}}
 
       - run: cat public/webpack.stats.json
         #if: false # disabling whilst there are issues with BundleStats
