@@ -46,13 +46,8 @@ const NewsIndex = ({ data, location }) => {
               </h2>
               <small>{post.createdAt}</small>
             </header>
-            <section>
-              <p
-                dangerouslySetInnerHTML={{
-                  __html: post.newsContent.raw || post.excerpt,
-                }}
-                itemProp="description"
-              />
+            <section>    
+              <p itemProp="description">{post.shortDescription}</p>
             </section>
           </article>
         );
@@ -79,6 +74,7 @@ export const pageQuery = graphql`
           raw
         }
         title
+        shortDescription
         createdAt(formatString: "Do MMMM YYYY")
         slug
       }
