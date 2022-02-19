@@ -15,11 +15,7 @@ const NewsIndex = ({ data, location }) => {
       <Layout location={location} title={siteTitle}>
         <Seo title="News" />
         <Bio />
-        <p>
-          No blog posts found. Add markdown posts to "content/blog" (or the
-          directory you specified for the "gatsby-source-filesystem" plugin in
-          gatsby-config.js).
-        </p>
+        <p>No news posts found. Add posts to contentful.</p>
       </Layout>
     );
   }
@@ -46,7 +42,7 @@ const NewsIndex = ({ data, location }) => {
               </h2>
               <small>{post.createdAt}</small>
             </header>
-            <section>    
+            <section>
               <p itemProp="description">{post.shortDescription}</p>
             </section>
           </article>
