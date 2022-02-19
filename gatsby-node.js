@@ -31,8 +31,6 @@ exports.createPages = async ({ graphql, actions, reporter }) => {
     }
   `);
 
-  console.log(result)
-
   if (result.errors) {
     reporter.panicOnBuild(
       `There was an error loading the work days and news`,
@@ -45,8 +43,6 @@ exports.createPages = async ({ graphql, actions, reporter }) => {
     news: result.data.allContentfulNews.nodes,
     workdays: result.data.allContentfulWorkDay.nodes,
   };
-
-  console.log(posts);
 
   createPostPage(posts.news, blogPostTemplate, "news", createPage);
   createPostPage(posts.workdays, workDayPostTemplate, "work-days", createPage);
