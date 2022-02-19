@@ -9,6 +9,7 @@
   },
   "dependencies": {
     "@what3words/react-components": "^4.0.3",
+    "dotenv": "^16.0.0",
     "gatsby": "^4.7.1",
     "gatsby-plugin-gatsby-cloud": "^4.7.0",
     "gatsby-plugin-google-analytics": "^4.0.0",
