@@ -10,8 +10,10 @@ export const contentfulRenderingOptions = {
         // asset is not an image
         return null;
       }
+
       console.log(node);
       console.log(gatsbyImageData.title);
+      
       return (
         <GatsbyImage image={gatsbyImageData} alt={gatsbyImageData.title} />
       );
