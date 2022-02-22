@@ -5,28 +5,12 @@ import Bio from "../components/bio";
 import Layout from "../components/layout";
 import Seo from "../components/seo";
 import * as style from "./blog-post.module.css";
-import { GatsbyImage } from "gatsby-plugin-image";
-import { BLOCKS } from "@contentful/rich-text-types";
 import { renderRichText } from "gatsby-source-contentful/rich-text";
 
 const BlogPostTemplate = ({ data, location }) => {
   const post = data.contentfulNews;
   const siteTitle = data.site.siteMetadata?.title || `Title`;
   const { previous, next } = data;
-
-  const options = {
-    renderNode: {
-      [BLOCKS.EMBEDDED_ASSET]: node => {
-        console.log(node);
-        return (
-          <img
-            key={node.data.target.fields.file.en.url}
-            src={node.data.target.fields.file.en.url}
-          />
-        );
-      },
-    },
-  };
 
   return (
     // <script src="https://assets.what3words.com/sdk/v3/what3words.js"></script>
@@ -46,7 +30,7 @@ const BlogPostTemplate = ({ data, location }) => {
           <p className={style.blogPostPostedDate}>{post.createdAt}</p>
         </header>
         <section itemProp="articleBody" className={style.articleBody}>
-          {renderRichText(post.newsContent, options)}
+          {renderRichText(post.newsContent)}
         </section>
         <hr className={style.spacer} />
         <footer>
@@ -94,14 +78,6 @@ export const pageQuery = graphql`
       createdAt(formatString: "Do MMMM YYYY")
       newsContent {
         raw
-        references {
-          description
-          gatsbyImageData(
-            formats: JPG
-            aspectRatio: 1.5
-            placeholder: TRACED_SVG
-          )
-        }
       }
     }
     previous: contentfulNews(id: { eq: $previousPostId }) {
