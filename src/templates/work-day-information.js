@@ -7,6 +7,7 @@ import Seo from "../components/seo";
 import { What3wordsAddress } from "@what3words/react-components";
 import * as style from "./work-day-information.module.css";
 import { renderRichText } from "gatsby-source-contentful/rich-text";
+import { contentfulRenderingOptions } from "../helpers/contentful-rendering-options";
 
 const WorkDayTemplate = ({ data, location }) => {
   const post = data.contentfulWorkDay;
@@ -26,7 +27,7 @@ const WorkDayTemplate = ({ data, location }) => {
         <section
           // dangerouslySetInnerHTML={{ __html: post.html }}
           itemProp="articleBody">
-          {renderRichText(post.workDayInformation)}
+          {renderRichText(post.newsContent, contentfulRenderingOptions)}
           {/* {post.workDayInformation.raw} */}
         </section>
         <section>
@@ -100,6 +101,14 @@ export const pageQuery = graphql`
       shortDescriptionOfWorkday
       workDayInformation {
         raw
+        references {
+          ... on ContentfulAsset {
+            contentful_id
+            __typename
+            gatsbyImageData
+          }
+          title
+        }
       }
     }
     previous: contentfulWorkDay(id: { eq: $previousPostId }) {

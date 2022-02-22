@@ -6,6 +6,7 @@ import Layout from "../components/layout";
 import Seo from "../components/seo";
 import * as style from "./blog-post.module.css";
 import { renderRichText } from "gatsby-source-contentful/rich-text";
+import { contentfulRenderingOptions } from "../helpers/contentful-rendering-options";
 
 const BlogPostTemplate = ({ data, location }) => {
   const post = data.contentfulNews;
@@ -30,7 +31,7 @@ const BlogPostTemplate = ({ data, location }) => {
           <p className={style.blogPostPostedDate}>{post.createdAt}</p>
         </header>
         <section itemProp="articleBody" className={style.articleBody}>
-          {renderRichText(post.newsContent)}
+          {renderRichText(post.newsContent, contentfulRenderingOptions)}
         </section>
         <hr className={style.spacer} />
         <footer>
@@ -78,6 +79,14 @@ export const pageQuery = graphql`
       createdAt(formatString: "Do MMMM YYYY")
       newsContent {
         raw
+        references {
+          ... on ContentfulAsset {
+            contentful_id
+            __typename
+            gatsbyImageData
+          }
+          title
+        }
       }
     }
     previous: contentfulNews(id: { eq: $previousPostId }) {
