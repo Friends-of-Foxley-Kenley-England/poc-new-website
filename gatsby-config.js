@@ -58,6 +58,10 @@ module.exports = {
         link: "/trees",
       },
       {
+        name: "Resources",
+        link: "/resources",
+      },
+      {
         name: "Contact",
         link: "/contact",
       },
