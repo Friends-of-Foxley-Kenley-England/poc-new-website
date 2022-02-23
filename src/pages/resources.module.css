@@ -1,8 +1,25 @@
 .pdf-file-list-item {
+  margin-left: var(--spacing-0);
   list-style-image: url("../images/PDF_32.png");
+}
+
+.pdf-file-list-item li {
+  margin-left: var(--spacing-0);
+  padding-left: var(--spacing-0);
 }
 
 .link-text {
   vertical-align: middle;
   padding-bottom: var(--fontSize-4);
+}
+
+@media screen and (min-width: 600px) {
+  .pdf-file-list-item {
+    margin-left: var(--spacing-4);
+  }
+
+  .pdf-file-list-item li {
+    margin-left: inherit;
+    padding-left: inherit;
+  }
 }

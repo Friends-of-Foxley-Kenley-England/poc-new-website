@@ -12,6 +12,11 @@ const ResourcesIndex = ({ data, location }) => {
       <Seo title="resources" />
       <h1>Resources</h1>
 
+      <p>
+        Surveys, management plan, membership application form and other
+        interesting documents.
+      </p>
+
       <ul className={style.pdfFileListItem}>
         {data.allContentfulAsset.nodes.map(node => {
           return (
