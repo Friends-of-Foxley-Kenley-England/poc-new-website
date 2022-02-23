@@ -1,0 +1,8 @@
+.pdf-file-list-item {
+  list-style-image: url("../images/PDF_32.png");
+}
+
+.link-text {
+  vertical-align: middle;
+  padding-bottom: var(--fontSize-4);
+}
