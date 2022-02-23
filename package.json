@@ -9,7 +9,7 @@
   },
   "dependencies": {
     "@contentful/rich-text-types": "^15.11.1",
-    "@what3words/react-components": "^4.0.3",
+    "@what3words/react-components": "^4.0.4",
     "dotenv": "^16.0.0",
     "gatsby": "^4.8.0",
     "gatsby-plugin-gatsby-cloud": "^4.7.0",
