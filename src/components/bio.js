@@ -1,10 +1,3 @@
-/**
- * Bio component that queries for data
- * with Gatsby's useStaticQuery component
- *
- * See: https://www.gatsbyjs.com/docs/use-static-query/
- */
-
 import * as React from "react";
 import { useStaticQuery, graphql } from "gatsby";
 
@@ -13,20 +6,16 @@ const Bio = () => {
     query BioQuery {
       site {
         siteMetadata {
-          author {
-            summary
-          }
+          description
         }
       }
     }
   `);
 
-  const author = data.site.siteMetadata?.author;
+  const description = data.site.siteMetadata?.description;
 
   return (
-    <div className="bio">
-      {author?.summary && <p>{author?.summary || null}</p>}
-    </div>
+    <div className="bio">{description && <p>{description || null}</p>}</div>
   );
 };
 
