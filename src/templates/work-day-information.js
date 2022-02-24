@@ -7,11 +7,14 @@ import Seo from "../components/seo";
 import { What3wordsAddress } from "@what3words/react-components";
 import * as style from "./work-day-information.module.css";
 import { renderRichText } from "gatsby-source-contentful/rich-text";
+import { parseMeetingPoint } from "../helpers/parse-meeting-point";
 
 const WorkDayTemplate = ({ data, location }) => {
   const post = data.contentfulWorkDay;
   const siteTitle = data.site.siteMetadata?.title || `Title`;
   const { previous, next } = data;
+  const { meetingPointWhatThreeWords, meetingPointDescription } =
+    parseMeetingPoint(post.meetingPointWhat3words);
 
   return (
     <Layout location={location} title={siteTitle}>
@@ -31,12 +34,12 @@ const WorkDayTemplate = ({ data, location }) => {
           <p>{post.meetingTime}</p>
 
           <h2 itemProp="headline">Location</h2>
-          <p>{post.meetingPointDescription}</p>
+          <p>{meetingPointDescription}</p>
           <What3wordsAddress
-            words={post.meeting_point_what3words}
+            words={meetingPointWhatThreeWords}
             icon-color="#0e4630"
             text-color="#0e4630"
-            tooltip-location={post.meeting_point_what3words}
+            tooltip-location={meetingPointDescription}
             rel="noopener noreferrer"
           />
         </section>
@@ -92,8 +95,8 @@ export const pageQuery = graphql`
       id
       title
       dateOfWorkday
-      meetingPointDescription
       meetingTime
+      meetingPointWhat3words
       shortDescriptionOfWorkday
       workDayInformation {
         raw
