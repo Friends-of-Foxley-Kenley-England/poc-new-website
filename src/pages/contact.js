@@ -10,7 +10,7 @@ const ContactIndex = ({ data, location }) => {
 
   return (
     <Layout location={location} title={siteTitle}>
-      <Seo title="contact" />
+      <Seo title="Contact" />
       <h1>Contact us</h1>
       <div className={style.facebookSpacing}>
         <FindUsOnFacebook useWhiteGraphic={false} />

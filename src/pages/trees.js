@@ -9,7 +9,7 @@ const TreesIndex = ({ data, location }) => {
 
   return (
     <Layout location={location} title={siteTitle}>
-      <Seo title="trees" />
+      <Seo title="Trees" />
       <h1>Trees of Foxley Wood</h1>
 
       <p>

@@ -9,7 +9,7 @@ const ResourcesIndex = ({ data, location }) => {
 
   return (
     <Layout location={location} title={siteTitle}>
-      <Seo title="resources" />
+      <Seo title="Resources" />
       <h1>Resources</h1>
 
       <p>

@@ -8,7 +8,7 @@ const HistoryIndex = ({ data, location }) => {
 
   return (
     <Layout location={location} title={siteTitle}>
-      <Seo title="history" />
+      <Seo title="History" />
       <h1>History of Foxley Wood</h1>
       <p>
         The ancient name FOXLE first appears in the Surrey Assize Rolls of 1279
