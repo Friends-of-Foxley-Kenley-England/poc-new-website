@@ -19,10 +19,7 @@ if (process.env.CONTENTFUL_HOST) {
 
 const { spaceId, accessToken } = contentfulConfig;
 
-console.log(
-  "process.env.CONTENTFUL_ACCESS_TOKEN",
-  process.env.CONTENTFUL_ACCESS_TOKEN,
-);
+console.log("process.env.CONTENTFUL_SPACE_ID", process.env.CONTENTFUL_SPACE_ID);
 
 if (!spaceId || !accessToken) {
   throw new Error(
