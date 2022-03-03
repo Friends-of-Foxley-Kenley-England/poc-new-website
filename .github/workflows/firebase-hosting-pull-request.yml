@@ -20,9 +20,6 @@ jobs:
       - run: npm ci
 
       - run: npm run build
-        env:
-          CONTENTFUL_SPACE_ID: "${{ secrets.CONTENTFUL_SPACE_ID }}"
-          CONTENTFUL_DELIVERY_TOKEN: "${{ secrets.CONTENTFUL_DELIVERY_TOKEN }}"
 
       - uses: FirebaseExtended/action-hosting-deploy@v0
         with:
