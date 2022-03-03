@@ -10,7 +10,8 @@ jobs:
     steps:
       - uses: actions/checkout@v2
 
-      - run: "echo $NODE_ENV ${{ github.NODE_ENV }}" 
+      - run: "echo $NODE_ENV" 
+      - run: "echo ${{ github.NODE_ENV }}" 
 
       - run: npm ci 
 
