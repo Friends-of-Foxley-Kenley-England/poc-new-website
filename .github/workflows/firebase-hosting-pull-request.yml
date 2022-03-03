@@ -4,10 +4,10 @@
 name: Deploy to Firebase Hosting on PR
 "on": pull_request
 
-env:
-  NODE_ENV: production
-  CONTENTFUL_SPACE_ID: "${{ secrets.CONTENTFUL_SPACE_ID }}"
-  CONTENTFUL_DELIVERY_TOKEN: "${{ secrets.CONTENTFUL_DELIVERY_TOKEN }}"
+# env:
+#   NODE_ENV: production
+#   CONTENTFUL_SPACE_ID: "${{ secrets.CONTENTFUL_SPACE_ID }}"
+#   CONTENTFUL_DELIVERY_TOKEN: "${{ secrets.CONTENTFUL_DELIVERY_TOKEN }}"
 
 jobs:
   build_and_preview:
@@ -18,6 +18,9 @@ jobs:
 
       - name: Create dotenv
         uses: iamsauravsharma/create-dotenv@v1.2.1
+        env:
+          CONTENTFUL_SPACE_ID: "${{ secrets.CONTENTFUL_SPACE_ID }}"
+          CONTENTFUL_DELIVERY_TOKEN: "${{ secrets.CONTENTFUL_DELIVERY_TOKEN }}"
         with:
           file-name: .env.production
 
