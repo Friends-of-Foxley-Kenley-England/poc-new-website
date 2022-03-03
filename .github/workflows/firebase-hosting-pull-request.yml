@@ -10,6 +10,8 @@ jobs:
     steps:
       - uses: actions/checkout@v2
 
+      - run: "${{ secrets.CONTENTFUL_SPACE_ID }}" 
+
       - run: npm ci 
 
       - run: npm run build
