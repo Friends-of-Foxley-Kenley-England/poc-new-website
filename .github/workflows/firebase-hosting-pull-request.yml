@@ -10,7 +10,7 @@ jobs:
     steps:
       - uses: actions/checkout@v2
 
-      - run: "${{ secrets.CONTENTFUL_SPACE_ID }}" 
+      - run: "echo $NODE_ENV ${{ github.NODE_ENV }}" 
 
       - run: npm ci 
 
