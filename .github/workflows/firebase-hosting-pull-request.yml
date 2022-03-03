@@ -22,6 +22,7 @@ jobs:
           file-name: .env.production
 
       - run: env
+      - run: ls
 
       - run: npm ci
 
