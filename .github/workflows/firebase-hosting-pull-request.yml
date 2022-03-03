@@ -28,11 +28,11 @@ jobs:
       - run: npm ci
 
       - run: npm run build
-
-      - uses: FirebaseExtended/action-hosting-deploy@v0
         env:
           CONTENTFUL_SPACE_ID: "${{ secrets.CONTENTFUL_SPACE_ID }}"
           CONTENTFUL_DELIVERY_TOKEN: "${{ secrets.CONTENTFUL_DELIVERY_TOKEN }}"
+
+      - uses: FirebaseExtended/action-hosting-deploy@v0
         with:
           repoToken: "${{ secrets.GITHUB_TOKEN }}"
           firebaseServiceAccount: "${{ secrets.FIREBASE_SERVICE_ACCOUNT_FRIENDS_OF_FOXLEY_PROD }}"
