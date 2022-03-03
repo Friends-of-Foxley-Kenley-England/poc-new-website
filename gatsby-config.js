@@ -17,6 +17,11 @@ if (process.env.CONTENTFUL_HOST) {
 
 const { spaceId, accessToken } = contentfulConfig;
 
+console.log(
+  "process.env.CONTENTFUL_ACCESS_TOKEN",
+  process.env.CONTENTFUL_ACCESS_TOKEN,
+);
+
 if (!spaceId || !accessToken) {
   throw new Error(
     "Contentful spaceId and the access token need to be provided.",
