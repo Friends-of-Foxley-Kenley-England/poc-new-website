@@ -6,6 +6,8 @@ name: Deploy to Firebase Hosting on PR
 
 env:
   NODE_ENV: production
+  CONTENTFUL_SPACE_ID: "${{ secrets.CONTENTFUL_SPACE_ID }}"
+  CONTENTFUL_DELIVERY_TOKEN: "${{ secrets.CONTENTFUL_DELIVERY_TOKEN }}"
 
 jobs:
   build_and_preview:
@@ -13,17 +15,17 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v2
-      
+
       - name: Create dotenv
         uses: iamsauravsharma/create-dotenv@v1.2.1
         with:
           file-name: .env.production
 
-      - run:  env
+      - run: env
 
-      - run: npm ci 
+      - run: npm ci
 
-      - run: CONTENTFUL_SPACE_ID=${{ secrets.CONTENTFUL_SPACE_ID }}  CONTENTFUL_DELIVERY_TOKEN=${{ secrets.CONTENTFUL_DELIVERY_TOKEN }}  npm run build
+      - run: npm run build
 
       - uses: FirebaseExtended/action-hosting-deploy@v0
         env:
