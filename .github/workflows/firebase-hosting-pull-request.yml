@@ -13,6 +13,11 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v2
+      
+      - name: Create dotenv
+        uses: iamsauravsharma/create-dotenv@v1.2.1
+        with:
+          file-name: .env.production
 
       - run:  env
 
