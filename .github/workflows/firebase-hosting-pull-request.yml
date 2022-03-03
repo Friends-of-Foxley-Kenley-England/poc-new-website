@@ -11,12 +11,6 @@ jobs:
     steps:
       - uses: actions/checkout@v2
 
-      # - name: Create dotenv
-      #   uses: iamsauravsharma/create-dotenv@v1.2.1
-      #   env:
-      #     CONTENTFUL_SPACE_ID: "${{ secrets.CONTENTFUL_SPACE_ID }}"
-      #     CONTENTFUL_DELIVERY_TOKEN: "${{ secrets.CONTENTFUL_DELIVERY_TOKEN }}"
-
       - run: npm ci
 
       - run: npm run build
