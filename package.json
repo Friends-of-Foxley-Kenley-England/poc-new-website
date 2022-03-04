@@ -35,7 +35,6 @@
     "typeface-montserrat": "1.1.13"
   },
   "devDependencies": {
-    "contentful-import": "^8.2.28",
     "depcheck": "^1.4.3",
     "gatsby-plugin-bundle-stats": "^3.2.5",
     "prettier": "2.5.1",
