@@ -4,9 +4,9 @@
 name: Deploy via Firebase Hosting on push to feature branches
 on:
   push:
-    branches:  
+    branches: 
+    - '**' 
     - '!main'
-    - '**'
 
 jobs:
   build_and_preview:
