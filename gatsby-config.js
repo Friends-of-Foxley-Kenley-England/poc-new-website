@@ -27,7 +27,7 @@ module.exports = {
   siteMetadata: {
     title: `Friends Of Foxley`,
     description: `The Friends of Foxley are a group of volunteers who manage Foxley Wood in Kenley, Surrey. `,
-    siteUrl: `https://gatsbystarterblogsource.gatsbyjs.io/`,
+    siteUrl: `http://www.friendsoffoxley.co.uk`,
     social: {
       facebook: `https://www.facebook.com/pages/Friends-of-Foxley-Wood/151238351586387`,
     },
