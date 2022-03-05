@@ -11,6 +11,17 @@
 .link-text {
   vertical-align: middle;
   padding-bottom: var(--fontSize-4);
+  top: -15px;
+  position: relative;
+}
+
+@-moz-document url-prefix() {
+  .link-text {
+    top: unset;
+    position: unset;
+    vertical-align: middle;
+    padding-bottom: var(--fontSize-4);
+  }
 }
 
 @media screen and (min-width: 600px) {
