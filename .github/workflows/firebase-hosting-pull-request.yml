@@ -4,9 +4,9 @@
 name: Deploy via Firebase Hosting on push to feature branches
 on:
   push:
-    branches: 
-    - '**' 
-    - '!main'
+    branches:
+      - "**"
+      - "!main"
 
 jobs:
   build_and_preview:
@@ -25,4 +25,4 @@ jobs:
         with:
           repoToken: "${{ secrets.GITHUB_TOKEN }}"
           firebaseServiceAccount: "${{ secrets.FIREBASE_SERVICE_ACCOUNT_FRIENDS_OF_FOXLEY_PROD }}"
-          projectId: friends-of-foxley-prod
+          projectId: friends-of-foxley-test
