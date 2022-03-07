@@ -1,9 +1,17 @@
 const path = require(`path`);
 const { createFilePath } = require(`gatsby-source-filesystem`);
 const { StatsWriterPlugin } = require("webpack-stats-plugin");
+const redirects = require("./redirects.json");
 
 exports.createPages = async ({ graphql, actions, reporter }) => {
-  const { createPage } = actions;
+  const { createRedirect, createPage } = actions;
+
+  redirects.forEach(redirect =>
+    createRedirect({
+      fromPath: redirect.fromPath,
+      toPath: redirect.toPath,
+    }),
+  );
 
   // Define a template for blog post
   const blogPostTemplate = path.resolve(`./src/templates/blog-post.js`);

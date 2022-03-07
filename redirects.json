@@ -1,0 +1,14 @@
+[
+  {
+    "fromPath": "/pages/history.html",
+    "toPath": "/history"
+  },
+  {
+    "fromPath": "/pages/the_trees_of_foxley_wood.html",
+    "toPath": "/trees"
+  },
+  {
+    "fromPath": "/pages/contact.html",
+    "toPath": "/contact"
+  }
+]
