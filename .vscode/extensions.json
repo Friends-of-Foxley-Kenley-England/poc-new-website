@@ -1,0 +1,8 @@
+{
+  "recommendations": [
+    "formulahendry.auto-rename-tag",
+    "esbenp.prettier-vscode",
+    "pflannery.vscode-versionlens",
+    "GitHub.vscode-pull-request-github"
+  ]
+}
