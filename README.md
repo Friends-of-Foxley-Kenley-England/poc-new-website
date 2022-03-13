@@ -8,6 +8,8 @@
   Friends of Foxley website 
 </h1>
 
+[![TODOs](https://img.shields.io/endpoint?url=https://todos.tickgit.com/badge?repo=github.com/Friends-of-Foxley-Kenley-England/new-fof-website)](https://todos.tickgit.com/browse?repo=github.com/Friends-of-Foxley-Kenley-England/new-fof-website)
+
 
 ## 🚀 Quick start
 
