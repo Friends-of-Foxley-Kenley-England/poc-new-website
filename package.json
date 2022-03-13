@@ -61,5 +61,6 @@
     "clean": "gatsby clean",
     "test": "echo \"Write tests! -> https://gatsby.dev/unit-testing\" && exit 1",
     "find-unused-deps": "depcheck"
-  }
+  },
+  "packageManager": "yarn@3.2.0"
 }
