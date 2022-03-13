@@ -1,19 +1,17 @@
-# Development frameworks used in this project 
+# Development frameworks used in this project
 
 We're using the following frameworks:
+
 - [Gatsby](#gatsby) - for the UI
 - [Contentful](#contentful) - headless CMS for the content on some pages
 - [What3Words](https://www.npmjs.com/package/@what3words/react-components) - for locations in the woods
-    - note: we're not using the what3words api for auto-suggest/anything else, just for the component to show the locations using the w3w branding eg `///loves.final.needed`
+  - note: we're not using the what3words api for auto-suggest/anything else, just for the component to show the locations using the w3w branding eg `///loves.final.needed`
 - [Prettier](https://prettier.io/) - formatting code in uniform way
-
-
 
 ## Gatsby
 
-I generated this site using this gatsby starter.  I've since swapped the markdown logic with Contentfull Headless CMS:
+I generated this site using this gatsby starter. I've since swapped the markdown logic with Contentfull Headless CMS:
 `gatsby new my-blog-starter https://github.com/gatsbyjs/gatsby-starter-blog`
-
 
 ### 🎓 Learning Gatsby
 
@@ -22,7 +20,6 @@ Looking for more guidance? Full documentation for Gatsby lives [on the website](
 - **For most developers, we recommend starting with our [in-depth tutorial for creating a site with Gatsby](https://www.gatsbyjs.com/tutorial/).** It starts with zero assumptions about your level of ability and walks through every step of the process.
 
 - **To dive straight into code samples, head [to our documentation](https://www.gatsbyjs.com/docs/).** In particular, check out the _Guides_, _API Reference_, and _Advanced Tutorials_ sections in the sidebar.
-
 
 ### 🧐 What's inside?
 
@@ -66,13 +63,12 @@ A quick look at the top-level files and directories you'll see in a Gatsby proje
 
 12. **`README.md`**: A text file containing useful reference information about your project.
 
-
-
 ## Contentful
 
-[Contentful](https://www.contentful.com/) is a headless CMS.  This means that text, images and files can be added to contentful, and surfaced in the friends of foxley website.
+[Contentful](https://www.contentful.com/) is a headless CMS. This means that text, images and files can be added to contentful, and surfaced in the friends of foxley website.
 
 These areas of the site are populated with Contentful content:
+
 - https://friendsoffoxley.co.uk/work-days & individual work day articles
 - https://friendsoffoxley.co.uk/news & individual news articles
 - https://friendsoffoxley.co.uk/resources
@@ -80,13 +76,26 @@ These areas of the site are populated with Contentful content:
 I haven't used contentful for everything, since a lot of the content on the website won't change often.
 
 ### How do I get the contentful content?
+
 Retrieve the content via graphQL.
 
     Assets = Images, and files
     Entries = News articles and work days
 
+[space_url]: https://app.contentful.com/spaces/jnd8s5ezvg4b/home
+[models_url]: https://app.contentful.com/spaces/jnd8s5ezvg4b/content_types
+[content_url]: https://app.contentful.com/spaces/jnd8s5ezvg4b/entries?id=fVjOlOJpy2qBIBwI&order.fieldId=updatedAt&order.direction=descending&displayedFieldIds=contentType&displayedFieldIds=updatedAt&displayedFieldIds=author&displayedFieldIds=metadata.tags&folderId=kzIgaBG3PX73JJiG&page=1
+[media_url]: https://app.contentful.com/spaces/jnd8s5ezvg4b/assets?id=Gkg6oxD7w37zhXZ4
 
-Useful links:
+| Area                    | Purpose                                                                                                                             |
+| ----------------------- | ----------------------------------------------------------------------------------------------------------------------------------- |
+| [Space home][space_url] | Home page for FOF Contentful project                                                                                                |
+| [Models][models_url]    | Models describe the schema for the content. You can define types, validation and control type (dropdown/radiobutton etc)            |
+| [Content][content_url]  | Content: work days, news, or other text content (you can link Media such as images in the content as well). Also known as "Entries" |
+| [Media][media_url]      | Files: Images, PDFs. Also known as "Assets".                                                                                        |
+
+More info:
+
 - <https://www.contentful.com/developers/docs/concepts/apis/>
 - <https://www.contentful.com/developers/docs/references/content-delivery-api/>
-
+- <https://www.gatsbyjs.com/plugins/gatsby-source-contentful/>
