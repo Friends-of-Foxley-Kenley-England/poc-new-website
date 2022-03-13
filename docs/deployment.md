@@ -3,9 +3,11 @@
 Deploying via 2 hosting services:
 
 - [Gatsby Cloud](https://www.gatsbyjs.com/products/cloud/) ([free tier](https://www.gatsbyjs.com/pricing/))
-  - Project URL: <https://www.gatsbyjs.com/dashboard/organization/805645db-b2b7-41eb-9afb-5981d52c12d2/sites>
+  - Deploys to: <https://friendsoffoxley.co.uk>
+  - Hosting Project URL: <https://www.gatsbyjs.com/dashboard/organization/805645db-b2b7-41eb-9afb-5981d52c12d2/sites>
 - [Firebase](https://firebase.google.com/products-release?authuser=0&hl=en) ([Free Spark Tier](https://firebase.google.com/pricing?authuser=0&hl=en))
-  - Project URL: <https://console.firebase.google.com/u/0/project/friends-of-foxley-prod/overview>
+  - Deploys to: <https://friends-of-foxley-prod.firebaseapp.com>
+  - Hosting Project URL: <https://console.firebase.google.com/u/0/project/friends-of-foxley-prod/overview>
 
 ## Why 2 hosting providers?
 
