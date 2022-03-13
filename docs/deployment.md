@@ -1,4 +1,4 @@
-# Deployment
+# 💫Deployment
 
 Deploying via 2 hosting services:
 - [Gatsby Cloud](https://www.gatsbyjs.com/products/cloud/) ([free tier](https://www.gatsbyjs.com/pricing/))
