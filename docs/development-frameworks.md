@@ -96,6 +96,7 @@ Retrieve the content via graphQL.
 
 More info:
 
+- <https://www.contentful.com/help/contentful-101/>
 - <https://www.contentful.com/developers/docs/concepts/apis/>
 - <https://www.contentful.com/developers/docs/references/content-delivery-api/>
 - <https://www.gatsbyjs.com/plugins/gatsby-source-contentful/>
