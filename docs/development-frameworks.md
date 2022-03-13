@@ -1,4 +1,4 @@
-# Development frameworks used in this project
+# 💻Development frameworks used in this project
 
 We're using the following frameworks:
 
@@ -63,7 +63,7 @@ A quick look at the top-level files and directories you'll see in a Gatsby proje
 
 12. **`README.md`**: A text file containing useful reference information about your project.
 
-## Contentful
+## 📃Contentful
 
 [Contentful](https://www.contentful.com/) is a headless CMS. This means that text, images and files can be added to contentful, and surfaced in the friends of foxley website.
 

@@ -1,4 +1,4 @@
-# 💫Deployment
+# 🚀 Deployment
 
 Deploying via 2 hosting services:
 
