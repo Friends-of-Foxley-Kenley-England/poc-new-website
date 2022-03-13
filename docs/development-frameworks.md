@@ -69,3 +69,24 @@ A quick look at the top-level files and directories you'll see in a Gatsby proje
 
 
 ## Contentful
+
+[Contentful](https://www.contentful.com/) is a headless CMS.  This means that text, images and files can be added to contentful, and surfaced in the friends of foxley website.
+
+These areas of the site are populated with Contentful content:
+- https://friendsoffoxley.co.uk/work-days & individual work day articles
+- https://friendsoffoxley.co.uk/news & individual news articles
+- https://friendsoffoxley.co.uk/resources
+
+I haven't used contentful for everything, since a lot of the content on the website won't change often.
+
+### How do I get the contentful content?
+Retrieve the content via graphQL.
+
+    Assets = Images, and files
+    Entries = News articles and work days
+
+
+Useful links:
+- <https://www.contentful.com/developers/docs/concepts/apis/>
+- <https://www.contentful.com/developers/docs/references/content-delivery-api/>
+
