@@ -7788,7 +7788,7 @@ __metadata:
     depcheck: ^1.4.3
     dotenv: ^16.0.0
     gatsby: ^4.9.1
-    gatsby-plugin-bundle-stats: ^3.2.5
+    gatsby-plugin-bundle-stats: ^3.2.9
     gatsby-plugin-gatsby-cloud: ^4.9.0
     gatsby-plugin-image: ^2.9.0
     gatsby-plugin-manifest: ^4.9.0
@@ -8064,7 +8064,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"gatsby-plugin-bundle-stats@npm:^3.2.5":
+"gatsby-plugin-bundle-stats@npm:^3.2.9":
   version: 3.2.9
   resolution: "gatsby-plugin-bundle-stats@npm:3.2.9"
   dependencies:

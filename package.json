@@ -37,7 +37,7 @@
   },
   "devDependencies": {
     "depcheck": "^1.4.3",
-    "gatsby-plugin-bundle-stats": "^3.2.5",
+    "gatsby-plugin-bundle-stats": "^3.2.9",
     "prettier": "2.5.1",
     "webpack-stats-plugin": "^1.0.3"
   },
