@@ -15,8 +15,8 @@
 1.  Start developing.
 
     ```shell
-    npm install
-    npm start
+    yarn install
+    yarn start
     ```
 
 1.  Open the source code and start editing!
