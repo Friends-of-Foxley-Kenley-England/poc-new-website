@@ -27,9 +27,9 @@ jobs:
           node-version: ${{ matrix.node-version }}
           cache: "npm"
           
-      - run: npm ci
+      - run: yarn install
 
-      - run: npm run build
+      - run: yarn build
         env:
           CONTENTFUL_SPACE_ID: "${{ secrets.CONTENTFUL_SPACE_ID }}"
           CONTENTFUL_DELIVERY_TOKEN: "${{ secrets.CONTENTFUL_DELIVERY_TOKEN }}"
