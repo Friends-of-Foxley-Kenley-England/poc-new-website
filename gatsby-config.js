@@ -137,6 +137,5 @@ module.exports = {
       resolve: "gatsby-source-contentful",
       options: contentfulConfig,
     },
-    `gatsby-plugin-meta-redirect`, // make sure to put last in the array
   ],
 };
