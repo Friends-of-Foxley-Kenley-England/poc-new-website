@@ -7792,6 +7792,7 @@ __metadata:
     gatsby-plugin-gatsby-cloud: ^4.9.0
     gatsby-plugin-image: ^2.9.0
     gatsby-plugin-manifest: ^4.9.0
+    gatsby-plugin-meta-redirect: ^1.1.1
     gatsby-plugin-offline: ^5.9.0
     gatsby-plugin-react-helmet: ^5.8.0
     gatsby-plugin-sharp: ^4.9.0
@@ -7850,6 +7851,17 @@ __metadata:
     jsonfile: ^4.0.0
     universalify: ^0.1.0
   checksum: c5ae3c7043ad7187128e619c0371da01b58694c1ffa02c36fb3f5b459925d9c27c3cb1e095d9df0a34a85ca993d8b8ff6f6ecef868fd5ebb243548afa7fc0936
+  languageName: node
+  linkType: hard
+
+"fs-extra@npm:^7.0.0":
+  version: 7.0.1
+  resolution: "fs-extra@npm:7.0.1"
+  dependencies:
+    graceful-fs: ^4.1.2
+    jsonfile: ^4.0.0
+    universalify: ^0.1.0
+  checksum: 141b9dccb23b66a66cefdd81f4cda959ff89282b1d721b98cea19ba08db3dcbe6f862f28841f3cf24bb299e0b7e6c42303908f65093cb7e201708e86ea5a8dcf
   languageName: node
   linkType: hard
 
@@ -8133,6 +8145,15 @@ __metadata:
   peerDependencies:
     gatsby: ^4.0.0-next
   checksum: dbe123330534b976b7fa31467d468136245009955fc56f4e96340fb9c4488e2d07fa56530a429a4aa1ebd809e1ba62ad1dd80831c6889f9312bedd21658ad58e
+  languageName: node
+  linkType: hard
+
+"gatsby-plugin-meta-redirect@npm:^1.1.1":
+  version: 1.1.1
+  resolution: "gatsby-plugin-meta-redirect@npm:1.1.1"
+  dependencies:
+    fs-extra: ^7.0.0
+  checksum: acd6d54ea2f1ea216dab1767952ef6df2fc54471f551e12f8b56a8220114eb77831d96b0ddfbb3eb349440a74bd895bec273a69f9f867d116d2b107354fce519
   languageName: node
   linkType: hard
 
