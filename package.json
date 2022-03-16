@@ -23,7 +23,7 @@
     "gatsby-remark-prismjs": "^6.9.0",
     "gatsby-remark-responsive-iframe": "^5.7.0",
     "gatsby-remark-smartypants": "^5.8.0",
-    "gatsby-source-contentful": "^7.5.0",
+    "gatsby-source-contentful": "^7.7.2",
     "gatsby-source-filesystem": "^4.9.0",
     "gatsby-transformer-remark": "^5.0.0",
     "gatsby-transformer-sharp": "^4.9.0",
@@ -56,10 +56,11 @@
     "build": "gatsby build",
     "develop": "gatsby develop",
     "format": "prettier --write \"**/*.{js,jsx,ts,tsx,json,md}\"",
-    "start": "npm run develop",
+    "start": "yarn develop",
     "serve": "gatsby serve",
     "clean": "gatsby clean",
     "test": "echo \"Write tests! -> https://gatsby.dev/unit-testing\" && exit 1",
     "find-unused-deps": "depcheck"
-  }
+  },
+  "packageManager": "yarn@3.2.0"
 }
