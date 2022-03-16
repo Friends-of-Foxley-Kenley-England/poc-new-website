@@ -38,6 +38,7 @@
   "devDependencies": {
     "depcheck": "^1.4.3",
     "gatsby-plugin-bundle-stats": "^3.2.5",
+    "gatsby-plugin-meta-redirect": "^1.1.1",
     "prettier": "2.5.1",
     "webpack-stats-plugin": "^1.0.3"
   },
