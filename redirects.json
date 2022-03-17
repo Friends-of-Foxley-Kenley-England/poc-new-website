@@ -10,5 +10,29 @@
   {
     "fromPath": "pages/contact.html",
     "componentPath": "./src/pages/contact.js"
+  },
+  {
+    "fromPath": "pages/latest_news.html",
+    "componentPath": "./src/pages/news.js"
+  },
+  {
+    "fromPath": "pages/work_days.html",
+    "componentPath": "./src/pages/work-days.js"
+  },
+  {
+    "fromPath": "images/content/Membership-Application.pdf",
+    "componentPath": "./src/pages/resources.js"
+  }  ,
+  {
+    "fromPath": "pages/surveys.html",
+    "componentPath": "./src/pages/resources.js"
+  },
+  {
+    "fromPath": "pages/firewood.html",
+    "componentPath": "./src/pages/firewood.js"
+  },
+  {
+    "fromPath": "pages/ancient_beech_tree.html",
+    "componentPath": "./src/pages/trees/ancient-beech-tree-diversion.js"
   }
 ]
