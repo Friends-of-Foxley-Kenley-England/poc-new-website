@@ -8,6 +8,10 @@
     "componentPath": "./src/pages/trees.js"
   },
   {
+    "fromPath": "pages/english_oak.html",
+    "componentPath": "./src/pages/trees/english-oak.js"
+  },
+  {
     "fromPath": "pages/contact.html",
     "componentPath": "./src/pages/contact.js"
   },
