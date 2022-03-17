@@ -20,9 +20,13 @@
     "componentPath": "./src/pages/work-days.js"
   },
   {
+    "fromPath": "pages/management_plan.html",
+    "componentPath": "./src/pages/resources.js"
+  },
+  {
     "fromPath": "images/content/Membership-Application.pdf",
     "componentPath": "./src/pages/resources.js"
-  }  ,
+  },
   {
     "fromPath": "pages/surveys.html",
     "componentPath": "./src/pages/resources.js"
