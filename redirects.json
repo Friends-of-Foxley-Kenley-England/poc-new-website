@@ -16,6 +16,10 @@
     "componentPath": "./src/pages/news.js"
   },
   {
+    "fromPath": "pages/news.html",
+    "componentPath": "./src/pages/news.js"
+  },
+  {
     "fromPath": "pages/work_days.html",
     "componentPath": "./src/pages/work-days.js"
   },
