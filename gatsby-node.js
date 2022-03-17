@@ -45,13 +45,13 @@ exports.createPages = async ({ graphql, actions, reporter }) => {
     workdays: result.data.allContentfulWorkDay.nodes,
   };
 
-  createRedirectedPages(redirects);  
+  createRedirectedPages(createPage, redirects);  
 
   createPostPage(posts.news, blogPostTemplate, "news", createPage);
   createPostPage(posts.workdays, workDayPostTemplate, "work-days", createPage);
 };
 
-function createRedirectedPages(redirects) {
+function createRedirectedPages(createPage, redirects) {
   redirects.forEach(redirect => {
     console.log(`Added temp page for ${redirect.fromPath}`)
     createPage({
