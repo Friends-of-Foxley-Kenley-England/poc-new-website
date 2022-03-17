@@ -1,10 +1,10 @@
 [
   {
-    "fromPath": "/pages/history.html",
+    "fromPath": "pages/history.html",
     "componentPath": "./src/pages/history.js"
   },
   {
-    "fromPath": "/pages/the_trees_of_foxley_wood.html",
+    "fromPath": "pages/the_trees_of_foxley_wood.html",
     "componentPath": "./src/pages/trees.js"
   },
   {
