@@ -4,15 +4,7 @@ const { StatsWriterPlugin } = require("webpack-stats-plugin");
 const redirects = require("./redirects.json");
 
 exports.createPages = async ({ graphql, actions, reporter }) => {
-  const { createRedirect, createPage } = actions;
-
-  redirects.forEach(redirect => {
-    console.log(`redirecting from ${redirect.fromPath} to ${redirect.toPath}`);
-    createRedirect({
-      fromPath: redirect.fromPath,
-      toPath: redirect.toPath,
-    });
-  });
+  const { createPage } = actions;
 
   // Define a template for blog post
   const blogPostTemplate = path.resolve(`./src/templates/blog-post.js`);
@@ -53,9 +45,21 @@ exports.createPages = async ({ graphql, actions, reporter }) => {
     workdays: result.data.allContentfulWorkDay.nodes,
   };
 
+  createRedirectedPages(redirects);  
+
   createPostPage(posts.news, blogPostTemplate, "news", createPage);
   createPostPage(posts.workdays, workDayPostTemplate, "work-days", createPage);
 };
+
+function createRedirectedPages(redirects) {
+  redirects.forEach(redirect => {
+    console.log(`Added temp page for ${redirect.fromPath}`)
+    createPage({
+      path: redirect.fromPath,
+      component: path.resolve(redirect.componentPath),
+    });
+  });
+}
 
 /***
  * @summary creates the pages with post content (either news or workdays)
