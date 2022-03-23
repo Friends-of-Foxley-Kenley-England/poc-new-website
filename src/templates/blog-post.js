@@ -23,7 +23,7 @@ const BlogPostTemplate = ({ data, location }) => {
       <article
         className="blog-post"
         itemScope
-        itemType="http://schema.org/Article">
+        itemType="https://schema.org/Article">
         <header>
           <h1 className={style.blogPostHeader} itemProp="headline">
             {post.title}
