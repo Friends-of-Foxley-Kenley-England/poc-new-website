@@ -124,6 +124,28 @@ module.exports = {
     `gatsby-plugin-react-helmet`,
     `gatsby-plugin-gatsby-cloud`,
     `gatsby-plugin-sitemap`,
+    {
+      resolve: `gatsby-plugin-sitemap`,
+      options: {
+        excludes: [
+          "/offline-plugin-app-shell-fallback/",
+          "/pages/contact.html",
+          "/pages/the_trees_of_foxley_wood.html",
+          "/pages/history.html",
+          "/pages/latest_news.html",
+          "/pages/news.html",
+          "/pages/work_days.html",
+          "/pages/management_plan.html",
+          "/images/content/Membership-Application.pdf",
+          "/pages/english_oak.html",
+          "/pages/surveys.html",
+          "/pages/firewood.html",
+          "/pages/ancient_beech_tree.html",
+          "/404/",
+          "/404.html",
+        ],
+      },
+    },
     // this (optional) plugin enables Progressive Web App + Offline functionality
     // To learn more, visit: https://gatsby.dev/offline
     {
