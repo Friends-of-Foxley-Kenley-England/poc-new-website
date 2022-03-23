@@ -55,7 +55,7 @@ const WorkDaysIndex = ({ data, location }) => {
               <article
                 className={style.postListItem}
                 itemScope
-                itemType="http://schema.org/Article">
+                itemType="https://schema.org/Article">
                 <header>
                   <h3>
                     <Link to={"/work-days/" + post.slug} itemProp="url">
