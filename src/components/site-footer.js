@@ -27,4 +27,4 @@ const SiteFooter = () => (
   </footer>
 );
 
-export default SiteFooter;
+export default React.memo(SiteFooter);

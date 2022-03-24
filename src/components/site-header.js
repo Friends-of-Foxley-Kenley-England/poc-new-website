@@ -34,4 +34,4 @@ SiteHeader.defaultProps = {
   siteTitle: ``,
 };
 
-export default SiteHeader;
+export default React.memo(SiteHeader);
