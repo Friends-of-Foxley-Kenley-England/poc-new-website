@@ -1,5 +1,4 @@
 const path = require(`path`);
-const { createFilePath } = require(`gatsby-source-filesystem`);
 const { StatsWriterPlugin } = require("webpack-stats-plugin");
 const redirects = require("./redirects.json");
 
@@ -109,7 +108,7 @@ exports.createSchemaCustomization = ({ actions }) => {
   `);
 };
 
-exports.onCreateWebpackConfig = ({ stage, plugins, actions }) => {
+exports.onCreateWebpackConfig = ({ stage, actions }) => {
   console.log("stage", stage);
 
   actions.setWebpackConfig({
