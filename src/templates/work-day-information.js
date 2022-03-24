@@ -5,7 +5,6 @@ import Bio from "../components/bio";
 import Layout from "../components/layout";
 import Seo from "../components/seo";
 import { What3wordsAddress } from "@what3words/react-components";
-import * as style from "./work-day-information.module.css";
 import { renderRichText } from "gatsby-source-contentful/rich-text";
 import { parseMeetingPoint } from "../helpers/parse-meeting-point";
 
