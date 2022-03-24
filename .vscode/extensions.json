@@ -3,6 +3,8 @@
     "formulahendry.auto-rename-tag",
     "esbenp.prettier-vscode",
     "pflannery.vscode-versionlens",
-    "GitHub.vscode-pull-request-github"
+    "github.vscode-pull-request-github",
+    "wix.vscode-import-cost",
+    "Perkovec.emoji"
   ]
 }
