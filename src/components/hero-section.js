@@ -7,7 +7,7 @@ const HeroSection = () => {
     <section className={style.container}>
       <StaticImage
         src="../images/hero-image.png"
-        alt="photo of the tree canopy in Foxley woods"
+        alt="tree canopy in Foxley woods"
         imgClassName={style.imageStyling}
         loading="eager"
         objectFit="cover"
