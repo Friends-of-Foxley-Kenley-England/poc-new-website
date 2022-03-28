@@ -69,4 +69,4 @@ Seo.propTypes = {
   title: PropTypes.string.isRequired,
 };
 
-export default Seo;
+export default React.memo(Seo);
