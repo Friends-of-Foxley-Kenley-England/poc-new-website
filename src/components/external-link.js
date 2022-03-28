@@ -8,4 +8,4 @@ const ExternalLink = ({ href, children, ...rest }) => {
   );
 };
 
-export default ExternalLink;
+export default React.memo(ExternalLink);
