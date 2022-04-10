@@ -32,30 +32,39 @@ const ContactIndex = ({ data, location }) => {
       <section className={style.contact}>
         <h2>Secretary and Membership</h2>
         <p>Chris Parker</p>
-        <a href="mailto:chrispm_parker@hotmail.co.uk" rel="noopener noreferrer">
-          chrispm_parker@hotmail.co.uk
-        </a>
-        <p>020 8668 3302</p>
+        <p>
+          <a
+            href="mailto:chrispm_parker@hotmail.co.uk"
+            rel="noopener noreferrer">
+            chrispm_parker@hotmail.co.uk
+          </a>
+        </p>
+
+        <a href="tel:02086683302">020 8668 3302</a>
       </section>
 
       <section className={style.contact}>
         <h2>Treasurer</h2>
         <p>Carl Roche</p>
-        <a href="mailto:carlroche@freeukisp.co.uk" rel="noopener noreferrer">
-          carlroche@freeukisp.co.uk
-        </a>
-        <p>020 8660 7790</p>
+        <p>
+          <a href="mailto:carlroche@freeukisp.co.uk" rel="noopener noreferrer">
+            carlroche@freeukisp.co.uk
+          </a>
+        </p>
+        <a href="tel:02086607790">020 8660 7790</a>
       </section>
 
       <section className={style.contact}>
         <h2>Wood Products</h2>
         <p>Alison Falkner</p>
-        <a
-          href="mailto:alison.falkner@btinternet.com"
-          rel="noopener noreferrer">
-          alison.falkner@btinternet.com
-        </a>
-        <p>020 8668 8979</p>
+        <p>
+          <a
+            href="mailto:alison.falkner@btinternet.com"
+            rel="noopener noreferrer">
+            alison.falkner@btinternet.com
+          </a>
+        </p>
+        <a href="tel:02086688979">020 8668 8979</a>
       </section>
 
       <section className={style.contact}>
