@@ -1,7 +1,7 @@
-meetingInfo h2 {
-    margin-bottom: var(--spacing-4);
+.description {
+    margin-bottom: var(--spacing-0);
 }
 
-location p {
-    margin-bottom: 0%;
+.footer {
+    padding-top: var(--spacing-10);
 }

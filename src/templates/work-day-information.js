@@ -7,6 +7,7 @@ import Seo from "../components/seo";
 import { What3wordsAddress } from "@what3words/react-components";
 import { renderRichText } from "gatsby-source-contentful/rich-text";
 import { parseMeetingPoint } from "../helpers/parse-meeting-point";
+import * as style from "./work-day-information.module.css";
 
 const WorkDayTemplate = ({ data, location }) => {
   const post = data.contentfulWorkDay;
@@ -33,7 +34,7 @@ const WorkDayTemplate = ({ data, location }) => {
           <p>{post.meetingTime}</p>
 
           <h2 itemProp="headline">Location</h2>
-          <p>{meetingPointDescription}</p>
+          <p className={style.description}>{meetingPointDescription}</p>
           <What3wordsAddress
             words={meetingPointWhatThreeWords}
             icon-color="#0e4630"
@@ -43,8 +44,8 @@ const WorkDayTemplate = ({ data, location }) => {
           />
         </section>
 
-        <hr />
-        <footer>
+        <footer className={style.footer}>
+          <hr />
           <Bio />
         </footer>
       </article>
