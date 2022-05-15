@@ -1429,59 +1429,59 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@bundle-stats/cli-utils@npm:^3.2.9":
-  version: 3.2.9
-  resolution: "@bundle-stats/cli-utils@npm:3.2.9"
+"@bundle-stats/cli-utils@npm:^3.3.8":
+  version: 3.3.8
+  resolution: "@bundle-stats/cli-utils@npm:3.3.8"
   dependencies:
-    "@bundle-stats/html-templates": ^3.2.9
-    "@bundle-stats/utils": ^3.2.9
-    core-js: 3.20.2
-    find-cache-dir: 3.1.0
-    fs-extra: 10.0.1
-    lodash: 4.17.21
-  checksum: f49b16b7b2eea598a2be2bdd702cec98fa4bce9c52655e659c20337ad26afd66b228e6b0f1a3ea8e41b2992b37a677562c1ae5d9a522506467042fa82bba8998
+    "@bundle-stats/html-templates": ^3.3.8
+    "@bundle-stats/utils": ^3.3.8
+    core-js: ^3.21.0
+    find-cache-dir: ^3.1.0
+    fs-extra: ^10.0.1
+    lodash: ^4.17.0
+  checksum: c518833fb35a7ca027463ac3a944cd200e93b77c0a7336fc3b210093057807237b23e4d4d9a8200284adf9dcc589354d124550e3cfb671ce050a8adcb686b31d
   languageName: node
   linkType: hard
 
-"@bundle-stats/html-templates@npm:^3.2.9":
-  version: 3.2.9
-  resolution: "@bundle-stats/html-templates@npm:3.2.9"
-  checksum: 023736da65944f48fc6cf7c1a0fdca322a5f0525aa4980a3cacf72cc0215b0e609524cf4d2386b12b7d0188b35dbcc15b8fced6f06283c9e3f716da48cf5a40d
+"@bundle-stats/html-templates@npm:^3.3.8":
+  version: 3.3.8
+  resolution: "@bundle-stats/html-templates@npm:3.3.8"
+  checksum: d9400dda34a8a0280546dc3604bb4343afb167c2ebfc328ea93add1ba3a9a184d910d985ba9a4f8ea0c24ed034823cc51f8d8987f3ae13bc2f2e1659d385c33d
   languageName: node
   linkType: hard
 
-"@bundle-stats/plugin-webpack-filter@npm:^3.2.9":
-  version: 3.2.9
-  resolution: "@bundle-stats/plugin-webpack-filter@npm:3.2.9"
+"@bundle-stats/plugin-webpack-filter@npm:^3.3.8":
+  version: 3.3.8
+  resolution: "@bundle-stats/plugin-webpack-filter@npm:3.3.8"
   peerDependencies:
-    core-js: 3.20.2
-    lodash: 4.17.21
-  checksum: edf6571bac96edf3509223073cab8c79a56f903a5ff8c5a0ccd26e9e4b8862420ed4ff23e698f03e43ef158616d1ca75d3315493a1cabc34ceee30c71e13dd44
+    core-js: ^3.0.0
+    lodash: ^4.0.0
+  checksum: d24664984b2a2fbbec32278886be72ff29ebdd342340592779126242e3a45332d839b7b804b2feba08ce5e28b7fd8c7ff8fe1250472cdc900c4fc01d7dcd5af9
   languageName: node
   linkType: hard
 
-"@bundle-stats/plugin-webpack-validate@npm:^3.2.9":
-  version: 3.2.9
-  resolution: "@bundle-stats/plugin-webpack-validate@npm:3.2.9"
+"@bundle-stats/plugin-webpack-validate@npm:^3.3.8":
+  version: 3.3.8
+  resolution: "@bundle-stats/plugin-webpack-validate@npm:3.3.8"
   dependencies:
     superstruct: 0.8.3
-  checksum: 43780ff44c8bdfdc3ab2123fa9e96238ce69df2e30d8bed33d30fcf07180d16318c6904cf667fd446c022cd078935838c3560bff89a8beb2b4e50fc8ee120e54
+  checksum: 18e0b8eb96e6b118d6ffb75d6f258ba18cedd541c2558c586a990b815c842b8ef5d971f3a2d6a25194a8c6a573060dcf7c2c938ad665db91bea0fb74a499c217
   languageName: node
   linkType: hard
 
-"@bundle-stats/utils@npm:^3.2.9":
-  version: 3.2.9
-  resolution: "@bundle-stats/utils@npm:3.2.9"
+"@bundle-stats/utils@npm:^3.3.8":
+  version: 3.3.8
+  resolution: "@bundle-stats/utils@npm:3.3.8"
   dependencies:
-    "@bundle-stats/plugin-webpack-filter": ^3.2.9
-    "@bundle-stats/plugin-webpack-validate": ^3.2.9
-    convert-units: 3.0.0-beta.2
-    query-string: 7.1.1
-    serialize-query-params: 1.3.6
+    "@bundle-stats/plugin-webpack-filter": ^3.3.8
+    "@bundle-stats/plugin-webpack-validate": ^3.3.8
+    convert-units: 3.0.0-beta.4
+    query-string: ^7.1.0
+    serialize-query-params: ^1.3.0
   peerDependencies:
-    core-js: 3.20.2
-    lodash: 4.17.21
-  checksum: 0efe1a52795a37c19cf847044e0ac444b7c133f28bc42930233a08558ec8ea7043ce9c5c6cf969015a2e9c5dfd8b3a46a93b0a7c27780a6e9adb95aa26d412bc
+    core-js: ^3.0.0
+    lodash: ^4.0.0
+  checksum: 0b94dfdb83acb16335da2ff8ba2f29462d0ddc46fec4dabc7ae773192173378826d7fb87b9e15c58de86b6d4ccf7964560b55eaec59d8e24c685d3ccf1e6916c
   languageName: node
   linkType: hard
 
@@ -4898,17 +4898,17 @@ __metadata:
   languageName: node
   linkType: hard
 
-"bundle-stats-webpack-plugin@npm:^3.2.9":
-  version: 3.2.9
-  resolution: "bundle-stats-webpack-plugin@npm:3.2.9"
+"bundle-stats-webpack-plugin@npm:^3.3.8":
+  version: 3.3.8
+  resolution: "bundle-stats-webpack-plugin@npm:3.3.8"
   dependencies:
-    "@bundle-stats/cli-utils": ^3.2.9
-    "@bundle-stats/utils": ^3.2.9
-    core-js: 3.20.2
-    lodash: 4.17.21
+    "@bundle-stats/cli-utils": ^3.3.8
+    "@bundle-stats/utils": ^3.3.8
+    core-js: ^3.21.0
+    lodash: ^4.17.0
   peerDependencies:
     webpack: ^4.0.0 || ^5.0.0
-  checksum: bae6726443318afbcfa5dacf8331f82110368b049c0c20e03b7fb923b541e2882cbff4ac71720345233fdf21083bcf36223150daff377822fa82cbe889bea350
+  checksum: d826582254b6719a809b5c33f00b5c178456953db0ebfbb611183516a7258b5082a78176e5d2671893933bd3aca1accd8f7b7d68d13cf2cf6d8874f7cced8ead
   languageName: node
   linkType: hard
 
@@ -5636,10 +5636,10 @@ __metadata:
   languageName: node
   linkType: hard
 
-"convert-units@npm:3.0.0-beta.2":
-  version: 3.0.0-beta.2
-  resolution: "convert-units@npm:3.0.0-beta.2"
-  checksum: 2364cf9bd1e4860206321dae5830512fdb10e703417f0666b6a8455c767cd03af719917d256ca09b9a3cebc9c32467a384aad4501aed9af03f28a3444196d522
+"convert-units@npm:3.0.0-beta.4":
+  version: 3.0.0-beta.4
+  resolution: "convert-units@npm:3.0.0-beta.4"
+  checksum: caa83a14bb46f99f5b4886e1713a7867fe8672adbb09a888a331e8f71b60d18770de6607e0161b6eb3e63f9b12e78aeecc8c841d3ce942f0409f2f43289e62e9
   languageName: node
   linkType: hard
 
@@ -5691,13 +5691,6 @@ __metadata:
   languageName: node
   linkType: hard
 
-"core-js@npm:3.20.2":
-  version: 3.20.2
-  resolution: "core-js@npm:3.20.2"
-  checksum: dc055a5a79f2e3c2e060b4fb8a3e228fa0de16464bff3c6605646183139eebaa68c390ec6d9c3acc5677f333df510b977ee3f1d5992e6c36b1f200e35f5ed8ca
-  languageName: node
-  linkType: hard
-
 "core-js@npm:^2.4.0":
   version: 2.6.12
   resolution: "core-js@npm:2.6.12"
@@ -5709,6 +5702,13 @@ __metadata:
   version: 3.21.1
   resolution: "core-js@npm:3.21.1"
   checksum: d68eddd831340ad5b24ac29c72fda022a43b17f194c4278b6b875a843283d316502cb4abd07f28631d6ebc4387f66aa06e2b1b3c8fd7e08096a751b5c63f6889
+  languageName: node
+  linkType: hard
+
+"core-js@npm:^3.21.0":
+  version: 3.22.5
+  resolution: "core-js@npm:3.22.5"
+  checksum: d3d7495d7cdde01cf9ac3debc5087afc3c8dd56baa4953d9ccbb46b1a80872c79d14c1e6343c664c9c0fade288ab44c70b54dd34f879a71e6eff6fffeab84e00
   languageName: node
   linkType: hard
 
@@ -7626,18 +7626,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"find-cache-dir@npm:3.1.0":
-  version: 3.1.0
-  resolution: "find-cache-dir@npm:3.1.0"
-  dependencies:
-    commondir: ^1.0.1
-    make-dir: ^3.0.0
-    pkg-dir: ^4.1.0
-  checksum: 5e34b12d4caaebc33f51ccac4f917e0c6b71a65d00d408876a5c36cca43d028c192e7f34ca6b5a2a0ec5c7240de2e47d9c1f20347722e1114977b3677a3f937b
-  languageName: node
-  linkType: hard
-
-"find-cache-dir@npm:^3.3.1, find-cache-dir@npm:^3.3.2":
+"find-cache-dir@npm:^3.1.0, find-cache-dir@npm:^3.3.1, find-cache-dir@npm:^3.3.2":
   version: 3.3.2
   resolution: "find-cache-dir@npm:3.3.2"
   dependencies:
@@ -7785,7 +7774,7 @@ __metadata:
     depcheck: ^1.4.3
     dotenv: 16.0.0
     gatsby: 4.10.3
-    gatsby-plugin-bundle-stats: ^3.2.5
+    gatsby-plugin-bundle-stats: ^3.3.8
     gatsby-plugin-gatsby-cloud: 4.10.1
     gatsby-plugin-image: 2.9.1
     gatsby-plugin-manifest: 4.9.1
@@ -7802,7 +7791,7 @@ __metadata:
     gatsby-source-filesystem: 4.9.1
     gatsby-transformer-remark: 5.9.1
     gatsby-transformer-sharp: 4.9.0
-    prettier: 2.5.1
+    prettier: 2.6.2
     prismjs: 1.27.0
     prop-types: 15.8.1
     react: 17.0.2
@@ -7828,7 +7817,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"fs-extra@npm:10.0.1, fs-extra@npm:^10.0.0":
+"fs-extra@npm:^10.0.0":
   version: 10.0.1
   resolution: "fs-extra@npm:10.0.1"
   dependencies:
@@ -7836,6 +7825,17 @@ __metadata:
     jsonfile: ^6.0.1
     universalify: ^2.0.0
   checksum: c1faaa5eb9e1c5c7c7ff09f966e93922ecb068ae1b04801cfc983ef05fcc1f66bfbb8d8d0b745c910014c7a2e7317fb6cf3bfe7390450c1157e3cc1a218f221d
+  languageName: node
+  linkType: hard
+
+"fs-extra@npm:^10.0.1":
+  version: 10.1.0
+  resolution: "fs-extra@npm:10.1.0"
+  dependencies:
+    graceful-fs: ^4.2.0
+    jsonfile: ^6.0.1
+    universalify: ^2.0.0
+  checksum: dc94ab37096f813cc3ca12f0f1b5ad6744dfed9ed21e953d72530d103cea193c2f81584a39e9dee1bea36de5ee66805678c0dddc048e8af1427ac19c00fffc50
   languageName: node
   linkType: hard
 
@@ -8085,12 +8085,12 @@ __metadata:
   languageName: node
   linkType: hard
 
-"gatsby-plugin-bundle-stats@npm:^3.2.5":
-  version: 3.2.9
-  resolution: "gatsby-plugin-bundle-stats@npm:3.2.9"
+"gatsby-plugin-bundle-stats@npm:^3.3.8":
+  version: 3.3.8
+  resolution: "gatsby-plugin-bundle-stats@npm:3.3.8"
   dependencies:
-    bundle-stats-webpack-plugin: ^3.2.9
-  checksum: 2b57ce2d792b62b3dc0bfe4362e36092bd735979a940aec68ab6d3d1f0159798c6f431a56060ed2b505034c86ef3ac5497006fabead2bc6a87cad171d53b7f2a
+    bundle-stats-webpack-plugin: ^3.3.8
+  checksum: 8dab6834964eb1dc05060e1e15f523017b5f1191423677c985bc7eb6f513671eae407cfc377e12aefc685c60f264ea9d29218160c80189f72d8a4062e4906d70
   languageName: node
   linkType: hard
 
@@ -11020,7 +11020,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"lodash@npm:4.17.21, lodash@npm:^4.17.10, lodash@npm:^4.17.15, lodash@npm:^4.17.19, lodash@npm:^4.17.20, lodash@npm:^4.17.21, lodash@npm:^4.17.4":
+"lodash@npm:4.17.21, lodash@npm:^4.17.0, lodash@npm:^4.17.10, lodash@npm:^4.17.15, lodash@npm:^4.17.19, lodash@npm:^4.17.20, lodash@npm:^4.17.21, lodash@npm:^4.17.4":
   version: 4.17.21
   resolution: "lodash@npm:4.17.21"
   checksum: eb835a2e51d381e561e508ce932ea50a8e5a68f4ebdd771ea240d3048244a8d13658acbd502cd4829768c56f2e16bdd4340b9ea141297d472517b83868e677f7
@@ -13488,12 +13488,12 @@ __metadata:
   languageName: node
   linkType: hard
 
-"prettier@npm:2.5.1":
-  version: 2.5.1
-  resolution: "prettier@npm:2.5.1"
+"prettier@npm:2.6.2":
+  version: 2.6.2
+  resolution: "prettier@npm:2.6.2"
   bin:
     prettier: bin-prettier.js
-  checksum: 21b9408476ea1c544b0e45d51ceb94a84789ff92095abb710942d780c862d0daebdb29972d47f6b4d0f7ebbfb0ffbf56cc2cfa3e3e9d1cca54864af185b15b66
+  checksum: 48d08dde8e9fb1f5bccdd205baa7f192e9fc8bc98f86e1b97d919de804e28c806b0e6cc685e4a88211aa7987fa9668f30baae19580d87ced3ed0f2ec6572106f
   languageName: node
   linkType: hard
 
@@ -13714,18 +13714,6 @@ __metadata:
   languageName: node
   linkType: hard
 
-"query-string@npm:7.1.1":
-  version: 7.1.1
-  resolution: "query-string@npm:7.1.1"
-  dependencies:
-    decode-uri-component: ^0.2.0
-    filter-obj: ^1.1.0
-    split-on-first: ^1.0.0
-    strict-uri-encode: ^2.0.0
-  checksum: b227d1f588ae93f9f0ad078c6b811295fa151dc5a160a03bb2bac5fa0e6919cb1daa570aad1d288e77c8e89fde5362ba505b1014e6e793da9b1e885b59a690a6
-  languageName: node
-  linkType: hard
-
 "query-string@npm:^6.13.8, query-string@npm:^6.14.1":
   version: 6.14.1
   resolution: "query-string@npm:6.14.1"
@@ -13735,6 +13723,18 @@ __metadata:
     split-on-first: ^1.0.0
     strict-uri-encode: ^2.0.0
   checksum: f2c7347578fa0f3fd4eaace506470cb4e9dc52d409a7ddbd613f614b9a594d750877e193b5d5e843c7477b3b295b857ec328903c943957adc41a3efb6c929449
+  languageName: node
+  linkType: hard
+
+"query-string@npm:^7.1.0":
+  version: 7.1.1
+  resolution: "query-string@npm:7.1.1"
+  dependencies:
+    decode-uri-component: ^0.2.0
+    filter-obj: ^1.1.0
+    split-on-first: ^1.0.0
+    strict-uri-encode: ^2.0.0
+  checksum: b227d1f588ae93f9f0ad078c6b811295fa151dc5a160a03bb2bac5fa0e6919cb1daa570aad1d288e77c8e89fde5362ba505b1014e6e793da9b1e885b59a690a6
   languageName: node
   linkType: hard
 
@@ -14724,7 +14724,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"serialize-query-params@npm:1.3.6":
+"serialize-query-params@npm:^1.3.0":
   version: 1.3.6
   resolution: "serialize-query-params@npm:1.3.6"
   peerDependencies:
