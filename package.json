@@ -1,7 +1,7 @@
 {
   "name": "friends-of-foxley-website",
   "private": true,
-  "description": "A POC for the Friends Of Foxley website refresh",
+  "description": "The Friends Of Foxley website",
   "version": "0.1.0",
   "author": "Eloise Taylor",
   "bugs": {
