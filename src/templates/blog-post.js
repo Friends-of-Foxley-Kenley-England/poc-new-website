@@ -28,7 +28,9 @@ const BlogPostTemplate = ({ data, location }) => {
           <h1 className={style.blogPostHeader} itemProp="headline">
             {post.title}
           </h1>
-          <p className={style.blogPostPostedDate}>{post.createdAt}</p>
+          <p className={style.blogPostPostedDate}>
+            {post.createdAt}, by {post.author}
+          </p>
         </header>
         <section itemProp="articleBody" className={style.articleBody}>
           {renderRichText(post.newsContent, contentfulRenderingOptions)}
@@ -76,6 +78,7 @@ export const pageQuery = graphql`
     contentfulNews(id: { eq: $id }) {
       id
       title
+      author
       createdAt(formatString: "Do MMMM YYYY")
       newsContent {
         raw
