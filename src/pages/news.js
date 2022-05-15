@@ -40,7 +40,7 @@ const NewsIndex = ({ data, location }) => {
                   <span itemProp="headline">{title}</span>
                 </Link>
               </h2>
-              <small>{post.createdAt}</small>
+              <small>{post.createdAt}, by {post.author}</small>
             </header>
             <section>
               <p itemProp="description">{post.shortDescription}</p>
@@ -70,6 +70,7 @@ export const pageQuery = graphql`
           raw
         }
         title
+        author
         shortDescription
         createdAt(formatString: "Do MMMM YYYY")
         slug
