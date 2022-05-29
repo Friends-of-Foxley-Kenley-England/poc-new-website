@@ -74,5 +74,8 @@
     "docz:build": "docz build",
     "docz:serve": "docz build && docz serve"
   },
-  "packageManager": "yarn@3.2.0"
+  "packageManager": "yarn@3.2.0",
+  "resolutions": {
+    "remark-mdx": "2.1.1"
+}
 }
