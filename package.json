@@ -37,6 +37,7 @@
   },
   "devDependencies": {
     "depcheck": "^1.4.3",
+    "docz": "^2.4.0",
     "gatsby-plugin-bundle-stats": "^3.3.8",
     "prettier": "2.6.2",
     "webpack-stats-plugin": "^1.0.3"
@@ -60,7 +61,10 @@
     "serve": "gatsby serve",
     "clean": "gatsby clean",
     "test": "echo \"Write tests! -> https://gatsby.dev/unit-testing\" && exit 1",
-    "find-unused-deps": "depcheck"
+    "find-unused-deps": "depcheck",
+    "docz:dev": "docz dev",
+    "docz:build": "docz build",
+    "docz:serve": "docz build && docz serve"
   },
   "packageManager": "yarn@3.2.0"
 }
