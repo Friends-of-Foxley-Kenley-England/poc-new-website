@@ -11,7 +11,7 @@ Deploying via 2 hosting services:
 
 ## Why 2 hosting providers?
 
-- So that if there are issues in one hosting platform I can see if it's a universal issue or an issue specific to Gatsby.
+- So that if there are issues in one hosting platform I can see if it's a universal issue or an issue specific to Gatsby cloud.
 - If Gatsby changes their plan or becomes too unstable I can easily switch-over to firebase.
 - Firebase is quicker to deploy so can check my work quicker
 - Gatsby cloud generates a lighthouse report on deployment, so can see vital stats
