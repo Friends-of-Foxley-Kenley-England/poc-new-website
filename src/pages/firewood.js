@@ -17,16 +17,14 @@ const Index = ({ data, location }) => {
         and ready to burn in good sized bags.
       </p>
       <p>
-        We ask for a donation of £4.50 per bag plus an additional 50p for local
-        delivery.
-      </p>
-      <p>
-        Other than occasional donations from local people this is our only
-        source of funds to help buy and maintain essential tools.
-      </p>
-      <p>
-        Order via <strong>Carl</strong> or <strong>Alison</strong> (see contact info on the{" "}
+        For supplies of seasoned hardwood firewood from Foxley Wood, please
+        speak to <strong>Alison</strong> (see contact info on the{" "}
         <Link to="/contact">contact</Link> page).
+      </p>
+
+      <p>
+        We do request a donation because this is our only source of regular
+        funds.
       </p>
       <StaticImage src="../images/firewood.jpeg" alt="Bags of firewood" />
     </Layout>
