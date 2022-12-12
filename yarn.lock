@@ -7781,7 +7781,7 @@ __metadata:
     gatsby-plugin-offline: 5.9.1
     gatsby-plugin-react-helmet: 5.9.0
     gatsby-plugin-sharp: 4.9.1
-    gatsby-plugin-sitemap: 5.9.0
+    gatsby-plugin-sitemap: 5.25.0
     gatsby-remark-copy-linked-files: 5.9.0
     gatsby-remark-images: 6.9.1
     gatsby-remark-prismjs: 6.9.0
@@ -8238,19 +8238,19 @@ __metadata:
   languageName: node
   linkType: hard
 
-"gatsby-plugin-sitemap@npm:5.9.0":
-  version: 5.9.0
-  resolution: "gatsby-plugin-sitemap@npm:5.9.0"
+"gatsby-plugin-sitemap@npm:5.25.0":
+  version: 5.25.0
+  resolution: "gatsby-plugin-sitemap@npm:5.25.0"
   dependencies:
     "@babel/runtime": ^7.15.4
     common-tags: ^1.8.2
-    minimatch: ^3.0.4
+    minimatch: ^3.1.2
     sitemap: ^7.0.0
   peerDependencies:
     gatsby: ^4.0.0-next
-    react: ^16.9.0 || ^17.0.0
-    react-dom: ^16.9.0 || ^17.0.0
-  checksum: 935ef5a0cd2c485f2d0fe6cb9965f2f7802cd9b184eaa46d591707eaafbe82e9cf3a322f642d238d0f7ce2a71a4c6af89f20de1343553968c622e69ff4cb6871
+    react: ^16.9.0 || ^17.0.0 || ^18.0.0 || ^0.0.0
+    react-dom: ^16.9.0 || ^17.0.0 || ^18.0.0 || ^0.0.0
+  checksum: c05f56d913409f347fa7bbc510f829c79449031163d18d132dd1631244ecf484feddbdffdae45114881e07403473ca151857ad96bd8a20fbad18159a3d37c5d9
   languageName: node
   linkType: hard
 
