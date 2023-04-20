@@ -20,9 +20,9 @@ const WorkDaysIndex = ({ data, location }) => {
 
   return (
     <Layout location={location} title={siteTitle}>
-      <Seo title="Volunteer workdays" />
+      <Seo title="Work Days and Volunteering" />
 
-      <h1>Volunteer days</h1>
+      <h1>Work Days and Volunteering</h1>
 
       <p>
         All are welcome and any time you can give on the day will be most
