@@ -1,7 +1,11 @@
 .description {
-    margin-bottom: var(--spacing-0);
+  margin-bottom: var(--spacing-0);
 }
 
 .footer {
-    padding-top: var(--spacing-10);
+  padding-top: var(--spacing-10);
+}
+
+.img-padding {
+  margin-bottom: var(--spacing-2);
 }

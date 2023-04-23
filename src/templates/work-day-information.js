@@ -8,6 +8,7 @@ import { What3wordsAddress } from "@what3words/react-components";
 import { renderRichText } from "gatsby-source-contentful/rich-text";
 import { parseMeetingPoint } from "../helpers/parse-meeting-point";
 import * as style from "./work-day-information.module.css";
+import { contentfulRenderingOptions } from "../helpers/contentful-rendering-options";
 
 const WorkDayTemplate = ({ data, location }) => {
   const post = data.contentfulWorkDay;
@@ -27,7 +28,10 @@ const WorkDayTemplate = ({ data, location }) => {
           <h1 itemProp="headline">{"Work day: " + post.title}</h1>
         </header>
         <section itemProp="articleBody">
-          {renderRichText(post.workDayInformation)}
+          {renderRichText(
+            post.workDayInformation,
+            contentfulRenderingOptions(style.imgPadding),
+          )}
         </section>
         <section>
           <h2 itemProp="headline">Time</h2>
@@ -100,6 +104,14 @@ export const pageQuery = graphql`
       shortDescriptionOfWorkday
       workDayInformation {
         raw
+        references {
+          ... on ContentfulAsset {
+            contentful_id
+            __typename
+            gatsbyImageData
+          }
+          title
+        }
       }
     }
     previous: contentfulWorkDay(id: { eq: $previousPostId }) {
