@@ -9,22 +9,28 @@ const Index = ({ data, location }) => {
 
   return (
     <Layout location={location} title={siteTitle}>
-      <Seo title="Firewood" />
-      <h1>Firewood</h1>
+      <Seo title="Wood Products" />
+      <h1>Wood Products</h1>
 
       <p>
-        Firewood is normally available throughout the winter. We supply it split
-        and ready to burn in good sized bags.
+        Wood for turning and other projects is sometimes available - if you are
+        interested in that please contact <strong>Andrew</strong> or{" "}
+        <strong>Chris</strong>.
       </p>
       <p>
-        For supplies of seasoned hardwood firewood from Foxley Wood, please
-        speak to <strong>Alison</strong> (see contact info on the{" "}
-        <Link to="/contact">contact</Link> page).
+        Seasoned hardwood firewood is normally available throughout the winter.
+        It comes split and ready to burn in good sized bags. Please speak to{" "}
+        <strong>Alison</strong>.
       </p>
 
       <p>
         We do request a donation because this is our only source of regular
         funds.
+      </p>
+
+      <p>
+        Phone numbers and emails are on the <Link to="/contact">contact</Link>{" "}
+        page.
       </p>
       <StaticImage src="../images/firewood.jpeg" alt="Bags of firewood" />
     </Layout>
