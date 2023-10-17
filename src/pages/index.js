@@ -39,7 +39,7 @@ const HomeIndex = ({ data, location }) => {
         membership form.
       </p>
       <p>
-        <Link to="/firewood">Firewood</Link>: excellent value firewood
+        <Link to="/wood-products">Wood products</Link>: excellent value
       </p>
     </Layout>
   );

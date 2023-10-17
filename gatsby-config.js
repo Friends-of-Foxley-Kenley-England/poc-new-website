@@ -139,7 +139,7 @@ module.exports = {
           "/images/content/Membership-Application.pdf",
           "/pages/english_oak.html",
           "/pages/surveys.html",
-          "/pages/firewood.html",
+          "/pages/wood-products.html",
           "/pages/ancient_beech_tree.html",
           "/404/",
           "/404.html",

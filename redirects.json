@@ -40,8 +40,8 @@
     "componentPath": "./src/pages/resources.js"
   },
   {
-    "fromPath": "pages/firewood.html",
-    "componentPath": "./src/pages/firewood.js"
+    "fromPath": "pages/wood-products.html",
+    "componentPath": "./src/pages/wood-products.js"
   },
   {
     "fromPath": "pages/ancient_beech_tree.html",
