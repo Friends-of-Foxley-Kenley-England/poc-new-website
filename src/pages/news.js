@@ -56,25 +56,23 @@ const NewsIndex = ({ data, location }) => {
 
 export default NewsIndex;
 
-export const pageQuery = graphql`
-  query {
-    site {
-      siteMetadata {
-        title
-      }
-    }
-    allContentfulNews(sort: { fields: createdAt, order: DESC }) {
-      nodes {
-        id
-        newsContent {
-          raw
-        }
-        title
-        author
-        shortDescription
-        createdAt(formatString: "Do MMMM YYYY")
-        slug
-      }
+export const pageQuery = graphql`{
+  site {
+    siteMetadata {
+      title
     }
   }
-`;
+  allContentfulNews(sort: {createdAt: DESC}) {
+    nodes {
+      id
+      newsContent {
+        raw
+      }
+      title
+      author
+      shortDescription
+      createdAt(formatString: "Do MMMM YYYY")
+      slug
+    }
+  }
+}`;
