@@ -77,21 +77,19 @@ const WorkDaysIndex = ({ data, location }) => {
 
 export default WorkDaysIndex;
 
-export const pageQuery = graphql`
-  query {
-    site {
-      siteMetadata {
-        title
-      }
-    }
-    allContentfulWorkDay(sort: { fields: dateOfWorkday, order: DESC }) {
-      nodes {
-        slug
-        createdAt
-        id
-        title
-        shortDescriptionOfWorkday
-      }
+export const pageQuery = graphql`{
+  site {
+    siteMetadata {
+      title
     }
   }
-`;
+  allContentfulWorkDay(sort: {dateOfWorkday: DESC}) {
+    nodes {
+      slug
+      createdAt
+      id
+      title
+      shortDescriptionOfWorkday
+    }
+  }
+}`;
