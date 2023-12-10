@@ -5,6 +5,7 @@ console.log("process.env.NODE_ENV", process.env.NODE_ENV);
 const contentfulConfig = {
   downloadLocal: true,
   spaceId: process.env.CONTENTFUL_SPACE_ID,
+  environment: process.env.CONTENTFUL_ENVIRONMENT,
   accessToken:
     process.env.CONTENTFUL_ACCESS_TOKEN ||
     process.env.CONTENTFUL_DELIVERY_TOKEN,
