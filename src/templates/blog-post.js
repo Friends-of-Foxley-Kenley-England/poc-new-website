@@ -33,10 +33,11 @@ const BlogPostTemplate = ({ data, location }) => {
           </p>
         </header>
         <section itemProp="articleBody" className={style.articleBody}>
-          {renderRichText(
-            post.newsContent,
-            contentfulRenderingOptions(style.imgPadding),
-          )}
+          {post?.newsContent &&
+            renderRichText(
+              post.newsContent,
+              contentfulRenderingOptions(style.imgPadding),
+            )}
         </section>
         <hr className={style.spacer} />
         <footer>

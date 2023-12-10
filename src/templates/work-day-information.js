@@ -30,10 +30,11 @@ const WorkDayTemplate = ({ data, location }) => {
           <h1 itemProp="headline">{"Work day: " + post.title}</h1>
         </header>
         <section itemProp="articleBody">
-          {renderRichText(
-            post.workDayInformation,
-            contentfulRenderingOptions(style.imgPadding),
-          )}
+          {post?.workDayInformation &&
+            renderRichText(
+              post.workDayInformation,
+              contentfulRenderingOptions(style.imgPadding),
+            )}
         </section>
         <section>
           <h2 itemProp="headline">Time</h2>
