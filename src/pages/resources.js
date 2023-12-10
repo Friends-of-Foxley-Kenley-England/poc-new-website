@@ -5,24 +5,30 @@ import Seo from "../components/seo";
 import * as style from "./resources.module.css";
 
 const ResourcesIndex = ({ data, location }) => {
+  console.log("data", data);
+
   const siteTitle = data.site.siteMetadata?.title || `Title`;
+
+  const resourcesPageData = data.allContentfulResourcesPage?.nodes[0];
 
   return (
     <Layout location={location} title={siteTitle}>
       <Seo title="Resources" />
-      <h1>Resources</h1>
+      <h1>{resourcesPageData.title}</h1>
 
-      <p>
-        Surveys, management plan, membership application form and other
-        interesting documents.
-      </p>
+      <p>{resourcesPageData.subTitle}</p>
 
+      {/* https://stackoverflow.com/questions/13354578/custom-li-list-style-with-font-awesome-icon */}
+      {/* <FontAwesomeIcon icon="fa-regular fa-file" /> */}
+      {/* <FontAwesomeIcon icon="fa-solid fa-file-image" /> */}
+      {/* <FontAwesomeIcon icon="fa-regular fa-file-lines" /> */}
+      {/* <FontAwesomeIcon icon="fa-solid fa-file-pdf" /> */}
       <ul className={style.pdfFileListItem}>
-        {data.allContentfulAsset.nodes.map(node => {
+        {resourcesPageData.resourceFiles.map(resourceFile => {
           return (
             <li className={style.linkText}>
-              <a href={node.file.url} className={style.linkText}>
-                {node.title}
+              <a href={resourceFile.file.url} className={style.linkText}>
+                {resourceFile.title}
               </a>
             </li>
           );
@@ -35,23 +41,25 @@ const ResourcesIndex = ({ data, location }) => {
 export default ResourcesIndex;
 
 export const pageQuery = graphql`
-  query {
+  query ResourcesPageQuery {
     site {
       siteMetadata {
         title
       }
     }
-
-    allContentfulAsset(
-      filter: { file: { contentType: { eq: "application/pdf" } } }
-    ) {
+    allContentfulResourcesPage {
       nodes {
-        description
         title
-        file {
-          contentType
+        subTitle
+        id
+        resourceFiles {
+          file {
+            contentType
+            fileName
+          }
+          description
+          title
           url
-          fileName
         }
       }
     }
