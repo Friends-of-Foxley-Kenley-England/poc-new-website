@@ -1,7 +1,6 @@
 {
   "hosting": [
     {
-      "target": "prod",
       "public": "public",
       "site": "friends-of-foxley-prod",
       "ignore": ["firebase.json", "**/.*", "**/node_modules/**"],
@@ -63,7 +62,6 @@
       ]
     },
     {
-      "target": "preview",
       "public": "public",
       "site": "friends-of-foxley-preview",
       "ignore": ["firebase.json", "**/.*", "**/node_modules/**"],
