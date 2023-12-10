@@ -1,5 +1,6 @@
 {
   "projects": {
-    "default": "friends-of-foxley-prod"
+    "default": "friends-of-foxley-prod",
+    "preview": "friends-of-foxley-preview"
   }
 }
