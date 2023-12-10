@@ -10,54 +10,22 @@ on:
     branches: [main]
 
 jobs:
-  # build:
-  #   runs-on: ubuntu-latest
-
-  #   strategy:
-  #     matrix:
-  #       node-version: [18.x, 20.x, 21.x]
-  #       # See supported Node.js release schedule at https://nodejs.org/en/about/releases/
-  #     fail-fast: false
-
-  #   steps:
-  #     - uses: actions/checkout@v2
-
-  #     - name: Use Node.js ${{ matrix.node-version }}
-  #       uses: actions/setup-node@v4
-  #       with:
-  #         node-version: ${{ matrix.node-version }}
-  #         cache: "yarn"
-
-  #     - run: yarn install --immutable --immutable-cache
-
-  #     - run: yarn build
-  #       env:
-  #         CONTENTFUL_SPACE_ID: "${{ secrets.CONTENTFUL_SPACE_ID }}"
-  #         CONTENTFUL_DELIVERY_TOKEN: "${{ secrets.CONTENTFUL_DELIVERY_TOKEN }}"
-
-  #     # - run: cat public/webpack.stats.json
-  #     #   #if: false # disabling whilst there are issues with BundleStats
-
-  #     # - name: BundleStats
-  #     #   #if: false # disabling whilst there are issues with BundleStats
-  #     #   # You may pin to the exact commit or the version.
-  #     #   # uses: vio/bundle-stats-action@6a98706a7aefa0fe25da5a1f48fa46e7b23bd653
-  #     #   uses: vio/bundle-stats-action@v1
-  #     #   with:
-  #     #     id: friends-of-foxley-app
-  #     #     webpack-stats-path: public/webpack.stats.json
-  #     #     repo-token: ${{ secrets.GITHUB_TOKEN }}
-
-  deploy_preview_api:
-    name: Build and deploy to Preview API
+  build:
     runs-on: ubuntu-latest
+
+    strategy:
+      matrix:
+        node-version: [18.x, 20.x, 21.x]
+        # See supported Node.js release schedule at https://nodejs.org/en/about/releases/
+      fail-fast: false
+
     steps:
       - uses: actions/checkout@v2
 
-      - name: Install node
+      - name: Use Node.js ${{ matrix.node-version }}
         uses: actions/setup-node@v4
         with:
-          node-version-file: ".nvmrc"
+          node-version: ${{ matrix.node-version }}
           cache: "yarn"
 
       - run: yarn install --immutable --immutable-cache
@@ -66,13 +34,16 @@ jobs:
         env:
           CONTENTFUL_SPACE_ID: "${{ secrets.CONTENTFUL_SPACE_ID }}"
           CONTENTFUL_DELIVERY_TOKEN: "${{ secrets.CONTENTFUL_DELIVERY_TOKEN }}"
-          CONTENTFUL_HOST: "preview.contentful.com"
-          CONTENTFUL_PREVIEW_ACCESS_TOKEN: "${{ secrets.CONTENTFUL_PREVIEW_ACCESS_TOKEN }}"
 
-      - name: Deploy to preview site
-        uses: FirebaseExtended/action-hosting-deploy@v0
-        with:
-          repoToken: "${{ secrets.GITHUB_TOKEN }}"
-          firebaseServiceAccount: "${{ secrets.FIREBASE_SERVICE_ACCOUNT_FRIENDS_OF_FOXLEY_PROD }}"
-          channelId: friends-of-foxley-preview
-          projectId: friends-of-foxley-prod
+      # - run: cat public/webpack.stats.json
+      #   #if: false # disabling whilst there are issues with BundleStats
+
+      # - name: BundleStats
+      #   #if: false # disabling whilst there are issues with BundleStats
+      #   # You may pin to the exact commit or the version.
+      #   # uses: vio/bundle-stats-action@6a98706a7aefa0fe25da5a1f48fa46e7b23bd653
+      #   uses: vio/bundle-stats-action@v1
+      #   with:
+      #     id: friends-of-foxley-app
+      #     webpack-stats-path: public/webpack.stats.json
+      #     repo-token: ${{ secrets.GITHUB_TOKEN }}
