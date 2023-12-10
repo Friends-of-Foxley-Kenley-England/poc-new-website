@@ -14,8 +14,10 @@ const WorkDayTemplate = ({ data, location }) => {
   const post = data.contentfulWorkDay;
   const siteTitle = data.site.siteMetadata?.title || `Title`;
   const { previous, next } = data;
-  const { meetingPointWhatThreeWords, meetingPointDescription } =
-    parseMeetingPoint(post.meetingPointWhat3words);
+  const meetingPoint = parseMeetingPoint(post.meetingPointWhat3words);
+
+  const meetingPointWhatThreeWords = meetingPoint?.meetingPointWhatThreeWords;
+  const meetingPointDescription = meetingPoint?.meetingPointDescription;
 
   return (
     <Layout location={location} title={siteTitle}>
