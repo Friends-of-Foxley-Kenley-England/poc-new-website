@@ -26,7 +26,7 @@ const NewsIndex = ({ data, location }) => {
       <h1>Latest news</h1>
 
       {posts.map(post => {
-        const title = post.title || post.fields.slug;
+        const title = post?.title || post?.fields?.slug || "News article title";
 
         return (
           <article
@@ -40,7 +40,9 @@ const NewsIndex = ({ data, location }) => {
                   <span itemProp="headline">{title}</span>
                 </Link>
               </h2>
-              <small>{post.createdAt}, by {post.author}</small>
+              <small>
+                {post.createdAt}, by {post.author}
+              </small>
             </header>
             <section>
               <p itemProp="description">{post.shortDescription}</p>
@@ -56,23 +58,25 @@ const NewsIndex = ({ data, location }) => {
 
 export default NewsIndex;
 
-export const pageQuery = graphql`{
-  site {
-    siteMetadata {
-      title
-    }
-  }
-  allContentfulNews(sort: {createdAt: DESC}) {
-    nodes {
-      id
-      newsContent {
-        raw
+export const pageQuery = graphql`
+  {
+    site {
+      siteMetadata {
+        title
       }
-      title
-      author
-      shortDescription
-      createdAt(formatString: "Do MMMM YYYY")
-      slug
+    }
+    allContentfulNews(sort: { createdAt: DESC }) {
+      nodes {
+        id
+        newsContent {
+          raw
+        }
+        title
+        author
+        shortDescription
+        createdAt(formatString: "Do MMMM YYYY")
+        slug
+      }
     }
   }
-}`;
+`;
