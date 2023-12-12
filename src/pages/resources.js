@@ -27,7 +27,7 @@ const ResourcesIndex = ({ data, location }) => {
         {resourcesPageData.resourceFiles.map(resourceFile => {
           return (
             <li className={style.linkText}>
-              <a href={resourceFile.file.url} className={style.linkText}>
+              <a href={resourceFile.url} className={style.linkText}>
                 {resourceFile.title}
               </a>
             </li>
