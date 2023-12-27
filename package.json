@@ -9,6 +9,7 @@
   },
   "dependencies": {
     "@what3words/react-components": "4.0.5",
+    "cypress": "^13.6.2",
     "dotenv": "16.0.0",
     "gatsby": "5.12.9",
     "gatsby-plugin-gatsby-cloud": "5.12.2",
