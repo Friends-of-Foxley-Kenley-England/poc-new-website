@@ -7,6 +7,7 @@ import FindUsOnFacebook from "../components/find-us-on-facebook";
 
 const ContactIndex = ({ data, location }) => {
   const siteTitle = data.site.siteMetadata?.title || `Title`;
+  const contactDetails = data?.allContentfulContactDetails?.edges;
 
   return (
     <Layout location={location} title={siteTitle}>
@@ -21,61 +22,29 @@ const ContactIndex = ({ data, location }) => {
         this local nature reserve then contact us now:
       </p>
 
-      <section className={style.contact}>
-        <h2> Chairman</h2>
-        <p>Andrew Wood</p>
-        <a href="mailto:fofchair@gmail.com" rel="noopener noreferrer">
-          fofchair@gmail.com
-        </a>
-      </section>
+      {contactDetails?.map(x => {
+        const contact = x?.node || {};
 
-      <section className={style.contact}>
-        <h2>Secretary and Membership</h2>
-        <p>Chris Parker</p>
-        <p>
-          <a
-            href="mailto:chrispm_parker@hotmail.co.uk"
-            rel="noopener noreferrer">
-            chrispm_parker@hotmail.co.uk
-          </a>
-        </p>
+        const { id, name, email, telephone, role, displayOrder } = contact;
 
-        <a href="tel:02086683302">020 8668 3302</a>
-      </section>
+        return (
+          <section className={style.contact} key={displayOrder || id}>
+            {role && <h2>{role}</h2>}
 
-      <section className={style.contact}>
-        <h2>Treasurer</h2>
-        <p>Carl Roche</p>
-        <p>
-          <a href="mailto:carlroche@freeukisp.co.uk" rel="noopener noreferrer">
-            carlroche@freeukisp.co.uk
-          </a>
-        </p>
-        <a href="tel:02086607790">020 8660 7790</a>
-      </section>
+            {name && <p>{name}</p>}
 
-      <section className={style.contact}>
-        <h2>Wood Products</h2>
-        <p>Alison Falkner</p>
-        <p>
-          <a
-            href="mailto:alison.falkner@btinternet.com"
-            rel="noopener noreferrer">
-            alison.falkner@btinternet.com
-          </a>
-        </p>
-        <a href="tel:02086688979">020 8668 8979</a>
-      </section>
+            {email && (
+              <p>
+                <a href={`mailto:${email}`} rel="noopener noreferrer">
+                  {email}
+                </a>
+              </p>
+            )}
 
-      <section className={style.contact}>
-        <h2>Committee Member for Biodiversity</h2>
-        <p>Bill Bessant</p>
-      </section>
-
-      <section className={style.contact}>
-        <h2>Committee Member</h2>
-        <p>Alastair Davis</p>
-      </section>
+            {telephone && <a href={`tel:${telephone}`}>{telephone}</a>}
+          </section>
+        );
+      })}
     </Layout>
   );
 };
@@ -83,10 +52,22 @@ const ContactIndex = ({ data, location }) => {
 export default ContactIndex;
 
 export const pageQuery = graphql`
-  query {
+  query ContactDetails {
     site {
       siteMetadata {
         title
+      }
+    }
+    allContentfulContactDetails(sort: { displayOrder: ASC }) {
+      edges {
+        node {
+          id
+          displayOrder
+          name
+          role
+          email
+          telephone
+        }
       }
     }
   }
