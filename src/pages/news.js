@@ -41,7 +41,8 @@ const NewsIndex = ({ data, location }) => {
                 </Link>
               </h2>
               <small>
-                {post.createdAt}, by {post.author}
+                {post.createdAt}
+                {post?.author && <span>, by {post.author} </span>}
               </small>
             </header>
             <section>
