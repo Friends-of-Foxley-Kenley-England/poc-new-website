@@ -60,6 +60,8 @@
     "start": "yarn develop",
     "serve": "gatsby serve",
     "clean": "gatsby clean",
+    "cy:run": "cypress run",
+    "cy:open": "cypress open",
     "test": "echo \"Write tests! -> https://gatsby.dev/unit-testing\" && exit 1",
     "find-unused-deps": "depcheck"
   },
