@@ -44,7 +44,7 @@ exports.createPages = async ({ graphql, actions, reporter }) => {
     workdays: result.data.allContentfulWorkDay.nodes,
   };
 
-  createRedirectedPages(createPage, redirects);  
+  createRedirectedPages(createPage, redirects);
 
   createPostPage(posts.news, blogPostTemplate, "news", createPage);
   createPostPage(posts.workdays, workDayPostTemplate, "work-days", createPage);
@@ -52,7 +52,7 @@ exports.createPages = async ({ graphql, actions, reporter }) => {
 
 function createRedirectedPages(createPage, redirects) {
   redirects.forEach(redirect => {
-    console.log(`Added temp page for ${redirect.fromPath}`)
+    console.log(`Added temp page for ${redirect.fromPath}`);
     createPage({
       path: redirect.fromPath,
       component: path.resolve(redirect.componentPath),
@@ -124,4 +124,3 @@ exports.onCreateWebpackConfig = ({ stage, actions }) => {
     ],
   });
 };
-
