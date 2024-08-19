@@ -9,14 +9,14 @@ const ResourcesIndex = ({ data, location }) => {
 
   const siteTitle = data.site.siteMetadata?.title || `Title`;
 
-  const resourcesPageData = data.allContentfulResourcesPage?.nodes[0];
+  const resourcesPageData = data.allContentfulResourcesPage?.nodes?.[0] || {};
 
   return (
     <Layout location={location} title={siteTitle}>
       <Seo title="Resources" />
       <h1>{resourcesPageData.title}</h1>
 
-      <p>{resourcesPageData.subTitle}</p>
+      <p>{resourcesPageData?.subTitle}</p>
 
       {/* https://stackoverflow.com/questions/13354578/custom-li-list-style-with-font-awesome-icon */}
       {/* <FontAwesomeIcon icon="fa-regular fa-file" /> */}
@@ -24,7 +24,7 @@ const ResourcesIndex = ({ data, location }) => {
       {/* <FontAwesomeIcon icon="fa-regular fa-file-lines" /> */}
       {/* <FontAwesomeIcon icon="fa-solid fa-file-pdf" /> */}
       <ul className={style.pdfFileListItem}>
-        {resourcesPageData.resourceFiles.map(resourceFile => {
+        {resourcesPageData?.resourceFiles?.map(resourceFile => {
           return (
             <li className={style.linkText}>
               <a href={resourceFile.url} className={style.linkText}>
