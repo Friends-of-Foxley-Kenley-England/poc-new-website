@@ -13,7 +13,7 @@ jobs:
     name: Build and deploy to PROD
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v2
+      - uses: actions/checkout@v4
 
       - name: Install node
         uses: actions/setup-node@v4
@@ -40,7 +40,7 @@ jobs:
     name: Build and deploy to Preview API
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v2
+      - uses: actions/checkout@v4
 
       - name: Install node
         uses: actions/setup-node@v4
