@@ -2,12 +2,12 @@
   padding-left: var(--spacing-6);
 }
 
-.pdf-file-list-item {
+.pdf-file-list {
   list-style-image: url("../images/PDF_32.png");
   list-style-position: outside;
 }
 
-.pdf-file-list-item li {
+.pdf-file-list li {
   margin-bottom: 0%;
 }
 
@@ -31,7 +31,7 @@
     padding-left: var(--spacing-8);
   }
 
-  .pdf-file-list-item li {
+  .pdf-file-list li {
     margin-left: inherit;
     padding-left: inherit;
   }

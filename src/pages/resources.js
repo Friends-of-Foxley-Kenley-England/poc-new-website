@@ -24,7 +24,7 @@ const ResourcesIndex = ({ data, location }) => {
         {/* <FontAwesomeIcon icon="fa-solid fa-file-image" /> */}
         {/* <FontAwesomeIcon icon="fa-regular fa-file-lines" /> */}
         {/* <FontAwesomeIcon icon="fa-solid fa-file-pdf" /> */}
-        <ul className={style.pdfFileListItem}>
+        <ul className={style.pdfFileList}>
           {resourcesPageData?.resourceFiles?.map(resourceFile => {
             return (
               <li className={style.linkText}>
