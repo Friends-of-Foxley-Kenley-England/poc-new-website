@@ -8,7 +8,7 @@
 }
 
 .pdf-file-list li {
-  margin-bottom: 0%;
+  margin-bottom: var(--spacing-2);
 }
 
 .link-text {
