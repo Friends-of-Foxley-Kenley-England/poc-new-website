@@ -5,13 +5,14 @@ import Layout from "../components/layout";
 import Seo from "../components/seo";
 
 const NotFoundPage = ({ data, location }) => {
-  const siteTitle = data.site.siteMetadata.title;
+  const siteTitle = data?.site?.siteMetadata?.title || "Not found";
 
   return (
-    <Layout location={location} title={siteTitle}>
+    <Layout location={location} title={siteTitle} showHeroSection>
       <Seo title="404: Not Found" />
-      <h1>404: Not Found</h1>
-      <p>You just hit a route that doesn&#39;t exist... the sadness.</p>
+      <h1>Couldn't find that page</h1>
+      <p>Check the URL and try again. Our woods aren't that big!</p>
+      <p>{location.pathname}</p>
     </Layout>
   );
 };

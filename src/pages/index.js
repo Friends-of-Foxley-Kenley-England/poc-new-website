@@ -7,7 +7,7 @@ const HomeIndex = ({ data, location }) => {
   const siteTitle = data.site.siteMetadata?.title || `Title`;
 
   return (
-    <Layout location={location} title={siteTitle}>
+    <Layout location={location} title={siteTitle} showHeroSection>
       <Seo title={siteTitle} />
       <p>
         The Friends Of Foxley are a group of local people who work in
