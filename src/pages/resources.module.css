@@ -30,9 +30,4 @@
   .file-list-container {
     padding-left: var(--spacing-8);
   }
-
-  .pdf-file-list li {
-    margin-left: inherit;
-    padding-left: inherit;
-  }
 }
