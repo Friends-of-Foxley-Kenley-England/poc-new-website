@@ -27,7 +27,7 @@ const ResourcesIndex = ({ data, location }) => {
         <ul className={style.pdfFileList}>
           {resourcesPageData?.resourceFiles?.map(resourceFile => {
             return (
-              <li className={style.linkText}>
+              <li className={style.linkText} key={resourceFile.id}>
                 <a href={resourceFile.url} className={style.linkText}>
                   {resourceFile.title}
                 </a>
@@ -55,6 +55,7 @@ export const pageQuery = graphql`
         subTitle
         id
         resourceFiles {
+          id
           file {
             contentType
             fileName
