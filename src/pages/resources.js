@@ -5,8 +5,6 @@ import Seo from "../components/seo";
 import * as style from "./resources.module.css";
 
 const ResourcesIndex = ({ data, location }) => {
-  console.log("data", data);
-
   const siteTitle = data.site.siteMetadata?.title || `Title`;
 
   const resourcesPageData = data.allContentfulResourcesPage?.nodes?.[0] || {};
