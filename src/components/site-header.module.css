@@ -27,7 +27,7 @@
 }
 
 .navigation-links a:hover {
-    background: var(--color-nav-accent);
+  background: var(--color-nav-accent);
 }
 
 /* Hide hamburger by default*/

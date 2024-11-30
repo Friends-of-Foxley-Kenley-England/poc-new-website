@@ -27,7 +27,6 @@ const Layout = ({ location, title, children }) => {
   if (isRootPath) {
     siteHeader = (
       <SiteHeader
-        className={style.headerLinkHome}
         menuLinks={data.site.siteMetadata.menuLinks}
         siteTitle={title}
       />
@@ -35,7 +34,6 @@ const Layout = ({ location, title, children }) => {
   } else {
     siteHeader = (
       <SiteHeader
-        className={style.headerLinkHome}
         menuLinks={data.site.siteMetadata.menuLinks}
         siteTitle={title}
       />
@@ -47,7 +45,7 @@ const Layout = ({ location, title, children }) => {
       <header>{siteHeader}</header>
 
       {isRootPath && <HeroSection title={title} />}
-      
+
       <div className={style.globalWrapper} data-is-root-path={isRootPath}>
         <main>{children}</main>
       </div>

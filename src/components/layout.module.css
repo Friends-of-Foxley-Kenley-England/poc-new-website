@@ -1,21 +1,13 @@
 .layout {
-    height: 100vh;
-    display: flex;
-    flex-direction: column;
-    margin-top: 0px;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  margin-top: 0px;
 }
 
 .global-wrapper {
-    flex: 1;
-    margin: var(--spacing-0) auto;
-    max-width: var(--maxWidth-wrapper); 
-    padding: var(--spacing-5);
+  flex: 1;
+  margin: var(--spacing-0) auto;
+  max-width: var(--maxWidth-wrapper);
+  padding: var(--spacing-5);
 }
-
-.header-link-home {
-    font-weight: var(--fontWeight-bold);
-    font-family: var(--font-heading);
-    text-decoration: none;
-    font-size: var(--fontSize-2);
-}
-  
