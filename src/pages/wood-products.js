@@ -14,8 +14,8 @@ const Index = ({ data, location }) => {
 
       <p>
         Wood for turning and other projects is sometimes available - if you are
-        interested in that please contact <strong>Andrew</strong> or{" "}
-        <strong>Chris</strong>.
+        interested in that please contact{" "}
+        <Link to="/contact/#secretary-and-membership">Chris Parker</Link>.
       </p>
       <p>
         Seasoned hardwood firewood is normally available throughout the winter.

@@ -39,10 +39,9 @@ const WorkDaysIndex = ({ data, location }) => {
       </p>
       <p>
         Please contact{" "}
-        <Link to="/contact/#secretary-and-membership">Chris Parker</Link> or{" "}
-        <Link to="/contact/#chairman">Andrew Wood</Link> for details, for each
-        workday, of where and when we will meet or to be added to the list of
-        email addresses to be advised.
+        <Link to="/contact/#secretary-and-membership">Chris Parker</Link> for
+        details, for each workday, of where and when we will meet or to be added
+        to the list of email addresses to be advised.
       </p>
 
       <h2>Dates:</h2>
@@ -77,19 +76,21 @@ const WorkDaysIndex = ({ data, location }) => {
 
 export default WorkDaysIndex;
 
-export const pageQuery = graphql`{
-  site {
-    siteMetadata {
-      title
+export const pageQuery = graphql`
+  {
+    site {
+      siteMetadata {
+        title
+      }
+    }
+    allContentfulWorkDay(sort: { dateOfWorkday: DESC }) {
+      nodes {
+        slug
+        createdAt
+        id
+        title
+        shortDescriptionOfWorkday
+      }
     }
   }
-  allContentfulWorkDay(sort: {dateOfWorkday: DESC}) {
-    nodes {
-      slug
-      createdAt
-      id
-      title
-      shortDescriptionOfWorkday
-    }
-  }
-}`;
+`;
