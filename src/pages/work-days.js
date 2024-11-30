@@ -83,7 +83,7 @@ export const pageQuery = graphql`
         title
       }
     }
-    allContentfulWorkDay(sort: { dateOfWorkday: DESC }) {
+    allContentfulWorkDay(sort: { dateOfWorkday: DESC }, limit: 15) {
       nodes {
         slug
         createdAt
